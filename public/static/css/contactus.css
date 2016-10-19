@@ -1,0 +1,85 @@
+
+#contact-body {
+    /*background-color: #000 !important;*/
+    background-image: url("../images/map-bg.jpg");
+    /* 背景图垂直、水平均居中 */
+    background-position: center center;
+
+    /* 背景图不平铺 */
+    background-repeat: no-repeat;
+
+    /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+    background-attachment: fixed;
+
+    /* 让背景图基于容器大小伸缩 */
+    background-size: cover;
+
+    /* 设置背景颜色，背景图加载过程中会显示背景色 */
+    background-color: #464646;
+}
+#header {
+    border-bottom: 1px solid #cfb154;
+}
+
+#footer2 {
+    border-top: 1px solid #cfb154;
+}
+
+#info-container{
+    margin:2% auto;
+    text-align: center;
+    width: 57%;
+}
+
+#info-container #map-img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.one-line {
+    display: inline-block;
+    /*border: 1px solid white;*/
+    text-align: left;
+    margin: 5px 2px;
+
+}
+
+.icon-block{
+    width: 20px;
+    vertical-align: top;
+}
+
+.icon-block i{
+    font-size: 18px;
+    margin-top:-5px;
+}
+
+#info-block{
+    float: left;
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+.info-btn{
+    border-radius: 0 !important;
+    background-color: transparent;
+    color: white;
+    padding: 2px 5px;
+    font-size: 11px;
+    border:1px solid white;
+    z-index: 1000;
+    /*margin: 10px 2px;*/
+}
+
+#quick-enquiry-btn{
+    font-size: 15px;
+    padding: 5px 10px;
+    background-color: #cfb154;
+    color: white;
+    border: none;
+}
+
+.one-line p{
+    margin-top: 5px;
+}
+
