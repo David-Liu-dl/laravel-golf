@@ -10,7 +10,7 @@ $(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
     }, function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-    })
+    });
 
     $('#btn-left').unbind("click").click(function () {
         moveToPrevious();
@@ -30,8 +30,8 @@ $(function () {
             }else {
                 checkVideoLoaded();
             }
-    },200)};
-
+        }, 200)
+    }
     checkVideoLoaded();
 
     function recurse(counter) {
@@ -85,7 +85,7 @@ $(function () {
 
         recurse(nextIndex);
     }
-})
+});
 
 
 

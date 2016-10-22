@@ -19,9 +19,9 @@
             "speed":"1000",
             "isAutoplay":"true",
             "dealy":"1000"
-        }
+        };
 
-        $.extend(this.setting,this.getSetting())
+        $.extend(this.setting,this.getSetting());
 
         this.setFirstPosition();
 
@@ -188,11 +188,11 @@
                 return (this.setting.posterHeight - height) / 2
             }
         }
-    }
+    };
     Caroursel.init = function (caroursels){
         caroursels.each(function(index,item){
             new Caroursel($(this));
         })  ;
     };
     window["Caroursel"] = Caroursel;
-})(jQuery)
+})(jQuery);
