@@ -12,6 +12,11 @@
 */
 
 Route::get('/', function () {
+
+    return View::make('test');
+});
+
+Route::get('/data', function () {
     $startRange = \Carbon\Carbon::now() -> addDay(-1)->format('Y-m-d h:m');
 
     $endRange = \Carbon\Carbon::now()->addMonth(3)->format('Y-m-d h:m');
@@ -21,29 +26,10 @@ Route::get('/', function () {
 
     $ordersDate = array();
     foreach ($orders as $order){
-//        $date = new DateTime($order->book_block);
-
-//        array_push($ordersDate, $date);
-//        print_r(\Carbon\Carbon::parse($order->book_block));
         array_push($ordersDate, \Carbon\Carbon::parse($order->book_block));
-
     }
 
-
-    return View::make('test',compact('ordersDate'));
-});
-
-//Route::get('/','TestController@create');
-
-
-
-Route::get('/contactus.blade.php', function () {
-    return View('contactus');
-});
-
-Route::get('customer', function () {
-    $customer = App\Customer::find(1);
-    print_r($customer);
+    return response()->json($ordersDate);
 });
 
 Route::post('/', 'TestController@store');

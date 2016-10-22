@@ -9,10 +9,11 @@
 namespace App;
 
 
+use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-    protected $fillable = ['name','phone','email','hand'];
+    protected $fillable = ['name','phone','email','hand','book_block'];
 
 }
