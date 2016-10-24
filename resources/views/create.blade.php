@@ -1,4 +1,4 @@
-@extends('test')
+@extends('book')
 
 @section('content')
     <h1>Write a New Article</h1>

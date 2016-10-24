@@ -13,7 +13,8 @@
 
 Route::get('/', function () {
 
-    return View::make('test');
+    return View::make('golf_and_cocktail_bar');
+//    return View::make('book');
 });
 
 Route::get('/data', function () {
