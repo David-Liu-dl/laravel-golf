@@ -17,12 +17,12 @@ Route::get('/', function () {
 //    return View::make('contactus');
 //    return View::make('price_detail');
 });
-Route::post('/', 'TestController@storeEnquiry');
+//
 
-//Route::post('/', 'TestController@storeOrders');
+Route::post('/', 'TestController@storeOrders');
 
 
-//Route::get('/enquiry-form', 'TestController@storeEnquiry');
+Route::get('/enquiry-form', 'TestController@storeEnquiry');
 //Route::post('/enquiry-form', 'TestController@storeEnquiry');
 //Route::post('/enquiry-form', function (){
 //    return View::make('book');

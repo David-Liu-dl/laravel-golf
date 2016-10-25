@@ -649,8 +649,9 @@
                 }
             },
             submitHandler: function(form) {
-                $(form).ajax({
+                $.ajax({
                     url:"/",
+                    data:$(form).serialize(),
                     type:"post",
                     success: function(data,status){
                         alert(data);
