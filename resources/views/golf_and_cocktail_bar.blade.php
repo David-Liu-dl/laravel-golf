@@ -650,7 +650,7 @@
             },
             submitHandler: function(form) {
                 $.ajax({
-                    url:"/",
+                    url:"/orders",
                     data:$(form).serialize(),
                     type:"post",
                     success: function(data,status){

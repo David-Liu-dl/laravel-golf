@@ -361,8 +361,8 @@
             },
             submitHandler: function(form) {
 //                console.log($(form).serialize());
-                $(form).ajax({
-                    url:"/",
+                $.ajax({
+                    url:"/enquiry-form",
                     type:"post",
                     data:$(form).serialize(),
                     success: function(data,status){

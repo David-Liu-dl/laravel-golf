@@ -12,21 +12,20 @@
 */
 
 Route::get('/', function () {
-    return View::make('golf_and_cocktail_bar');
-//    return View::make('book');
-//    return View::make('contactus');
-//    return View::make('price_detail');
+    return View::make('home');
 });
 //
 
-Route::post('/', 'TestController@storeOrders');
+
+Route::get('/cocktail', function () {
+    return View::make('golf_and_cocktail_bar');
+});
+
+Route::post('/orders', 'TestController@storeOrders');
 
 
-Route::get('/enquiry-form', 'TestController@storeEnquiry');
-//Route::post('/enquiry-form', 'TestController@storeEnquiry');
-//Route::post('/enquiry-form', function (){
-//    return View::make('book');
-//});
+Route::post('/enquiry-form', 'TestController@storeEnquiry');
+Route::post('/enquiry-form', 'TestController@storeEnquiry');
 
 
 Route::get('/data', function () {
