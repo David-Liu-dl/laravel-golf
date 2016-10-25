@@ -614,10 +614,6 @@
         //perform today clicked
         $(".ui-datepicker-current-day").trigger("click");
 
-        $.validator.addMethod("selected_blocks", function(value, element) {
-            return false;
-        }, 'Please select a valid and non empty Guid value.');
-
         $("#order-form").validate({
             rules: {
                 name: {

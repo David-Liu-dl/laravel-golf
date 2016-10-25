@@ -15,10 +15,133 @@
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="static/css/contactus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
+    <style>
 
+        #enquiry_window{
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            background: white;
+            width: 20%;
+            max-width: 700px;
+            min-width: 400px;
+            padding:10px 20px;
+
+            position: fixed; /* or absolute */
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            display: none;
+        }
+
+        .input-group-addon,input.transparent-input{
+            background-color:rgba(0,0,0,0) !important;
+            border:none;
+            color:black;
+        }
+
+        #enquiry_window .input-group-addon{
+            color: #cfb154;
+        }
+
+        label.btn span {
+            font-size: 1.5em ;
+        }
+
+        #enquiry_form_title{
+            text-align: center;
+            font-size: 20px;
+            color:#b5a37e;
+        }
+
+        .input_container{
+            width:100%;
+            padding:5px 5px;
+            margin:10px 0px;
+            border:1px solid #cfb154;
+            border-radius: 6px;
+        }
+
+        .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+            width: 100%;
+        }
+
+        .btn-full{
+            width:100%;
+            background: #cfb154;
+            font-weight: normal;
+            color: white;
+        }
+
+        .input-group-addon{
+            width: 23%;
+        }
+
+        .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+            text-overflow:ellipsis;
+            width: 95%;
+        }
+
+        label.error {
+            color: red;
+            font-weight: normal;
+            font-size: 12px;
+        }
+
+        input.error {
+            color: red;
+        }
+    </style>
 </head>
 
 <body id = "contact-body">
+
+<div id="enquiry_window">
+    <form id="enquiry_form" target="_self" class="form-horizontal" role="form" method="POST">
+        <div id="form_container" >
+            <div id="enquiry_form_title">ENQUIRY</div>
+
+            <div>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            </div>
+
+            <div class="input_container input-group">
+                <span class="input-group-addon">NAME </span>
+                <input type="text" name="name" class="form-control transparent-input">
+            </div>
+
+            <div class="input_container input-group">
+                <span class="input-group-addon">EMAIL </span>
+                <input type="text" name="email" class="form-control transparent-input">
+            </div>
+
+            <div class="input_container input-group">
+                <span class="input-group-addon">PHONE </span>
+                <input type="text" name="phone" class="form-control transparent-input">
+            </div>
+
+            <div class="">
+                <select class="selectpicker" name="types[]" title="WHICH PART WOULD YOU LIKE TO ENQUIRE" multiple>
+                    <option value="tournament">tournament</option>
+                    <option value="event">event</option>
+                    <option value="academy">academy</option>
+                    <option value="four">Four</option>
+                    <option value="golf & cocktail bar">golf & cocktail bar</option>
+                </select>
+            </div>
+
+            <div class="input_container">
+                <textarea type="text" name="comment" placeholder="COMMENT / REQUEST" class="form-control transparent-input" style="border:none;height: 100px;resize: none;"></textarea>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-default btn-full">Submit</button>
+            </div>
+
+        </div>
+    </form>
+</div>
 
 <div class="black-container container-fluid" id="header">
     <div class="container">
@@ -132,14 +255,13 @@
             </div>
 
         </div>
+        {{-- onClick="showEnquiryWindow()"--}}
         <div id="right-btn-block" style="margin-top:20px;float: right">
             <button id="quick-enquiry-btn" type="button" class="btnCustom info-btn">QUICK ENQUIRY</button>
         </div>
     </div>
 
 </div>
-
-
 
 
 <div id="footer2" class="black-container container-fluid">
@@ -168,13 +290,106 @@
 <!-- Optional theme -->
 <!-- Latest compiled and minified JavaScript -->
 <script src="static/js/bootstrap.min.js"></script>
-
-<script src="static/js/carousel.js"></script>
-
-<script src="static/js/vidbg.js"></script>
-<script src="static/js/slider.js"></script>
-
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 <script src="static/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
 
+<script>
+    $(document).ready(function () {
+//        $.ajax({
+//            url:"/enquiry-form",
+//            type:"post",
+//            data: { '_token': token, 'someOtherData': "123" },
+//            dataType: 'json',
+//            success: function(data,status){
+//                alert(data);
+//            }
+//        });
+
+        $('#quick-enquiry-btn').click(function (event) {
+            showEnquiryWindow()
+        });
+        $('#info-container').find('div').not('#right-btn-block').click(function (event) {
+            if ($('#enquiry_window').is(":visible")){
+                hideEnquiryWindow();
+            }
+        });
+
+        $("#enquiry_form .selectpicker").change(function () {
+            console.log($(this).val());
+            $("#enquiry_form").valid();
+        });
+
+        $("#enquiry_form").validate({
+            rules: {
+                name: {
+                    required: true,
+                },
+                phone: {
+                    required: true,
+                    number:true
+                },
+                email: {
+                    required: true,
+                    email:true
+                },
+                types:{
+                    required: true,
+                },
+                comment:{
+                    required:true,
+                }
+            },
+            messages: {
+                name: {
+                    required: "Please enter name",
+                },
+                phone: {
+                    required: "Please enter phone",
+                    number: "Please enter correct phone"
+                },
+                email: {
+                    required: "Please enter email",
+                    email:"Your email address must be in the format of name@domain.com"
+                },
+                types:{
+                    required: "Please at least select one type",
+                },
+                comment:{
+                    required: "Please leave some message",
+                }
+            },
+            submitHandler: function(form) {
+//                console.log($(form).serialize());
+                $(form).ajax({
+                    url:"/",
+                    type:"post",
+                    data:$(form).serialize(),
+                    success: function(data,status){
+//                        alert(data);
+                    },
+                    error: function () {
+                        OnError(cartObject.productID)
+                    },
+                    complete: function () {
+                        // Handle the complete event
+                        alert("ajax completed " + cartObject.productID);
+                    }
+                });
+                return false;
+            }
+        });
+    });
+
+    function showEnquiryWindow() {
+        if (!$('#enquiry_window').is(":visible")){
+            $('#enquiry_window').fadeIn();
+        }
+    }
+
+    function hideEnquiryWindow(){
+        $('#enquiry_window').slideUp(200);
+    }
+</script>
 </body>
 </html>

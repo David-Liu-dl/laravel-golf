@@ -12,10 +12,22 @@
 */
 
 Route::get('/', function () {
-
     return View::make('golf_and_cocktail_bar');
 //    return View::make('book');
+//    return View::make('contactus');
+//    return View::make('price_detail');
 });
+Route::post('/', 'TestController@storeEnquiry');
+
+//Route::post('/', 'TestController@storeOrders');
+
+
+//Route::get('/enquiry-form', 'TestController@storeEnquiry');
+//Route::post('/enquiry-form', 'TestController@storeEnquiry');
+//Route::post('/enquiry-form', function (){
+//    return View::make('book');
+//});
+
 
 Route::get('/data', function () {
     $startRange = \Carbon\Carbon::now() -> addDay(-1)->format('Y-m-d h:m');
@@ -33,4 +45,3 @@ Route::get('/data', function () {
     return response()->json($ordersDate);
 });
 
-Route::post('/', 'TestController@store');
