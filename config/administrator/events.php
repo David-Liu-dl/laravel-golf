@@ -65,6 +65,22 @@ return [
     ],
 
     'edit_fields' => [
+        'title' => array(
+            'type' => 'text', //optional, default is 'text'
+            'title' => 'Title',
+            'limit' => 50, //optional, defaults to no limit
+        ),
+        'address' => array(
+            'type' => 'text', //optional, default is 'text'
+            'title' => 'Addrs',
+            'limit' => 30, //optional, defaults to no limit
+        ),
+        'introduction' => array(
+            'type' => 'textarea',
+            'title' => 'Introduction',
+            'limit' => 300, //optional, defaults to no limit
+            'height' => 200, //optional, defaults to 100
+        ),
         'price' => array(
             'type' => 'number',
             'title' => 'Price',
@@ -94,15 +110,15 @@ return [
         'picture' => array(
             'title' => 'Image',
             'type' => 'image',
+            'action' => function(){
+                error_log("Oracle database not available!", 0);
+            },
             'location' => public_path() . '/uploads/',
             'naming' => 'random',
             'length' => 20,
             'size_limit' => 2,
             'display_raw_value' => false,
         ),
-
-
-
 
     ],
 
