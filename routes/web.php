@@ -14,11 +14,34 @@
 Route::get('/', function () {
     return View::make('home');
 });
-//
 
+
+//
+//Route::get('/admin_home', ['middleware' => 'auth',function () {
+//    return View::make('admin_home');
+//}]);
+
+Route::get('/admin_home', function () {
+    if (Auth::check()) {
+        return View::make('admin_home');
+    }
+    return View::make('auth/login');
+});
+
+Route::get('/home', function () {
+    return View::make('home');
+});
+
+Route::get('/contactus', function () {
+    return View::make('contactus');
+});
 
 Route::get('/cocktail', function () {
     return View::make('golf_and_cocktail_bar');
+});
+
+Route::get('/coming_events', function () {
+    return View::make('coming_events');
 });
 
 Route::post('/orders', 'TestController@storeOrders');
@@ -28,19 +51,12 @@ Route::post('/enquiry-form', 'TestController@storeEnquiry');
 Route::post('/enquiry-form', 'TestController@storeEnquiry');
 
 
-Route::get('/data', function () {
-    $startRange = \Carbon\Carbon::now() -> addDay(-1)->format('Y-m-d h:m');
+Route::get('/getUnavailableDates', 'DBController@getUnavailableDates');
+Route::get('/getAllAvailableEvents', 'DBController@getAllAvailableEvents');
 
-    $endRange = \Carbon\Carbon::now()->addMonth(3)->format('Y-m-d h:m');
+//Auth::logout();
 
-    $range = [$startRange, $endRange];
-    $orders = App\Order::whereBetween('book_block', $range)->get();
+Auth::routes();
 
-    $ordersDate = array();
-    foreach ($orders as $order){
-        array_push($ordersDate, \Carbon\Carbon::parse($order->book_block));
-    }
 
-    return response()->json($ordersDate);
-});
-
+//Route::get('/home', 'HomeController@index');

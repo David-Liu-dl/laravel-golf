@@ -564,15 +564,12 @@
 
     function getOrder() {
         $.ajax({
-            url: '/data',
+            url: '/getUnavailableDates',
             method: 'GET',
             dataType: 'json',
-            data: {username: 'fuck'},
-
             success: function (msg) {
                 render(msg);
             }
-
         });
     }
 

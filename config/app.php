@@ -168,6 +168,7 @@ return [
          * Package Service Providers...
          */
 
+        'Frozennode\Administrator\AdministratorServiceProvider',
         //
 
         /*

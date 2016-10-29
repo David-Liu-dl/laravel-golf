@@ -6,12 +6,12 @@
  * Time: 3:26 PM
  */
 
-namespace App\Http;
+namespace App;
 
 
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-//    protected $fillable = ['name','phone','email','types','comment'];
+    protected $fillable = ['name','phone','email','types','comment'];
 }
