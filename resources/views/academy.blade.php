@@ -18,13 +18,17 @@
     <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
     <style>
         .casual_container {
-            background: url("static/images/slider3.png") 0 0 no-repeat;
-            filter: Alpha(opacity=20);
-            opacity: 0.5;
+            background: url("static/images/slider2.png") no-repeat center center fixed;
+            filter: Alpha(opacity=50);
+            opacity:0.2;
+            /*opacity: 0.5;*/
             height: 100%;
             width: 100%;
             right: 0;
             top: 0;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
             background-size: cover;
             position: fixed;
         }
@@ -38,7 +42,7 @@
             left: 10%;
             width: 80%;
             overFlow-x:hidden;
-            overFlow-y:auto;
+            overFlow-y:scroll;
             position: fixed;
 
         }
@@ -61,7 +65,7 @@
     </style>
 
 </head>
-<body style="background: black none;">
+<body style="background-image:none;background-color:black">
 <!--------nav start-------->
 <div class="black-container container-fluid" id="header">
     <div class="container">
@@ -104,8 +108,7 @@
 
 <div id="fixed-frame" class="container">
     <div>
-        <p><img src="static/images/price_drink.jpg" style="max-width:100%; height:auto"></p>
-        <p><img src="static/images/price_food.jpg" style="max-width:100%; height:auto"></p>
+        <p style="text-align: center"><img src="static/images/academy.png" style="max-width:100%; height:auto"></p>
     </div>
 </div>
 

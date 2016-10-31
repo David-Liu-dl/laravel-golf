@@ -32,12 +32,28 @@ Route::get('/home', function () {
     return View::make('home');
 });
 
+Route::get('/academy', function () {
+    return View::make('academy');
+});
+
+Route::get('/tournament', function () {
+    return View::make('tournament');
+});
+
+Route::get('/casual', function () {
+    return View::make('casual');
+});
+
 Route::get('/contactus', function () {
     return View::make('contactus');
 });
 
 Route::get('/cocktail', function () {
     return View::make('golf_and_cocktail_bar');
+});
+
+Route::get('/price', function () {
+    return View::make('price_detail');
 });
 
 Route::get('/coming_events', function () {

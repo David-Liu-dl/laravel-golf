@@ -18,18 +18,19 @@
     <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
     <style>
         .casual_container {
-            background: url("static/images/slider3.png") 0 0 no-repeat;
+            background: url("static/images/slider1.png") 0 0 no-repeat;
             filter: Alpha(opacity=20);
-            opacity: 0.5;
+            opacity: 0.3;
             height: 100%;
             width: 100%;
             right: 0;
             top: 0;
-            background-size: cover;
+            /*background-size: cover;*/
             position: fixed;
         }
 
         #fixed-frame {
+            padding-right: 5%;
             height: 70%;
             max-height: 70%;
             bottom: 40px;
@@ -38,9 +39,25 @@
             left: 10%;
             width: 80%;
             overFlow-x:hidden;
-            overFlow-y:auto;
+            overFlow-y:scroll;
             position: fixed;
 
+        }
+
+        #fixed-frame .title {
+            width: 100%;
+            padding-bottom: 20px;
+            text-align: center;
+            color: #cfb154;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 2px solid #cfb154;
+            font-size: 14px;
+            margin-bottom: 8px;
+            filter: Alpha(opacity=100);
+            opacity: 1;
+            font-weight: normal;
+            font-size: 18px;
         }
 
         ::-webkit-scrollbar {
@@ -60,6 +77,58 @@
 
     </style>
 
+    <style>
+        .mythumbnail {
+
+            border: none;
+            background: transparent;
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        .mythumbnail img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: auto;
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+
+        .portrait {
+            height: auto;
+            width: 100%;
+        }
+
+        .item-container {
+            padding: 20px 40px;
+
+        }
+
+        .item{
+            font-weight: normal;
+            height:330px;
+            border-bottom: 1px solid #cfb154;
+        }
+        .item .event_title{
+            color:#cfb154;
+            font-size: 14px;
+            text-align: center;
+        }
+        .item .introduction{
+            margin: 15px auto 30px;
+            font-size:14px;
+            color: white;
+            word-wrap: break-word;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body style="background: black none;">
 <!--------nav start-------->
@@ -103,9 +172,10 @@
 </div>
 
 <div id="fixed-frame" class="container">
-    <div>
-        <p><img src="static/images/price_drink.jpg" style="max-width:100%; height:auto"></p>
-        <p><img src="static/images/price_food.jpg" style="max-width:100%; height:auto"></p>
+    <p class="title">TOURNAMENT</p>
+    <div style="margin-top: 20px;">
+        <div class="row" id="event_block">
+        </div>
     </div>
 </div>
 
@@ -132,6 +202,16 @@
 </div>
 <!--------footer end-------->
 
+<script id="item" type="text/template">
+    <div class="col-md-4 col-xs-4 item-container">
+        <div class="item">
+            <div class="mythumbnail"><img class="portrait" src={picture}></div>
+            <div class="event_title">{title}</div>
+            <div class="figcaption introduction">{introduction}</div>
+        </div>
+    </div>
+</script>
+
 <script src="static/js/jquery.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 <script src="static/js/jquery-ui.min.js"></script>
@@ -142,6 +222,52 @@
 <script src="static/js/vidbg.js"></script>
 <script src="static/js/slider.js"></script>
 
+<script>
+    $(document).ready(function () {
+        getEvents();
+    });
+
+    function getEvents() {
+        $.ajax({
+            url: '/getAllAvailableEvents',
+            method: 'GET',
+            dataType: 'json',
+            success: function (dta) {
+                if (!dta) {
+                    return;
+                }
+                //获取模板上的HTML
+                var html = $('script[id="item"]').html();
+                //定义一个数组，用来接收格式化合的数据
+                var arr = [];
+
+                //对数据进行遍历
+                $.each(dta, function(i, o) {
+                    //这里取到o就是上面rows数组中的值, formatTemplate是最开始定义的方法.
+                    arr.push(formatTemplate(o, html));
+                });
+                //好了，最后把数组化成字符串，并添加到table中去。
+                $('#event_block').append(arr.join(''));
+                //走完这一步其实就完成了，不会吧，这么简单，不错，就是这么简单!! 不信就自己动手去试试!
+            }
+
+        });
+    }
+
+    function formatTemplate(dta, tmpl) {
+        var format = {
+            name: function(x) {
+                return x;
+            }
+        };
+        return tmpl.replace(/{(\w+)}/g, function(m1, m2) {
+
+            if (!m2)
+                return "";
+            return (format && format[m2]) ? format[m2](dta[m2]) : dta[m2];
+        });
+    }
+</script>
 
 
 </body>

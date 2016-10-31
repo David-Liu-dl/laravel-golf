@@ -20,7 +20,7 @@
         .casual_container {
             background: url("static/images/slider3.png") 0 0 no-repeat;
             filter: Alpha(opacity=20);
-            opacity: 0.5;
+            opacity: 0.2;
             height: 100%;
             width: 100%;
             right: 0;
@@ -108,7 +108,7 @@
         }
 
         .ui-datepicker td span, .ui-datepicker td a{
-            padding:.4em;
+            padding:.5em;
             margin:.6em;
         }
 
@@ -205,6 +205,7 @@
             height:100px;
             overFlow-x:hidden;
             overFlow-y:auto;
+            font-size: 13px;
         }
 
 
@@ -373,7 +374,7 @@
 
     </style>
 </head>
-<body>
+<body style="background: black none;">
 <!--------nav start-------->
 <div class="black-container container-fluid" id="header">
     <div class="container">
@@ -409,6 +410,10 @@
         </div>
     </div>
 </div>
+
+<div class="casual_container container-fluid">
+</div>
+
 <!--------nav end-------->
 <div id="book_window">
     <form id="order-form" target="_self" class="form-horizontal" role="form" method="POST">
