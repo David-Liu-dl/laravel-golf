@@ -84,7 +84,7 @@
             background: transparent;
             position: relative;
             width: 100%;
-            height: 200px;
+            height: 150px;
             overflow: hidden;
         }
         .mythumbnail img {
@@ -99,7 +99,6 @@
         }
 
         .portrait {
-            height: auto;
             width: 100%;
         }
 
@@ -115,6 +114,7 @@
         }
         .item .event_title{
             color:#cfb154;
+            margin-top: 20px;
             font-size: 14px;
             text-align: center;
         }
