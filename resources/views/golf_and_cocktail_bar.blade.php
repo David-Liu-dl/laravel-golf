@@ -90,6 +90,9 @@
             background: #cfb154;
         }
 
+    </style>
+
+    <style>
         #book_window{
             position: fixed; /* or absolute */
             top: 50%;
@@ -98,10 +101,6 @@
             z-index: 999;
             display:none;
         }
-    </style>
-
-    <style>
-
         .ui-state-default {
             border: 0px !important;
             text-align: center;

@@ -64,7 +64,6 @@ Route::post('/orders', 'TestController@storeOrders');
 
 
 Route::post('/enquiry-form', 'TestController@storeEnquiry');
-Route::post('/enquiry-form', 'TestController@storeEnquiry');
 
 
 Route::get('/getUnavailableDates', 'DBController@getUnavailableDates');

@@ -196,12 +196,11 @@ body {
 
 }
 
-.navbar-nav.navbar-right li{
+.navbar-nav.navbar-right .main-menu{
     font-size: 12px;
-    margin-left: 20px;
 
 }
-.navbar-nav.navbar-right li:last-child {
+.navbar-nav.navbar-right .main-menu:last-child {
     padding-left: 15px;
 }
 
@@ -264,8 +263,9 @@ body {
 }
 
 .dropdown .dropdown-menu {
-    right: 0px;
-    left: auto;
+    /*right: 0px;*/
+    /*left: auto;*/
+    padding:0px;
 }
 
 .dropdown-menu li a {
