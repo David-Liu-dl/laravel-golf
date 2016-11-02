@@ -65,7 +65,7 @@
         margin-top: 10px;
         position: absolute;
         bottom: 0px;
-        right: 5%;
+        right: 6%;
     }
     ::-webkit-scrollbar {
         width:10px;
@@ -101,6 +101,7 @@
             @foreach( $package['features'] as $feature)
                 <p> {{ $feature }}</p>
             @endforeach
+            <p>${{ $package['price'] }}</p>
         </div>
     </div>
     <button class="enquiry">ENQUIRY</button>

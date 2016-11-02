@@ -77,6 +77,7 @@ Route::get('/getAllAvailableEvents', 'DBController@getAllAvailableEvents');
 //Auth::logout();
 
 Route::get('/package/{id}', 'PackageController@index');
+Route::get('/package', 'PackageController@initial');
 
 Auth::routes();
 
