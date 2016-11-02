@@ -237,7 +237,6 @@
     <span class="right" id="btn-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
 </div>
 
-
 <!--------footer start-------->
 <div id="footer2" class="black-container container-fluid">
     <div class="container">
