@@ -13,7 +13,7 @@
 
 
 Route::get('/test', function () {
-    return View::make('test');
+    return View::make('packages');
 });
 
 Route::get('/', function () {
@@ -75,6 +75,8 @@ Route::get('/getUnavailableDates', 'DBController@getUnavailableDates');
 Route::get('/getAllAvailableEvents', 'DBController@getAllAvailableEvents');
 
 //Auth::logout();
+
+Route::get('/package/{id}', 'PackageController@index');
 
 Auth::routes();
 

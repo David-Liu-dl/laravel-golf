@@ -10,7 +10,7 @@
         "laravelcollective/html": "^5.2.0",
         "illuminate/html": "^5.0",
         "doctrine/dbal": "^2.5",
-        "frozennode/administrator": "5.*"
+        "frozennode/administrator": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

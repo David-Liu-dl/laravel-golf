@@ -175,8 +175,8 @@
                 </div>
 
                 <div class="btn-block">
-                    <button type="button" class="btnCustom gold-btn">DETAILS</button>
-                    <button type="button" class="btnCustom gold-btn">OTHER EVENT</button>
+                    <a type="button" class="btnCustom gold-btn" href="coming_events">DETAILS</a>
+                    <a type="button" class="btnCustom gold-btn" href="coming_events">OTHER EVENT</a>
                 </div>
 
                 <div class="thumb event-block">
@@ -219,8 +219,8 @@
                 </div>
 
                 <div class="btn-block">
-                    <button type="button" class="btnCustom gold-btn" onClick="window.open('cockdetail.html')">DETAILS</button>
-                    <button type="button" class="btnCustom gold-btn">BOOKING</button>
+                    <a type="button" class="btnCustom gold-btn" href="coming_events">DETAILS</a>
+                    <a type="button" class="btnCustom gold-btn" onClick="showBookWindow()">BOOKING</a>
                 </div>
 
                 <div class="thumb event-block">
