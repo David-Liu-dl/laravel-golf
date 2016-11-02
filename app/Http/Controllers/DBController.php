@@ -34,6 +34,7 @@ class DBController extends Controller
         foreach ($objs as $obj){
             if ($obj instanceof Event){
                 $obj->picture = "uploads/". ($obj->picture);
+                $obj->cover = "uploads/". ($obj->cover);
             }else{
                 break;
             }

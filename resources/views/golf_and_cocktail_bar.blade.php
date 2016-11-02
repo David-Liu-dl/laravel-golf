@@ -10,12 +10,14 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="static/css/animation.css">
     <link rel="stylesheet" href="static/css/jquery-ui.min.css">
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="static/css/reset.css">
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
+    {{--<link rel="stylesheet" href="static/css/style.css">--}}
+    <link rel="stylesheet" href="static/css/frame.css">
+    <link rel="stylesheet" href="static/css/jquery.jqzoom.css">
     <style>
         .casual_container {
             background: url("static/images/slider3.png") 0 0 no-repeat;
@@ -30,12 +32,12 @@
         }
 
         #fixed-frame {
-            height: 70%;
-            max-height: 70%;
+            height: 80%;
+            max-height: 80%;
             bottom: 40px;
-            top: 16%;
-            right: 15%;
-            left: 15%;
+            top: 10%;
+            right: 17%;
+            left: 13%;
             width: 70%;
             overFlow-x:hidden;
             overFlow-y:scroll;
@@ -43,38 +45,12 @@
 
         }
 
-        #fixed-frame p {
+        #fixed-frame a {
             color: white;
             line-height: 30px;
             font-size: 12px;
-            filter: Alpha(opacity=60);
-            opacity: 0.6;
         }
 
-        #fixed-frame .title {
-            width: 100%;
-            text-align: center;
-            color: #cfb154;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-bottom: 2px solid #cfb154;
-            font-size: 14px;
-            margin-bottom: 8px;
-            filter: Alpha(opacity=100);
-            opacity: 1;
-        }
-
-        #fixed-frame .price {
-            font-weight: bold;
-            text-align: center;
-            text-transform: uppercase;
-            filter: Alpha(opacity=100);
-            opacity: 1;
-        }
-
-        #fixed-frame .price .money {
-            color: #cfb154;
-        }
         ::-webkit-scrollbar {
             width:10px;
         }
@@ -381,33 +357,122 @@
             <div id="header-logo2" class="col-md-6">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre"/>
+                        <a href="home"><img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre"/></a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 hidden-nav-xs">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">TOURNAMENT</a></li>
-                    <li><a href="#">ACADEMY</a></li>
-                    <li><a href="#">GOLF&COCKTAIL BAR</a></li>
-                    <li class="dropdown">
+                    <li class="main-menu"><a href="tournament">TOURNAMENT</a></li>
+                    <li class="main-menu"><a href="academy">ACADEMY</a></li>
+                    <li class="main-menu"><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
+                    <li class="main-menu"><a href="price">PRICING</a></li>
+                    <li class="dropdown main-menu">
                         <button type="button" class="dropdown-toggle btn" data-toggle="dropdown" id="dropdown-show">
                             <span class="fa fa-bars" aria-hidden="true"></span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdown-show">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
+                            <li><a href="tournament">TOURNAMENT</a></li>
+                            <li><a href="academy">ACADEMY</a></li>
+                            <li><a href="coming_events">EVENT</a></li>
+                            <li><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
+                            <li><a href="price">PRICING</a></li>
+                            <li><a href="#" onclick="showBookWindow()">BOOKING</a></li>
+                            <li><a href="contactus">CONTACT US</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+</div>
+
+<div id="book_window">
+    <form id="order-form" target="_self" class="form-horizontal" role="form" method="POST">
+        <div id="form_container">
+            <div>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            </div>
+            <div id="title_block" class="row">
+                <div class="col-xs-10 vcenter">
+                    <label>TOURNAMENT BOOKING</label>
+                </div>
+                <div class="col-xs-2 vcenter" style="text-align: right;padding: 0px;">
+                    <a href="#" onClick="hideBookWindow();">
+                        <i style="padding:0px;font-size: 20px;font-weight: normal;color:#cfb154" class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+
+                </div>
+            </div>
+            <div style="margin:20px 0px;">
+                {{--left--}}
+                <div id="datepicker_block">
+                    <div class="form-group">
+                        <input id="selected-date" name="selected-date" type="hidden" class="form-control"
+                               value="<?php echo date('Y-m-d'); ?>">
+                        <div id="datepicker"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input id="selected_blocks" name="selected_blocks" type="text" class="form-control">
+                        <div id="block_container">
+                            <div id="blocks"></div>
+                        </div>
+                    </div>
+                </div>
+                {{--right--}}
+                <div id="user_info_block">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12" style="text-align: center;margin-top: 10px;" >
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn active">
+                                        <input type="radio" name="hand" value="lefthand" checked=""><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> LEFT HAND</span>
+                                    </label>
+                                    <label class="btn">
+                                        <input type="radio" name="hand" value="righthand"><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> RIGHT HAND</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="margin-top:20px;margin-bottom: 20px;font-size:13px;">
+                        <div class="col-xs-12">
+                            Please enter your name and contact detail to confirm the booking senssion.
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label name="name" class="col-xs-2 col-form-label">Name:</label>
+                        <div class="col-xs-10">
+                            <input type="text" name="name" class="form-control transparent-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-xs-2 col-form-label">Phone:</label>
+                        <div class="col-xs-10">
+                            <input name="phone" type="text" class="form-control transparent-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-xs-2 col-form-label">Email:</label>
+                        <div class="col-xs-10">
+                            <input name="email" type="email" class="form-control transparent-input" aria-describedby="emailHelp">
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <button style="margin-top:20px;float:right;font-size:15px;padding:10px 10px;" id="submit" type="submit" class="btnCustom gold-btn">REQUEST BOOKING</button>
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+
+    </form>
 </div>
 
 <div class="casual_container container-fluid">
@@ -504,12 +569,17 @@
 
 <div id="fixed-frame" class="container">
     <div>
-        <img src="static/images/cocktail_bar.png" style="max-width:100%; height:auto">
+
+        <a href="static/images/price_drink.jpg"><img src="static/images/price_drink.jpg" width="100%"></a>
+        <a href="static/images/price_food.jpg"><img src="static/images/price_food.jpg" width="100%"></a>
+        {{--<a><img src="static/images/price_food.jpg" style="max-width:100%; height:auto"></a>--}}
+        <a href="#"><img src="static/images/cocktail_bar.png" style="max-width:100%; height:auto"></a>
+
     </div>
 
     <div style="margin:20px auto;text-align: center">
         <button id="bookBtn" type="button" class="btnCustom gold-btn"
-                style="padding: 10px 20px;background: #cfb154;color: black;font-weight: normal">BOOKING</button>
+                style="padding: 10px 20px;background: #cfb154;color: black;font-weight: normal" onclick="showBookWindow()">BOOKING</button>
     </div>
 </div>
 
@@ -517,18 +587,12 @@
 <div id="footer2" class="black-container container-fluid">
     <div class="container">
         <ul class="nav navbar-nav navbar-right">
-            <li class="pointer" onClick="window.open('contactus.html')"><i class="fa fa-map-marker"></i>&nbsp;03 9600
-                0988
-            </li>
-            <li class="pointer"><i class="fa fa-phone"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</li>
+            <li class="pointer" onClick=""><i class="fa fa-phone" ></i>&nbsp;03 9600 0988</li>
+            <li class="pointer"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</li>
             <li class="pointer icon hidden-xs hidden-sm">
                 <i class="fa fa-facebook-square"></i>
             </li>
             <li class="pointer icon hidden-xs hidden-sm">
-                <i class="fa fa-tumblr-square"></i>
-            </li>
-            <li class="pointer icon hidden-lg hidden-md">
-                <i class="fa fa-facebook-square"></i>&nbsp;&nbsp;
                 <i class="fa fa-tumblr-square"></i>
             </li>
         </ul>
@@ -536,248 +600,23 @@
 </div>
 <!--------footer end-------->
 
-<script src="static/js/jquery.min.js"></script>
+<script src="static/js/jquery-1.11.3.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 <script src="static/js/jquery-ui.min.js"></script>
 {{--<script src="static/js/bootstrap.min.js"></script>--}}
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="static/js/moment.min.js"></script>
-
-<script src="static/js/vidbg.js"></script>
-<script src="static/js/slider.js"></script>
-
-
+<script src="static/js/jquery.jqzoom.js"></script>
+<script src="static/js/book.js"></script>
 <script>
-
     $(document).ready(function () {
-        $('#bookBtn').click(function () {
-            showBookWindow();
-        });
+        var options =
+        {
+            zoomWidth: 200, //放大镜的宽度
+            zoomHeight: 200,//放大镜的高度
+        };
+        $(".jqzoom").jqzoom(options);
     });
-
-    function showBookWindow() {
-        if (!$('#book_window').is(":visible")){
-            $('#book_window').fadeIn();
-            getOrder();
-        }
-    }
-
-    function hideBookWindow(){
-        $('#book_window').slideUp(200);
-    }
-
-    function getOrder() {
-        $.ajax({
-            url: '/getUnavailableDates',
-            method: 'GET',
-            dataType: 'json',
-            success: function (msg) {
-                render(msg);
-            }
-        });
-    }
-
-    function render(ordersDate) {
-        $("#datepicker").datepicker(
-            {
-                minDate: 0,
-                maxDate: "+2M",
-                dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                dayNamesMin: ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"],
-                dateFormat: 'yy-mm-dd',
-                onSelect: function (dateText, inst) {
-                    var selected = $(this).val();
-                    $('#selected-date').val(selected);
-
-                    var selectDayData = getSelectedDayData(selected, ordersDate);
-                    insertSlots(selectDayData);
-                    var selectedDates = [];
-                    $(".block.selected").each(function () {
-                        selectedDates.push($(this).data('date'));
-                    });
-
-                    var available_count = getAvailableSlot(selectDayData).length;
-                    //important!!
-                    setTimeout(
-                        function() {
-                            $('.ui-state-active').attr(
-                                {
-                                    'data-toggle':'tooltip',
-                                    'title':available_count + ' Available' ,
-                                    'data-placement':'top',
-                                });
-                            $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
-                        },
-                        50);
-                },
-            });
-
-        //perform today clicked
-        $(".ui-datepicker-current-day").trigger("click");
-
-        $("#order-form").validate({
-            rules: {
-                name: {
-                    required: true,
-                },
-                phone: {
-                    required: true,
-                    number:true
-                },
-                email: {
-                    required: true,
-                    email:true
-                },
-                selected_blocks:{
-                    required: true,
-                }
-
-            },
-            messages: {
-                name: {
-                    required: "Please enter name",
-                },
-                phone: {
-                    required: "Please enter phone",
-                    number: "Please enter correct phone"
-                },
-                email: {
-                    required: "Please enter email",
-                    email:"Your email address must be in the format of name@domain.com"
-                },
-                selected_blocks:{
-                    required: "Please at least select one slot",
-                }
-            },
-            submitHandler: function(form) {
-                $.ajax({
-                    url:"/orders",
-                    data:$(form).serialize(),
-                    type:"post",
-                    success: function(data,status){
-                        alert(data);
-                    }
-                });
-            }
-        });
-
-    };
-
-    function getAvailableSlot(slots){
-        var result = [];
-        $.each(slots, function (index, slot) {
-            if(slot['availability']){
-                result.push(slot);
-            }
-        });
-
-        return result;
-    }
-
-    function slotsToJson(selectedDates){
-        var slots = [];
-        $.each(selectedDates, function (index, value) {
-            slots.push(value.toString());
-        })
-
-        var dateJSON = new Object();
-        dateJSON.slots = slots;
-
-
-        var json = JSON.stringify(dateJSON);
-        return json;
-    }
-
-    function insertSlots(slots) {
-        $('#blocks').fadeOut(function () {
-            $(this).empty();
-            $.each(slots, function (index, slot) {
-                var $div = $("<div>", {
-                    id: "slot_" + index,
-                    class: "block unselected",
-                    css: {
-                        "cursor": "pointer"
-                    },
-                    text: moment(new Date(slot['slot'])).format('h:mm a')
-                    + " - "
-                    + moment((new Date(slot['slot'])).setHours(
-                        slot['slot'].getHours() + 1
-                    )).format('h:mm a')
-                });
-
-                $div.data('date', slot['slot']);
-
-                if (slot['availability']){
-                    $div.click(function () {
-                        if ($(this).hasClass('selected')){
-                            $(this).removeClass('selected');
-                            $(this).addClass('unselected');
-                        }else{
-                            $(this).removeClass('unselected');
-                            $(this).addClass('selected');
-                        }
-
-                        var selectedDates = [];
-                        $(".block.selected").each(function () {
-                            selectedDates.push($(this).data('date'));
-                        });
-
-                        $('#selected_blocks').val(selectedDates.length > 0 ? slotsToJson(selectedDates):null);
-                        $("#order-form").valid();
-                    });
-
-                }else{
-                    $div.addClass('disable');
-                }
-                $('#blocks').append($div);
-            });
-            $(this).fadeIn();
-        });
-    }
-
-    function getSelectedDayData(selected, ordersDate) {
-        var slot_availability = [];
-        var slots = createDaysTimeSlots(selected);
-
-        $.each(slots, function (index, value) {
-            var booked = false;
-
-            if (value.getTime() < (new Date()).getTime()) {
-                var booked = true;
-            } else {
-                $.each(ordersDate, function (innerIndex, innerValue) {
-                    var booked_date = new Date(innerValue['date']);
-                    if (value.getTime() == booked_date.getTime()) {
-                        booked = true;
-                        return false;
-                    }
-
-                });
-            }
-
-            slot_availability.push({'slot': value, 'availability': (!booked)});
-
-        });
-
-        return slot_availability;
-    }
-
-    function createDaysTimeSlots(selected) {
-        var slots = [];
-        var startDate = new Date(selected);
-        startDate.setHours(8);
-        startDate.setMinutes(0);
-
-        for (i = 0; i < 10; i++) {
-            var newSlot = new Date(startDate);
-            newSlot.setHours(startDate.getHours() + i);
-            slots.push(newSlot);
-        }
-
-        return slots;
-    }
-
 </script>
-
 </body>
 </html>

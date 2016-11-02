@@ -11,11 +11,13 @@
     <!--<link rel="stylesheet" href="static/css/main.css">-->
     <link rel="stylesheet" href="static/css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="static/css/animation.css">
+    <link rel="stylesheet" href="static/css/jquery-ui.min.css">
     <link rel="stylesheet" href="static/css/reset.css">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="static/css/contactus.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="static/css/frame.css">
     <style>
 
         #enquiry_window{
@@ -28,20 +30,20 @@
             padding:10px 20px;
 
             position: fixed; /* or absolute */
-            top: 35%;
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 999;
             display: none;
         }
 
-        .input-group-addon,input.transparent-input{
+        #enquiry_window .input-group-addon,#enquiry_window input.transparent-input{
             background-color:rgba(0,0,0,0) !important;
             border:none;
-            color:black;
+            /*color:black;*/
         }
 
-        #enquiry_window .input-group-addon{
+        .input-group-addon{
             color: #cfb154;
         }
 
@@ -122,7 +124,7 @@
             </div>
 
             <div class="">
-                <select class="selectpicker" name="types[]" title="WHICH PART WOULD YOU LIKE TO ENQUIRE" multiple>
+                <select class="selectpicker text-uppercase" name="types[]" title="WHICH PART WOULD YOU LIKE TO ENQUIRE" multiple>
                     <option value="tournament">tournament</option>
                     <option value="event">event</option>
                     <option value="academy">academy</option>
@@ -149,27 +151,28 @@
             <div id="header-logo2" class="col-md-6">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre"/>
+                        <a href="home"><img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre" /></a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 hidden-nav-xs">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">TOURNAMENT</a></li>
-                    <li><a href="#">ACADEMY</a></li>
-                    <li><a href="#">GOLF&COCKTAIL BAR</a></li>
-                    <li class="dropdown">
+                    <li class="main-menu"><a href="tournament">TOURNAMENT</a></li>
+                    <li class="main-menu"><a href="academy">ACADEMY</a></li>
+                    <li class="main-menu"><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
+                    <li class="main-menu"><a href="price">PRICING</a></li>
+                    <li class="dropdown main-menu">
                         <button type="button" class="dropdown-toggle btn" data-toggle="dropdown" id="dropdown-show">
                             <span class="fa fa-bars" aria-hidden="true"></span>
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown-show">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
+                        <ul class="dropdown-menu text-uppercase" aria-labelledby="dropdown-show">
+                            <li><a href="tournament">TOURNAMENT</a></li>
+                            <li><a href="academy">ACADEMY</a></li>
+                            <li><a href="coming_events">EVENT</a></li>
+                            <li><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
+                            <li><a href="price">PRICING</a></li>
+                            <li><a href="#" onclick="showBookWindow()">BOOKING</a></li>
+                            <li><a href="contactus">CONTACT US</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -178,12 +181,100 @@
     </div>
 </div>
 
+<div id="book_window">
+    <form id="order-form" target="_self" class="form-horizontal" role="form" method="POST">
+        <div id="form_container">
+            <div>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            </div>
+            <div id="title_block" class="row">
+                <div class="col-xs-10 vcenter">
+                    <label>TOURNAMENT BOOKING</label>
+                </div>
+                <div class="col-xs-2 vcenter" style="text-align: right;padding: 0px;">
+                    <a href="#" onClick="hideBookWindow();">
+                        <i style="padding:0px;font-size: 20px;font-weight: normal;color:#cfb154" class="fa fa-times" aria-hidden="true"></i>
+                    </a>
+
+                </div>
+            </div>
+            <div style="margin:20px 0px;">
+                {{--left--}}
+                <div id="datepicker_block">
+                    <div class="form-group">
+                        <input id="selected-date" name="selected-date" type="hidden" class="form-control"
+                               value="<?php echo date('Y-m-d'); ?>">
+                        <div id="datepicker"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input id="selected_blocks" name="selected_blocks" type="text" class="form-control">
+                        <div id="block_container">
+                            <div id="blocks"></div>
+                        </div>
+                    </div>
+                </div>
+                {{--right--}}
+                <div id="user_info_block">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12" style="text-align: center;margin-top: 10px;" >
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn active">
+                                        <input type="radio" name="hand" value="lefthand" checked=""><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> LEFT HAND</span>
+                                    </label>
+                                    <label class="btn">
+                                        <input type="radio" name="hand" value="righthand"><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> RIGHT HAND</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="margin-top:20px;margin-bottom: 20px;font-size:13px;">
+                        <div class="col-xs-12">
+                            Please enter your name and contact detail to confirm the booking senssion.
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label name="name" class="col-xs-2 col-form-label">Name:</label>
+                        <div class="col-xs-10">
+                            <input type="text" name="name" class="form-control transparent-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-xs-2 col-form-label">Phone:</label>
+                        <div class="col-xs-10">
+                            <input name="phone" type="text" class="form-control transparent-input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-xs-2 col-form-label">Email:</label>
+                        <div class="col-xs-10">
+                            <input name="email" type="email" class="form-control transparent-input" aria-describedby="emailHelp">
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <button style="margin-top:20px;float:right;font-size:15px;padding:10px 10px;" id="submit" type="submit" class="btnCustom gold-btn">REQUEST BOOKING</button>
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
 <div class="container-fluid">
     <div id="info-container">
         <div style="height: 100%">
         <img id="map-img" src="static/images/map.jpg"/>
         </div>
-        <div id="info-block">
+        <div id="info-block" style="width:100%;text-align: left;position: relative;">
             <div id="text-info-block" style="color: white;">
                 <!--left -->
                 <div class="one-line" style="font-weight: bold;font-size: 12px;">
@@ -252,13 +343,15 @@
                         </div>
                     </p>
                 </div>
+
+                <div id="right-btn-block"  class="one-line" style="position:absolute;right:0px; top:0px;">
+                    <button id="quick-enquiry-btn" type="button" class="btnCustom info-btn">QUICK ENQUIRY</button>
+                </div>
             </div>
 
         </div>
         {{-- onClick="showEnquiryWindow()"--}}
-        <div id="right-btn-block" style="margin-top:20px;float: right">
-            <button id="quick-enquiry-btn" type="button" class="btnCustom info-btn">QUICK ENQUIRY</button>
-        </div>
+
     </div>
 
 </div>
@@ -267,19 +360,12 @@
 <div id="footer2" class="black-container container-fluid">
     <div class="container">
         <ul class="nav navbar-nav navbar-right">
-            <li class="pointer">
-                <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;info@golfzon.melbourne
-            </li>
-            <li class="pointer" onClick="window.open('contactus.html')"><i class="fa fa-phone" ></i>&nbsp;03 9600 0988</li>
+            <li class="pointer" onClick=""><i class="fa fa-phone" ></i>&nbsp;03 9600 0988</li>
             <li class="pointer"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</li>
             <li class="pointer icon hidden-xs hidden-sm">
                 <i class="fa fa-facebook-square"></i>
             </li>
             <li class="pointer icon hidden-xs hidden-sm">
-                <i class="fa fa-tumblr-square"></i>
-            </li>
-            <li class="pointer icon hidden-lg hidden-md">
-                <i class="fa fa-facebook-square"></i>&nbsp;&nbsp;
                 <i class="fa fa-tumblr-square"></i>
             </li>
         </ul>
@@ -290,28 +376,23 @@
 <!-- Optional theme -->
 <!-- Latest compiled and minified JavaScript -->
 <script src="static/js/bootstrap.min.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-<script src="static/js/main.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="static/js/jquery-ui.min.js"></script>
+<script src="static/js/moment.min.js"></script>
+
+<script src="static/js/main.js"></script>
+<script src="static/js/book.js"></script>
 
 <script>
     $(document).ready(function () {
-//        $.ajax({
-//            url:"/enquiry-form",
-//            type:"post",
-//            data: { '_token': token, 'someOtherData': "123" },
-//            dataType: 'json',
-//            success: function(data,status){
-//                alert(data);
-//            }
-//        });
 
-        $('#quick-enquiry-btn').click(function (event) {
-            showEnquiryWindow()
-        });
-        $('#info-container').find('div').not('#right-btn-block').click(function (event) {
+        $('#quick-enquiry-btn').click(function () {
             if ($('#enquiry_window').is(":visible")){
                 hideEnquiryWindow();
+            }else{
+                showEnquiryWindow();
             }
         });
 
