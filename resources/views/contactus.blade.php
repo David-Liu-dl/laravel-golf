@@ -277,7 +277,7 @@
         <div id="info-block" style="width:100%;text-align: left;position: relative;">
             <div id="text-info-block" style="color: white;">
                 <!--left -->
-                <div class="one-line" style="font-weight: bold;font-size: 12px;">
+                <div class="one-line" style="font-weight: bold;font-size: 10px;">
                     <p>
                         <div class="one-line icon-block"><i class="fa fa-map-marker" ></i></div>
                         <div class="one-line">280 KING STREET, MELBOURNE, VIC 3000</div>
