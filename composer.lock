@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a3df2c383870c134e8decdddb6c6f7b8",
-    "content-hash": "053fb942e0465dab9b8534fb3e22da66",
+    "hash": "0af1520a9a86b637fc7d90d955bb5ad8",
+    "content-hash": "5ea0cf4721e73ae1b398f7f8c165d233",
     "packages": [
         {
             "name": "ckeditor/ckeditor",
@@ -606,7 +606,7 @@
         },
         {
             "name": "frozennode/administrator",
-            "version": "v5.0.12",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FrozenNode/Laravel-Administrator.git",
@@ -4037,7 +4037,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "frozennode/administrator": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
