@@ -49,10 +49,11 @@
     #package-content{
         padding-left: 3%;
     }
+    
     #package-content p {
         line-height: 50px;
     }
-    #package-content .enquiry{
+    .enquiry{
         width: 120px;
         height: 45px;
         line-height: 45px;
@@ -62,6 +63,9 @@
         padding-bottom: 0px;
         font-weight: bold;
         margin-top: 10px;
+        position: absolute;
+        bottom: 0px;
+        right: 5%;
     }
     ::-webkit-scrollbar {
         width:10px;
@@ -97,8 +101,8 @@
             @foreach( $package['features'] as $feature)
                 <p> {{ $feature }}</p>
             @endforeach
-            <p><button class="enquiry">ENQUIRY</button></p>
         </div>
     </div>
+    <button class="enquiry">ENQUIRY</button>
 </div>
 @stop
