@@ -131,7 +131,6 @@
                     <option value="tournament">tournament</option>
                     <option value="event">event</option>
                     <option value="academy">academy</option>
-                    <option value="four">Four</option>
                     <option value="golf & cocktail bar">golf & cocktail bar</option>
                 </select>
             </div>
