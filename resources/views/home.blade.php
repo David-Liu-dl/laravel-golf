@@ -22,7 +22,7 @@
         }
     </style>
 </head>
-<body onmousemove="hide_show(event)">
+<body>
 <!--------nav start-------->
 <div class="black-container container-fluid" id="header">
     <div class="container">
@@ -232,8 +232,8 @@
 </section>
 
 <div id="control-icon">
-    <span class="left" id="btn-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
-    <span class="right" id="btn-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+    <span class="left" id="btn-left" style="visibility: hidden;"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+    <span class="right" id="btn-right" style="visibility: hidden;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
 </div>
 
 <!--------footer start-------->
@@ -267,27 +267,11 @@
 <script src="static/js/book.js"></script>
 
 <script>
-    var timer;
-
-    function show_control(){
-        $('#control-icon span').css('visibility','visible');
-    }
-
-    function hide_control(){
-        $('#control-icon span').css('visibility','hidden');
-    }
-    function hide_show(){
-        show_control();
-        clearTimeout(timer);
-        timer = setTimeout(hide_control,2000);
-    }
-</script>
-
-<script>
-
     $(document).ready(function () {
-
         getEvents();
+
+
+
 
     });
 
@@ -315,8 +299,6 @@
 
         });
     }
-
-
 </script>
 
 </body>

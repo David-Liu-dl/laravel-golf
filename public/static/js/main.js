@@ -4,6 +4,8 @@
 $(function () {
     var items = $('.slide-item').toArray();
     var timer;
+    var clickTimer;
+
     var nowIndex;
 
     $('ul.navbar-nav li.dropdown').hover(function () {
@@ -25,13 +27,17 @@ $(function () {
         setTimeout(function () {
             if ( $('#bgvid').get(0).readyState === 4 ) {
                 //start sliding
-                console.log("1");
                 recurse(0);
+
+                $("body").mousemove(function(event){
+                    hide_show()
+                });
             }else {
                 checkVideoLoaded();
             }
         }, 200)
     }
+
     checkVideoLoaded();
 
     function recurse(counter) {
@@ -48,7 +54,6 @@ $(function () {
         }
         // run it again for the next number
         timer = setTimeout(function() {
-            // console.log(timer + " : old timer");
             $(item).removeClass("active");
             var nextIndex = nowIndex + 1;
             nextIndex = nextIndex > (items.length - 1)? 0 : nextIndex;
@@ -85,6 +90,21 @@ $(function () {
 
         recurse(nextIndex);
     }
+
+    function hide_show(){
+        show_control();
+        clearTimeout(clickTimer);
+        clickTimer = setTimeout(hide_control,2000);
+    }
+
+    function show_control(){
+        $('#control-icon span').css('visibility','visible');
+    }
+
+    function hide_control(){
+        $('#control-icon span').css('visibility','hidden');
+    }
+
 });
 
 
