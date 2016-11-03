@@ -37,9 +37,7 @@ Route::get('/home', function () {
     return View::make('home');
 });
 
-Route::get('/academy', function () {
-    return View::make('academy');
-});
+
 
 Route::get('/tournament', function () {
     return View::make('tournament');
@@ -76,8 +74,12 @@ Route::get('/getAllAvailableEvents', 'DBController@getAllAvailableEvents');
 
 //Auth::logout();
 
-Route::get('/package/{id}', 'PackageController@index');
-Route::get('/package', 'PackageController@initial');
+//Route::get('/package/{id}', 'PackageController@index');
+//Route::get('/package', 'PackageController@initial');
+Route::get('/academy', 'PackageController@getAll');
+//Route::get('/academy', function () {
+//    return View::make('academy');
+//});
 
 Auth::routes();
 

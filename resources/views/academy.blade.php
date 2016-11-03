@@ -201,6 +201,9 @@
     <div>
         <p style="text-align: center"><img src="static/images/academy.png" style="max-width:100%; height:auto"></p>
     </div>
+    <div id="main" class="row">
+        @yield('courses')
+    </div>
 </div>
 
 <!--------footer start-------->
