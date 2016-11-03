@@ -218,7 +218,7 @@
                 </div>
 
                 <div class="btn-block">
-                    <a type="button" class="btnCustom gold-btn" href="coming_events">DETAILS</a>
+                    <a type="button" class="btnCustom gold-btn" href="tournament">DETAILS</a>
                     <a type="button" class="btnCustom gold-btn" onClick="showBookWindow()">BOOKING</a>
                 </div>
 

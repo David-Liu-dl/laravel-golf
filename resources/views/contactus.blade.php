@@ -102,7 +102,10 @@
 <div id="enquiry_window">
     <form id="enquiry_form" target="_self" class="form-horizontal" role="form" method="POST">
         <div id="form_container" >
-            <div id="enquiry_form_title">ENQUIRY</div>
+            <div class="col-xs-" id="enquiry_form_title">
+                ENQUIRY
+                <i class="fa fa-times pointer" aria-hidden="true" style="position: absolute;right: 5%;" onclick="hideEnquiryWindow()"></i>
+            </div>
 
             <div>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -390,7 +393,6 @@
 
         $('#quick-enquiry-btn').click(function () {
             if ($('#enquiry_window').is(":visible")){
-                hideEnquiryWindow();
             }else{
                 showEnquiryWindow();
             }

@@ -200,7 +200,8 @@ body {
 }
 
 .navbar-nav li a:hover {
-    /*background-color: transparent;*/
+    background:none #cfb154;
+    color:white;
 }
 
 .nav > li > a {

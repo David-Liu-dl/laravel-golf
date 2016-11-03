@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="static/css/frame.css">
     <style>
         .casual_container {
-            background: url("static/images/slider3.png") no-repeat center;
+            background: url("static/images/pricing_bg.jpg") no-repeat center;
             filter: Alpha(opacity=20);
             opacity: 0.5;
             height: 100%;

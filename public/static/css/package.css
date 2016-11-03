@@ -1,3 +1,7 @@
+body{
+    background: none black;
+}
+
 #package-container{
     background: url('/static/images/slider2.png') no-repeat fixed center;
     /*filter: Alpha(opacity=20);*/
