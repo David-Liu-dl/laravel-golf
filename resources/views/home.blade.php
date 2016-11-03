@@ -197,7 +197,7 @@
                 </div>
 
                 <div class="btn-block">
-                    <button type="button" class="btnCustom gold-btn">COURSES</button>
+                    <a type="button" class="btnCustom gold-btn" href="academy">COURSES</a>
                 </div>
 
                 <div class="thumb event-block">
