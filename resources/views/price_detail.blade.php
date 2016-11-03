@@ -31,7 +31,7 @@
             position: fixed;
         }
 
-        
+
         #fixed-frame {
             height: 70%;
             max-height: 70%;
