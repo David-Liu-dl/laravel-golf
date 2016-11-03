@@ -22,7 +22,7 @@
         .casual_container {
             background: url("static/images/pricing_bg.jpg") no-repeat center;
             filter: Alpha(opacity=20);
-            opacity: 0.5;
+            opacity: 1;
             height: 100%;
             width: 100%;
             right: 0;
