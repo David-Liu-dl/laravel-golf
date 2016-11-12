@@ -1,3 +1,93 @@
+@extends('layouts.default')
+@section('content')
+    <section class="cd-hero">
+        <ul class="cb-slideshow">
+            <li class="slide-item" ><span></span>
+                <div id="div-video" class="bg">
+                    <video autoplay loop width="100%" height="auto" poster="static/images/polina.jpg" id="bgvid">
+                        <!--<source src="static/images/polina.webm" type="video/webm">-->
+                        <source src="static/images/polina.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </li>
+
+            <li class="slide-item"><span class="bg"></span>
+                <div class="text-part">
+                    <div class="text-fst-part">
+                        <div class="white-text-big">GOLF</div>
+                        <div class="white-text-big">TOURNAMENT</div>
+                    </div>
+
+                    <div class="text-snd-part">
+                        <div class="white-text-small">THE PERFECT SETUP FOR</div>
+                        <div class="white-text-small">COMPETITIVE GOLF</div>
+                        <div class="white-text-small">TUITION AND ENTERTAINMENT</div>
+                    </div>
+
+                    <div class="btn-block">
+                        <a type="button" class="btnCustom gold-btn" href="tournament">DETAILS</a>
+                        <a type="button" class="btnCustom gold-btn" href="coming_events">OTHER EVENT</a>
+                    </div>
+
+                    <div class="thumb event-block">
+                        <a href="#"><img src="static/images/event-frame.png" class="img-responsive event-cover" item="" alt="Cinque Terre" /></a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="slide-item" ><span class="bg"></span>
+                <div class="text-part">
+                    <div class="text-fst-part">
+                        <div class="white-text-big">GOLF</div>
+                        <div class="white-text-big">ACADEMY</div>
+                    </div>
+
+                    <div class="text-snd-part">
+                        <div class="white-text-small">PGA PROFESSIONAL</div>
+                        <div class="white-text-small">COACHING LESSION</div>
+                    </div>
+
+                    <div class="btn-block">
+                        <a type="button" class="btnCustom gold-btn" href="academy">COURSES</a>
+                    </div>
+
+                    <div class="thumb event-block">
+                        <a href="#"><img src="static/images/event-frame.png" class="img-responsive event-cover" item="" alt="Cinque Terre"/></a>
+                    </div>
+                </div>
+            </li>
+            <li class="slide-item"><span class="bg"></span>
+                <div class="text-part">
+                    <div class="text-fst-part">
+                        <div class="white-text-big">GOLF&</div>
+                        <div class="white-text-big">COCKTAIL BAR</div>
+                    </div>
+
+                    <div class="text-snd-part">
+                        <div class="white-text-small">FULLY LICENSE & PROFESSIONAL BAR</div>
+                        <div class="white-text-small">ALL GOLF RELATED COCKTAILS</div>
+                    </div>
+
+                    <div class="btn-block">
+                        <a type="button" class="btnCustom gold-btn" href="cocktail">DETAILS</a>
+                        <a type="button" class="btnCustom gold-btn" onClick="showBookWindow()">BOOKING</a>
+                    </div>
+
+                    <div class="thumb event-block">
+                        <a href="#"><img src="static/images/event-frame.png" class="img-responsive event-cover" item="" alt="Cinque Terre" /></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </section>
+
+    <div id="control-icon">
+        <span class="left" id="btn-left" style="visibility: hidden;"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+        <span class="right" id="btn-right" style="visibility: hidden;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+    </div>
+@stop
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

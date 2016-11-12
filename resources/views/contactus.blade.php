@@ -8,7 +8,6 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="static/css/bootstrap.css">
     <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
-    <!--<link rel="stylesheet" href="static/css/main.css">-->
     <link rel="stylesheet" href="static/css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="static/css/animation.css">
     <link rel="stylesheet" href="static/css/jquery-ui.min.css">
