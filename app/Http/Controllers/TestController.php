@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Enquiry;
 use App\Order;
+use Mail;
 
 use Illuminate\Http\Request;
 
@@ -38,6 +39,8 @@ class TestController extends Controller
             return 'Sorry, block ' . $results['factor'] . " already booked.";
         }
 
+        // send the mail to host
+        $this->sendEmailWithOrder($request);
 
         return "Great, done.";
     }
@@ -83,5 +86,13 @@ class TestController extends Controller
         }
 
         return array('validity' => intval(true));
+    }
+
+    private function sendEmailWithOrder(Request $request){
+        $name = $request -> input('name');
+        Mail::queue('emailViews.order',['request'=>$request->all()],function($message) use($name){
+            $to = '375099857@qq.com';
+            $message ->to($to)->subject('New order: ' . $name);
+        });
     }
 }

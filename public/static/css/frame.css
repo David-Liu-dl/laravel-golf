@@ -75,12 +75,12 @@
 }
 
 .ui-datepicker-prev  {
-    background-image: url("static/images/prev_arrow.png") !important;
+    background-image: url("../images/prev_arrow.png") !important;
     background-size: cover;
 }
 
 .ui-datepicker-next {
-    background-image: url("static/images/next_arrow.png") !important;
+    background-image: url("../images/next_arrow.png") !important;
     background-size: cover;
 }
 
@@ -300,6 +300,50 @@ input.error {
     transform: translate(-50%, -50%);
     z-index: 999;
     /*display:none;*/
+
+}
+
+#info-block p {
+     display:inline-block;
+     line-height: 25px;
+     font-size: 16px;
+ }
+
+#info-block p:not(:first-child) {
+    font-size: 14px;
+}
+
+#title{
+    font-size:20px;
+}
+
+#fd-window{
+    position: fixed; /* or absolute */
+    width: 850px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    color: #cfb154;
+    background: #000000;
+    border: 1px solid #cfb154;
+    font-family: "work-sans-regular", serif;
+    display:none;
+}
+
+#fd-window #fd-title-block{
+    margin: 0px 20px;
+    padding: 20px 20px;
+    border-bottom: 1px solid #cfb154;
+}
+
+#fd-window .gold-btn{
+    margin-top: 30%;
+    margin-left: 0px;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 1000px) {
 
 }
 

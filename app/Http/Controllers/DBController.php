@@ -25,7 +25,7 @@ class DBController extends Controller
     }
 
     public function getAllAvailableEvents(){
-        $events = Event::all();
+        $events = Event::where("availability",0) -> get();
         $this->addResourcePrefix($events);
         return response()->json($events);
     }

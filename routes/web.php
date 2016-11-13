@@ -13,7 +13,7 @@
 
 
 Route::get('/test', function () {
-    return View::make('packages');
+    return View::make('test');
 });
 
 Route::get('/', function () {
@@ -71,17 +71,6 @@ Route::post('/enquiry-form', 'TestController@storeEnquiry');
 
 Route::get('/getUnavailableDates', 'DBController@getUnavailableDates');
 Route::get('/getAllAvailableEvents', 'DBController@getAllAvailableEvents');
-
-//Auth::logout();
-
-//Route::get('/package/{id}', 'PackageController@index');
-//Route::get('/package', 'PackageController@initial');
 Route::get('/academy', 'PackageController@getAll');
-//Route::get('/academy', function () {
-//    return View::make('academy');
-//});
 
 Auth::routes();
-
-
-//Route::get('/home', 'HomeController@index');

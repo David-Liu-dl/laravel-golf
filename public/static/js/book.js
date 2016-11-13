@@ -12,6 +12,18 @@ function hideBookWindow(){
     $('#book_window').slideUp(200);
 }
 
+function showFdWindow(){
+    if ($('#book_window').is(":visible")){
+        $('#book_window').fadeOut(100,function () {
+            $('#fd-window').fadeIn(200);
+        });
+    }
+}
+
+function hideFdWindowAndRefresh() {
+    location.reload();
+}
+
 function getOrder() {
     $.ajax({
         url: '/getUnavailableDates',
@@ -102,10 +114,11 @@ function render(ordersDate) {
                 data:$(form).serialize(),
                 type:"post",
                 success: function(data,status){
-                    alert(data);
+                    // alert(data);
                     $('#book_window').slideUp(200);
+                    showFdWindow();
                     // getOrder();
-                    alert();
+                    // alert();
                 }
             });
         }

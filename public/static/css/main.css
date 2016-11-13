@@ -150,9 +150,13 @@ fieldset[disabled] .btnCustom-default.active {
 }
 
 body {
-    /*background-color: #000 !important;*/
     font-family: work-sans-regular;
     background-image: url("../images/background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
     min-height: 100%;
     height: auto;
     position: relative;
@@ -209,23 +213,34 @@ body {
     padding-right: 8px;
 }
 
-@media only screen and (min-width: 768px) {
-    .hidden-nav-lg {
+/*@media only screen and (min-width: 768px) {*/
+    /*.hidden-nav-lg {*/
+        /*display: none;*/
+    /*}*/
+
+    /*.hidden-nav-xs {*/
+        /*display: block;*/
+    /*}*/
+/*}*/
+
+@media only screen and (max-width: 1000px) {
+    /*.hidden-nav-xs {*/
+        /*display: none;*/
+    /*}*/
+
+    /*.hidden-nav-lg {*/
+        /*display: block;*/
+    /*}*/
+    .row {
+    }
+
+    .main-menu:not(:last-child){
         display: none;
     }
 
-    .hidden-nav-xs {
-        display: block;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .hidden-nav-xs {
-        display: none;
-    }
-
-    .hidden-nav-lg {
-        display: block;
+    .main-menu:last-child{
+        /*float:right;*/
+        text-align: right;
     }
 }
 
@@ -392,15 +407,22 @@ body {
 }
 
 .cb-slideshow li:nth-child(2) span {
-    background-image: url(../images/slider1.png);
+    background-image: url(../images/slider3.png);
+    background-size: auto 90%;
+    background-repeat: no-repeat;
+
 }
 
 .cb-slideshow li:nth-child(3) span {
     background-image: url(../images/slider2.png);
+    background-size: auto 90%;
+    background-repeat: no-repeat;
 }
 
 .cb-slideshow li:nth-child(4) span {
-    background-image: url(../images/slider3.png);
+    background-image: url(../images/slider1.png);
+    background-size: auto 90%;
+    background-repeat: no-repeat;
 }
 
 @-webkit-keyframes imageAnimationIn {

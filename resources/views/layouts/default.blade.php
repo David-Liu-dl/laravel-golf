@@ -13,24 +13,26 @@
     <link rel="stylesheet" href="static/css/animation.css">
     <link rel="stylesheet" href="static/css/reset.css">
     <link rel="stylesheet" href="static/css/frame.css">
+
 </head>
 <body>
 <!--------nav start-------->
 <div class="black-container container-fluid" id="header">
     <div class="container">
         <div class="row">
-            <div id="header-logo2" class="col-md-6">
+            <div id="header-logo2" class="col-md-5 col-sm-5 col-xs-5">
                 <div class="row">
                     <div class="col-md-6">
                         <a href="home"><img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre" /></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 hidden-nav-xs">
+            <div class="col-md-7 col-sm-7 col-xs-7 hidden-nav-xs">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="main-menu"><a href="tournament">TOURNAMENT</a></li>
-                    <li class="main-menu"><a href="academy">ACADEMY</a></li>
                     <li class="main-menu"><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
+                    <li class="main-menu"><a href="coming_events">ACTIVITIES</a></li>
+                    <li class="main-menu"><a href="academy">ACADEMY</a></li>
+                    <li class="main-menu"><a href="tournament">TOURNAMENT</a></li>
                     <li class="main-menu"><a href="price">PRICING</a></li>
                     <li class="dropdown main-menu">
                         <button type="button" class="dropdown-toggle btn" data-toggle="dropdown" id="dropdown-show">
@@ -39,7 +41,7 @@
                         <ul class="dropdown-menu" aria-labelledby="dropdown-show">
                             <li><a href="tournament">TOURNAMENT</a></li>
                             <li><a href="academy">ACADEMY</a></li>
-                            <li><a href="coming_events">EVENT</a></li>
+                            <li><a href="coming_events">ACTIVITY</a></li>
                             <li><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
                             <li><a href="price">PRICING</a></li>
                             <li><a href="#" onclick="showBookWindow()">BOOKING</a></li>
@@ -139,6 +141,28 @@
 
     </form>
 </div>
+
+<div id="fd-window">
+    <div id="fd-title-block" class="row">
+        <div id="title" class="col-xs-10">
+            <label>TOURNAMENT BOOKING</label>
+        </div>
+        <div class="col-xs-2" style="text-align: right;padding: 0px;margin-top: 0px;">
+            <a href="#" onClick="hideFdWindowAndRefresh()">
+                <i style="font-size: 20px;font-weight: normal;color:#cfb154" class="fa fa-times" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <div id="info-block" style="text-align: center;padding:8% 0px 12%;">
+        <p style="padding: 10px 0px;font-weight: bold">THANK YOU!</p><br/>
+        <p>YOUR BOOKING INFORMATION IS CONFIRMED</p><br/>
+        <p>THE COMFIRMATION WILL SENT TO YOUR EMAIL ADDRESS</p><br/>
+        <p>FOR MORE DETAILS. PLEASE CONTACT US ON</p><br/>
+        <p style="border-bottom: 1px solid #cfb154">03 9600 0988</p><br/>
+        <p><a type="button" class="btnCustom gold-btn" onclick="hideFdWindowAndRefresh()">CLOSE</a></p>
+    </div>
+
+</div>
 <!--------nav end-------->
 
 <div id="main" class="row">
@@ -175,9 +199,8 @@
 <script src="static/js/jquery-ui.min.js"></script>
 <script src="static/js/moment.min.js"></script>
 <script src="/static/js/moment.min.js"></script>
-
-<script src="/static/js/vidbg.js"></script>
-<script src="/static/js/slider.js"></script>
+<script src="static/js/main.js"></script>
+<script src="static/js/book.js"></script>
 
 </body>
 </html>
