@@ -176,23 +176,4 @@
         </div>
     </div>
 
-    {{--<script type="text/template">--}}
-        {{--<div class="row row-eq-height event_container" id="">--}}
-            {{--<div class="col-md-4 col-xs-4 event_img_container">--}}
-                {{--<img src={picture} class="img-responsive event_img" alt="Cinque Terre"/>--}}
-            {{--</div>--}}
-            {{--<div class="col-md-8 col-xs-8">--}}
-                {{--<div class="event_info_container">--}}
-                    {{--<div class="event_title">{title}</div>--}}
-                    {{--<div class="event_description">{introduction}</div>--}}
-                    {{--<div class="event_date"><label>DATE:&nbsp;</label><span >{date}</span></div>--}}
-                    {{--<div class="event_location"><label>PLACE:&nbsp;</label><span >{address}</span></div>--}}
-                    {{--<div class="event_price"><label>ENTRY FEE:&nbsp;</label><span class="event_location">{price} AUD</span></div>--}}
-                {{--</div>--}}
-
-                {{--<div><button class="btnCustom info-btn entry_btn quick-enquiry-btn">ENTRY NOW</button></div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</script>--}}
-
 @stop

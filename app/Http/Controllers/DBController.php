@@ -9,9 +9,9 @@ use App\Event;
 class DBController extends Controller
 {
     public function getUnavailableDates(){
-        $startRange = \Carbon\Carbon::now() -> addDay(-1)->format('Y-m-d h:m');
+        $startRange = \Carbon\Carbon::now() -> addDay(-1)->format('Y-m-d H:i');
 
-        $endRange = \Carbon\Carbon::now()->addMonth(3)->format('Y-m-d h:m');
+        $endRange = \Carbon\Carbon::now()->addMonth(3)->format('Y-m-d H:i');
 
         $range = [$startRange, $endRange];
         $orders = Order::whereBetween('book_block', $range)->get();

@@ -8,7 +8,7 @@ use Mail;
 
 use Illuminate\Http\Request;
 
-class TestController extends Controller
+class OrderController extends Controller
 {
     public function create(){
 
@@ -61,7 +61,7 @@ class TestController extends Controller
 
     private function sendEmailWithOrder(Request $request){
         $name = $request -> input('name');
-        Mail::queue('emailViews.order',['request'=>$request->all()],function($message) use($name){
+        Mail::send('emailViews.order',['request'=>$request->all()],function($message) use($name){
             $to = '375099857@qq.com';
             $message ->to($to)->subject('New order: ' . $name);
         });
