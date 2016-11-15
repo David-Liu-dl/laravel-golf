@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Package;
-use Illuminate\Http\Request;
 
 class PackageController extends Controller {
 
@@ -32,17 +31,6 @@ class PackageController extends Controller {
 
         return view('packages')->with("packages", $packages);
     }
-    
-//    public function initial() {
-//        $package = Package::orderBy('id', 'desc')->first();
-//        if(empty($package)){
-//            $package = $this -> first();
-//        }
-//        if(!empty($package)){
-//            $package['features'] = explode(";", $package['features']);
-//        }
-//        return view('packages')->with("package", $package);
-//    }
     
     private function first(){
         $packet = array();

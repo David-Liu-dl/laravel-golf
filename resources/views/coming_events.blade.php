@@ -153,29 +153,46 @@
             </div>
 
             <div id="event_block">
+                @foreach($events as $event)
+                    <div class="row row-eq-height event_container" id="">
+                        <div class="col-md-4 col-xs-4 event_img_container">
+                            <img src= "{{$event['picture']}}" class="img-responsive event_img" alt="Cinque Terre"/>
+                        </div>
+                        <div class="col-md-8 col-xs-8">
+                            <div class="event_info_container">
+                                <div class="event_title">{{$event['title']}}</div>
+                                <div class="event_description">{{$event['introduction']}}</div>
+                                <div class="event_date"><label>DATE:&nbsp;</label><span >{{$event['date']}}</span></div>
+                                <div class="event_location"><label>PLACE:&nbsp;</label><span >{{$event['address']}}</span></div>
+                                <div class="event_price"><label>ENTRY FEE:&nbsp;</label><span class="event_location">{{$event['price'] . "AUD"}} </span></div>
+                            </div>
+
+                            <div><button class="btnCustom info-btn entry_btn quick-enquiry-btn">ENTRY NOW</button></div>
+                        </div>
+                    </div>
+                @endforeach
+
             </div>
         </div>
     </div>
 
-    <script type="text/template">
-        <div class="row row-eq-height event_container" id="">
-            <div class="col-md-4 col-xs-4 event_img_container">
-                <img src={picture} class="img-responsive event_img" alt="Cinque Terre"/>
-            </div>
-            <div class="col-md-8 col-xs-8">
-                <div class="event_info_container">
-                    <div class="event_title">{title}</div>
-                    <div class="event_description">{introduction}</div>
-                    <div class="event_date"><label>DATE:&nbsp;</label><span >{date}</span></div>
-                    <div class="event_location"><label>PLACE:&nbsp;</label><span >{address}</span></div>
-                    <div class="event_price"><label>ENTRY FEE:&nbsp;</label><span class="event_location">{price} AUD</span></div>
-                </div>
+    {{--<script type="text/template">--}}
+        {{--<div class="row row-eq-height event_container" id="">--}}
+            {{--<div class="col-md-4 col-xs-4 event_img_container">--}}
+                {{--<img src={picture} class="img-responsive event_img" alt="Cinque Terre"/>--}}
+            {{--</div>--}}
+            {{--<div class="col-md-8 col-xs-8">--}}
+                {{--<div class="event_info_container">--}}
+                    {{--<div class="event_title">{title}</div>--}}
+                    {{--<div class="event_description">{introduction}</div>--}}
+                    {{--<div class="event_date"><label>DATE:&nbsp;</label><span >{date}</span></div>--}}
+                    {{--<div class="event_location"><label>PLACE:&nbsp;</label><span >{address}</span></div>--}}
+                    {{--<div class="event_price"><label>ENTRY FEE:&nbsp;</label><span class="event_location">{price} AUD</span></div>--}}
+                {{--</div>--}}
 
-                <div><button class="btnCustom info-btn entry_btn">ENTRY NOW</button></div>
-            </div>
-        </div>
-    </script>
+                {{--<div><button class="btnCustom info-btn entry_btn quick-enquiry-btn">ENTRY NOW</button></div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</script>--}}
 
-    <script type="text/javascript" src="{!! asset('static/js/jquery-1.11.3.js') !!}"></script>
-    <script type="text/javascript" src="{!! asset('static/js/coming_event.js') !!}"></script>
 @stop

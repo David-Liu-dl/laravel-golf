@@ -155,14 +155,11 @@
                                 <p> {{ $feature }}</p>
                             @endforeach
                             <p>${{ $package['price'] }}</p>
-                            <button id="quick-enquiry-btn" class="enquiry">ENQUIRY</button>
+                            <button class="quick-enquiry-btn enquiry">ENQUIRY</button>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
 
-    <script type="text/javascript" src="{!! asset('static/js/jquery-1.11.3.js') !!}"></script>
-    <script type="text/javascript" src="{!! asset('static/js/contactus.js') !!}"></script>
-    <script type="text/javascript" src="{!! asset('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js') !!}"></script>
 @stop

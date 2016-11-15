@@ -1,15 +1,9 @@
-
-body {
-    background-image: url("../images/map-bg.jpg");
-
+.bootstrap-select.btn-group .dropdown-toggle .filter-option{
+    text-transform: uppercase;
 }
 
-#header {
-    border-bottom: 1px solid #cfb154;
-}
-
-#footer2 {
-    border-top: 1px solid #cfb154;
+#enquiry_form input{
+    color:black;
 }
 
 #info-container{
@@ -41,13 +35,13 @@ body {
     margin-top:-5px;
 }
 
-#info-block{
+.contactus #info-block{
     float: left;
     margin-top: 20px;
     font-size: 10px;
 }
 
-.info-btn{
+.contactus .info-btn{
     border-radius: 0 !important;
     background-color: transparent;
     color: white;
@@ -58,7 +52,7 @@ body {
     /*margin: 10px 2px;*/
 }
 
-#quick-enquiry-btn{
+.contactus .quick-enquiry-btn{
     font-size: 15px;
     padding: 5px 10px;
     background-color: #cfb154;

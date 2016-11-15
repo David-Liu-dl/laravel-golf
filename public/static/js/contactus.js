@@ -3,7 +3,7 @@
  */
 $(document).ready(function () {
 
-    $('#quick-enquiry-btn').click(function () {
+    $('.quick-enquiry-btn').click(function () {
         if ($('#enquiry_window').is(":visible")){
         }else{
             showEnquiryWindow();
@@ -57,11 +57,12 @@ $(document).ready(function () {
         submitHandler: function(form) {
 //                console.log($(form).serialize());
             $.ajax({
-                url:"/",
+                url:"/enquiry-form",
                 type:"post",
                 data:$(form).serialize(),
                 success: function(data,status){
-//                        alert(data);
+                       alert("Success!");
+                    $('#enquiry_window').slideUp(100);
                 },
                 error: function () {
                     OnError(cartObject.productID)

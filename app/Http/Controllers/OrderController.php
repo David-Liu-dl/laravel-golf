@@ -46,35 +46,6 @@ class TestController extends Controller
     }
 
 
-    public function storeEnquiry(Request $request){
-
-        $name = $request->input('name');
-        $phone = $request->input('phone');
-        $email = $request->input('email');
-        $typeArray = $request ->input('types');
-        $types = $this->typesStr($typeArray);
-        $comment = $request->input('comment');
-
-        $enquiry = new Enquiry();
-        $enquiry->name = $name;
-        $enquiry->phone = $phone;
-        $enquiry->email = $email;
-        $enquiry->types = $types;
-        $enquiry->comment = $comment;
-        $enquiry->save();
-
-
-        return "Great, done.";
-    }
-
-    private function typesStr($typeArray){
-        $result = "";
-        foreach ($typeArray as $type){
-            $result .= " | " . $type;
-        }
-        return $result;
-    }
-
     private function checkOrderValidity($selected_blocks){
 
         foreach ($selected_blocks['slots'] as $selected_block){

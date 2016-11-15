@@ -49,14 +49,11 @@ Route::get('/price', function () {
     return View::make('price_detail');
 });
 
-Route::get('/coming_events', function () {
-    return View::make('coming_events');
-});
+Route::get('/coming_events', "EventController@getAll");
 
-Route::post('/orders', 'TestController@storeOrders');
+Route::post('/orders', 'OrderController@storeOrders');
 
-
-Route::post('/enquiry-form', 'TestController@storeEnquiry');
+Route::post('/enquiry-form', 'EnquiryController@storeEnquiry');
 
 
 Route::get('/getUnavailableDates', 'DBController@getUnavailableDates');
@@ -64,5 +61,3 @@ Route::get('/getAllAvailableEvents', 'DBController@getAllAvailableEvents');
 Route::get('/academy', 'PackageController@getAll');
 
 Auth::routes();
-
-//Route::get('/home', 'HomeController@index');
