@@ -13,31 +13,21 @@
 
 
 Route::get('/test', function () {
-    return View::make('test');
+    if (Auth::check()){
+        Auth::logout();
+        return View::make('home');
+    }else{
+        return View::make('auth.login');
+    }
 });
 
 Route::get('/', function () {
     return View::make('home');
 });
 
-
-//
-//Route::get('/admin_home', ['middleware' => 'auth',function () {
-//    return View::make('admin_home');
-//}]);
-
-Route::get('/admin_home', function () {
-    if (Auth::check()) {
-        return View::make('admin_home');
-    }
-    return View::make('auth/login');
-});
-
 Route::get('/home', function () {
     return View::make('home');
 });
-
-
 
 Route::get('/tournament', function () {
     return View::make('tournament');
@@ -74,3 +64,5 @@ Route::get('/getAllAvailableEvents', 'DBController@getAllAvailableEvents');
 Route::get('/academy', 'PackageController@getAll');
 
 Auth::routes();
+
+//Route::get('/home', 'HomeController@index');
