@@ -19,8 +19,8 @@ class CreateEventsTable extends Migration
             $table->integer('price');
             $table->string('address')->nullable();
             $table->string('introduction')->nullable();
-            $table->string('cover')->nullable();
-            $table->string('picture')->nullable();
+            $table->string('coverImg')->nullable();
+            $table->string('originalImg')->nullable();
             $table->date('date')->nullable();
             $table->boolean('availability')->default(false);
             $table->timestamps();

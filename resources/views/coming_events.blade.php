@@ -156,7 +156,7 @@
                 @foreach($events as $event)
                     <div class="row row-eq-height event_container" id="">
                         <div class="col-md-4 col-xs-4 event_img_container">
-                            <img src= "{{$event['picture']}}" class="img-responsive event_img" alt="Cinque Terre"/>
+                            <img src= "{{$event['originalImg']}}" class="img-responsive event_img" alt="Cinque Terre"/>
                         </div>
                         <div class="col-md-8 col-xs-8">
                             <div class="event_info_container">

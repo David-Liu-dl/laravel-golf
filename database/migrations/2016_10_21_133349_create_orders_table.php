@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('phone')->nullable();
             $table->string('hand')->default('R');
             $table->string('email')->nullable();
-            $table->timestamp('book_block')->unique();
+            $table->timestamp('book_block');
             $table->timestamps();
         });
     }

@@ -47,7 +47,6 @@ function render(ordersDate) {
             onSelect: function () {
                 var selected = $(this).val();
                 $('#selected-date').val(selected);
-                console.log("innero" + ordersDate);
                 var selectDayData = getSelectedDayData(selected, ordersDate);
                 insertSlots(selectDayData);
                 var selectedDates = [];
@@ -114,11 +113,12 @@ function render(ordersDate) {
                 data:$(form).serialize(),
                 type:"post",
                 success: function(data,status){
-                    // alert(data);
                     $('#book_window').slideUp(200);
                     showFdWindow();
-                    // getOrder();
-                    // alert();
+                },
+                error: function(data,status,error){
+                    alert(data.statusText);
+                    hideFdWindowAndRefresh();
                 }
             });
         }
@@ -204,18 +204,13 @@ function getSelectedDayData(selected, ordersDate) {
 
     $.each(slots, function (index, value) {
         var booked = false;
-
         if (value.getTime() < (new Date()).getTime()) {
-            var booked = true;
+            booked = true;
         } else {
-            $.each(ordersDate, function (innerIndex, innerValue) {
-                var booked_date = new Date(innerValue['date']);
-                if (value.getTime() == booked_date.getTime()) {
-                    booked = true;
-                    return false;
-                }
-
-            });
+            var count = ordersDate.reduce(function(n, innerValue) {
+                return n + ((new Date(innerValue['date'])).getTime() == value.getTime());
+            }, 0);
+            booked = count >= 4;
         }
 
         slot_availability.push({'slot': value, 'availability': (!booked)});

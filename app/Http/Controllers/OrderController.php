@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Enquiry;
 use App\Order;
 use Mail;
 
 use Illuminate\Http\Request;
+use \Illuminate\Http\Response;
 
 class OrderController extends Controller
 {
@@ -35,14 +35,14 @@ class OrderController extends Controller
                 $order->book_block = $date;
                 $order->save();
             }
+            return (new Response)->setStatusCode(201, 'Success');
+
         }else{
-            return 'Sorry, block ' . $results['factor'] . " already booked.";
+            return (new Response)->setStatusCode(401, 'Sorry, block ' . $results['factor'] . " already booked.");
         }
 
         // send the mail to host
         $this->sendEmailWithOrder($request);
-
-        return "Great, done.";
     }
 
 
@@ -50,7 +50,7 @@ class OrderController extends Controller
 
         foreach ($selected_blocks['slots'] as $selected_block){
             $date = \Carbon\Carbon::parse($selected_block)->format('Y-m-d H:i:s');
-            if(Order::where('book_block','=',$date) -> count() > 0){
+            if(Order::where('book_block','=',$date) -> count() >= 4){
 
                 return array('validity' => intval(false),'factor' => $date);
             };

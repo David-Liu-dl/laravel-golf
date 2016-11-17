@@ -33,8 +33,8 @@ class DBController extends Controller
     private function addResourcePrefix($objs){
         foreach ($objs as $obj){
             if ($obj instanceof Event){
-                $obj->picture = "uploads/". ($obj->picture);
-                $obj->cover = "uploads/". ($obj->cover);
+                $obj->originalImg = "storage/". ($obj->originalImg);
+                $obj->coverImg = "storage/". ($obj->coverImg);
             }else{
                 break;
             }

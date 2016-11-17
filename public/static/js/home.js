@@ -123,7 +123,7 @@ function getEvents() {
 
             $.each(eventImageContainer, function (i,o) {
                 if(i < dta.length){
-                    $(o).attr('src',(dta[i]['cover']));
+                    $(o).attr('src',(dta[i]['coverImg']));
                     $(o).parent('a').attr('href','coming_events?event=' + dta[i]['id']);
                 }else{
                     $(o).parent('.event-block').css('visibility','hidden');

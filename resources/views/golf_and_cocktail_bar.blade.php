@@ -349,8 +349,8 @@
             <button id="bookBtn" type="button" class="btnCustom gold-btn"
                     style="padding: 10px 20px;background: #cfb154;color: black;font-weight: normal" onclick="showBookWindow()">BOOKING</button>
 
-            <button id="bookBtn" type="button" class="btnCustom gold-btn"
-                    style="padding: 10px 20px;background: #cfb154;color: black;font-weight: normal" onclick="">MORE ACTIVITIES</button>
+            <a href="coming_events"><button id="bookBtn" type="button" class="btn btnCustom gold-btn"
+                    style="padding: 10px 20px;background: #cfb154;color: black;font-weight: normal" href="coming_events">MORE ACTIVITIES</button></a>
         </div>
     </div>
 
