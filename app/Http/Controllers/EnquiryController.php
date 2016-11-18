@@ -42,7 +42,7 @@ class EnquiryController extends Controller
         $name = $request -> input('name');
         Mail::send('emailViews.enquiry',['request'=>$request->all()],function($message) use($name){
             $to = '375099857@qq.com';
-            $message ->to($to)->subject('New enquiry: ' . $name);
+            $message ->to($to)->subject('New Enquiry: ' . $name);
         });
     }
 }

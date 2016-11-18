@@ -63,7 +63,7 @@ class OrderController extends Controller
         $name = $request -> input('name');
         Mail::send('emailViews.order',['request'=>$request->all()],function($message) use($name){
             $to = '375099857@qq.com';
-            $message ->to($to)->subject('New order: ' . $name);
+            $message ->to($to)->subject('New Booking: ' . $name);
         });
     }
 }
