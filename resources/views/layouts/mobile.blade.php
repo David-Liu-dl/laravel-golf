@@ -92,6 +92,10 @@
         input.error {
             color: red;
         }
+
+        .filter-option{
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
