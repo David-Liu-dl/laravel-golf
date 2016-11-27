@@ -26,11 +26,11 @@
             <div>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
             </div>
-            <div id="title_block" class="row" style="overflow: hidden">
-                <div class="col-xs-10 vcenter" >
+            <div id="title_block" class="row" style="overflow: hidden;">
+                <div class="col-xs-10" style="padding-top: 7%;">
                     TOURNAMENT BOOKING
                 </div>
-                <div class="col-xs-2 vcenter" style="text-align: right;padding: 0px;">
+                <div class="col-xs-2" style="padding-top: 10px;text-align: right">
                     <a href="#" onClick="hideBookWindow();">
                         <i style="padding:0px;font-size: 20px;font-weight: normal;color:#cfb154" class="fa fa-times" aria-hidden="true"></i>
                     </a>
@@ -127,6 +127,24 @@
 <script>
     $(document).ready(function () {
         getOrder();
+
+        $('#info-container').scroll(function(e) {
+            clearTimeout($.data(this, 'scrollTimer'));
+            $.data(this, 'scrollTimer', setTimeout(function() {
+                // do something
+                $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
+            }, 250));
+
+            if ($(this).is(':animated')) {
+                console.log('scroll happen by animate');
+            } else if (e.originalEvent) {
+                // scroll happen manual scroll
+                $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('hide');
+            } else {
+                // scroll happen by call
+                console.log('scroll happen by call');
+            }
+        });
     })
 </script>
 </body>

@@ -13,12 +13,12 @@
 use Jenssegers\Agent\Agent;
 
 Route::get('/mobile', function () {
-    $agent = new Agent();
-    if ($agent->isMobile()){
+//    $agent = new Agent();
+//    if ($agent->isMobile()){
         return View::make('mobileViews.test_mobile');
-    }else{
-        return View::make('home');
-    }
+//    }else{
+//        return View::make('home');
+//    }
 });
 
 

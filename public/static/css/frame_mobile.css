@@ -37,7 +37,7 @@
 }
 
 .ui-datepicker td span, .ui-datepicker td a{
-    padding:.5em;
+    padding:.6em;
     margin:.5em;
 }
 
@@ -160,12 +160,14 @@
 
 #title_block{
     height:10%;
-    /*padding-top: 4%;*/
-    margin:0px 0px;
-    padding-left: 40px;
+    margin: 0;
     border-bottom: 1px solid #cfb154;
     color: #cfb154;
-    font-size: 15px;
+    font-size: 18px;
+}
+
+.full-height{
+    height:100%;
 }
 
 #book_window #form_container{
@@ -353,8 +355,3 @@ input.error {
     margin-left: 0px;
     font-size: 16px;
 }
-
-@media only screen and (max-width: 1000px) {
-
-}
-

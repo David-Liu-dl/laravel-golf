@@ -36,7 +36,6 @@ function getOrder() {
 }
 
 function render(ordersDate) {
-    console.log("out" + ordersDate);
     $("#datepicker").datepicker(
         {
             minDate: 0,
