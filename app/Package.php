@@ -1,7 +1,6 @@
 <?php
 
 namespace App;
-use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Database\Eloquent\Model;
 
 class Package extends Model {

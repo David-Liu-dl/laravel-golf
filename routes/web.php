@@ -10,7 +10,19 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+use Jenssegers\Agent\Agent;
 
+Route::get('/mobile', function () {
+    $agent = new Agent();
+    if ($agent->isMobile()){
+        return View::make('mobileViews.test_mobile');
+    }else{
+        return View::make('home');
+    }
+});
+
+
+//
 
 Route::get('/test', function () {
     if (Auth::check()){
