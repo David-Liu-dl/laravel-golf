@@ -16,9 +16,134 @@
     {{--<link rel="stylesheet" href="static/css/frame.css">--}}
     <link rel="stylesheet" href="static/css/frame_mobile.css">
     {{--<link rel="stylesheet" href="static/css/contactus.css">--}}
+
+    <style>
+        body {
+            overflow-x:hidden;
+        }
+
+        #enquiry_window{
+            /*-moz-border-radius: 6px;*/
+            /*border-radius: 6px;*/
+            background: white;
+            width: 100%;
+            height: 100%;
+            padding:10px 20px;
+
+            position: fixed; /* or absolute */
+            z-index: 999;
+            /*display: none;*/
+        }
+
+        #enquiry_window .input-group-addon,#enquiry_window input.transparent-input{
+            background-color:rgba(0,0,0,0) !important;
+            border:none;
+            /*color:black;*/
+        }
+
+        .input-group-addon{
+            color: #cfb154;
+        }
+
+        label.btn span {
+            font-size: 1.5em ;
+        }
+
+        #enquiry_form_title{
+            text-align: center;
+            font-size: 20px;
+            color:#b5a37e;
+        }
+
+        .input_container{
+            width:100%;
+            padding:5px 5px;
+            margin:10px 0px;
+            border:1px solid #cfb154;
+            border-radius: 6px;
+        }
+
+        .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+            width: 100%;
+        }
+
+        .btn-full{
+            width:100%;
+            background: #cfb154;
+            font-weight: normal;
+            color: white;
+        }
+
+        .input-group-addon{
+            width: 23%;
+        }
+
+        .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+            text-overflow:ellipsis;
+            width: 95%;
+        }
+
+        label.error {
+            color: red;
+            font-weight: normal;
+            font-size: 12px;
+        }
+
+        input.error {
+            color: red;
+        }
+    </style>
 </head>
 <body>
 <!--------nav start-------->
+
+<div id="enquiry_window">
+    <form id="enquiry_form" action="enquiry-form" class="form-horizontal" role="form" method="POST">
+        <div id="form_container" >
+            <div class="col-xs-" id="enquiry_form_title">
+                ENQUIRY
+                <i class="fa fa-times pointer" aria-hidden="true" style="position: absolute;right: 5%;" onclick="hideEnquiryWindow()"></i>
+            </div>
+
+            <div>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            </div>
+
+            <div class="input_container input-group">
+                <span class="input-group-addon">NAME </span>
+                <input type="text" name="name" class="form-control transparent-input">
+            </div>
+
+            <div class="input_container input-group">
+                <span class="input-group-addon">EMAIL </span>
+                <input type="text" name="email" class="form-control transparent-input">
+            </div>
+
+            <div class="input_container input-group">
+                <span class="input-group-addon">PHONE </span>
+                <input type="text" name="phone" class="form-control transparent-input">
+            </div>
+
+            <div class="">
+                <select class="selectpicker text-uppercase" name="types[]" title="WHICH PART WOULD YOU LIKE TO ENQUIRE" multiple>
+                    <option value="tournament">tournament</option>
+                    <option value="event">event</option>
+                    <option value="academy">academy</option>
+                    <option value="golf & cocktail bar">golf & cocktail bar</option>
+                </select>
+            </div>
+
+            <div class="input_container">
+                <textarea type="text" name="comment" placeholder="COMMENT / REQUEST" class="form-control transparent-input" style="border:none;height: 100px;resize: none;"></textarea>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-default btn-full">Submit</button>
+            </div>
+
+        </div>
+    </form>
+</div>
 
 <div id="book_window">
     <form id="order-form" target="_self" class="form-horizontal" role="form" method="POST">
@@ -108,6 +233,28 @@
         </div>
 
     </form>
+</div>
+
+<div id="fd-window">
+    <div id="fd-title-block" class="row">
+        <div id="title" class="col-xs-10">
+            <label>TOURNAMENT BOOKING</label>
+        </div>
+        <div class="col-xs-2" style="text-align: right;padding: 0px;margin-top: 0px;">
+            <a href="#" onClick="hideFdWindowAndRefresh()">
+                <i style="font-size: 20px;font-weight: normal;color:#cfb154" class="fa fa-times" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <div id="info-block" style="text-align: center;padding:8% 0px 12%;">
+        <p style="padding: 10px 0px;font-weight: bold">THANK YOU!</p><br/>
+        <p>YOUR BOOKING INFORMATION IS CONFIRMED</p><br/>
+        <p>THE COMFIRMATION WILL SENT TO YOUR EMAIL ADDRESS</p><br/>
+        <p>FOR MORE DETAILS. PLEASE CONTACT US ON</p><br/>
+        <p style="border-bottom: 1px solid #cfb154">03 9600 0988</p><br/>
+        <p><a type="button" class="btnCustom gold-btn" onclick="hideFdWindowAndRefresh()">CLOSE</a></p>
+    </div>
+
 </div>
 
 <!--------nav end-------->
