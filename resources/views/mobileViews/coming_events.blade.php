@@ -86,7 +86,7 @@
         }
 
         .event_container{
-            margin:20px 0px;
+            margin:10px 0px;
         }
 
         .event_container:not(:first-child){

@@ -12,20 +12,12 @@
             top: 0;
             background-size: cover;
             position: fixed;
+            z-index: -1;
         }
 
 
         #fixed-frame {
-            height: 70%;
-            max-height: 70%;
-            bottom: 40px;
-            top: 10%;
-            right: 5%;
-            left: 5%;
-            width: 90%;
-            overFlow-x:hidden;
             overFlow-y:auto;
-            position: fixed;
 
         }
 
@@ -69,7 +61,7 @@
         <div style="display:table;margin:0 auto;">
             <img src="static/images/mobile_pricing.png" style="max-width:100%; height:auto">
             <div class="golf-info row" style="">
-                <div class="col-xs-5 .col-sm-5 .col-lg-4" style="padding:0px;text-align:left;font-size: 0.4em;">
+                <div class="col-xs-5 .col-sm-5 .col-lg-4" style="padding:0px;text-align:left;font-size: 0.6em;">
                     <p class="pointer icon">
                         <i class="fa fa-facebook-square"></i>
                         <span>golfplus.city</span>

@@ -57,7 +57,13 @@ Route::get('/casual', function () {
 });
 
 Route::get('/contactus', function () {
-    return View::make('contactus');
+    $agent = new Agent();
+
+    if ($agent->isMobile()){
+        return View::make('mobileViews.contactus');
+    }else{
+        return View::make('contactus');
+    }
 });
 
 Route::get('/cocktail', function () {

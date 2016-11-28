@@ -15,16 +15,15 @@
         }
 
         #fixed-frame {
-            height: 80%;
-            max-height: 80%;
-            bottom: 40px;
-            top: 10%;
-            right: 5%;
-            left: 5%;
-            width: 90%;
-            overFlow-x:hidden;
+            /*height: 80%;*/
+            /*max-height: 80%;*/
+            /*bottom: 40px;*/
+            /*top: 10%;*/
+            /*right: 5%;*/
+            /*left: 5%;*/
+            /*width: 90%;*/
+            /*overFlow-x:hidden;*/
             overFlow-y:scroll;
-            position: fixed;
 
         }
 
@@ -76,7 +75,7 @@
             <a href="static/images/price_food.jpg"><img class="golf-img" src="static/images/price_food.jpg" width="100%"></a>
         </div>
 
-        <div style="margin:20px auto;text-align: center">
+        <div style="margin:10px 0px 0px 0px;text-align: center">
             <a><button id="bookBtn" type="button" class="btnCustom gold-btn" onclick="showBookWindow()">BOOKING</button></a>
 
             <a><button id="bookBtn" type="button" class="btnCustom gold-btn" onclick="showEnquiryWindow()">ENQUIRY</button></a>

@@ -15,17 +15,9 @@
         }
 
         #fixed-frame {
-            height: 80%;
-            max-height: 80%;
-            bottom: 40px;
-            top: 10%;
-            right: 2%;
-            left: 2%;
-            width: 96%;
             overFlow-x:hidden;
             overFlow-y:scroll;
-            position: fixed;
-
+            /*position: fixed;*/
         }
 
         #fixed-frame .title {
@@ -38,7 +30,7 @@
             text-transform: uppercase;
             border-bottom: 2px solid #cfb154;
             font-size: 14px;
-            margin-top: 5%;
+            /*margin-top: 5%;*/
             margin-bottom: 8px;
             filter: Alpha(opacity=100);
             opacity: 1;
@@ -89,7 +81,7 @@
         }
 
         .item-container {
-            padding: 20px 5%;
+            padding: 20px 3%;
 
         }
 
