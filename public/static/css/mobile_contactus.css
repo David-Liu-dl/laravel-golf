@@ -1,0 +1,62 @@
+.contactus{
+    font-family: work-sans-light;
+}
+
+.contactus #contact-info-container{
+    margin:0 auto;
+    text-align: center;
+    width: 95%;
+}
+
+#contact-info-container #map-img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.one-line {
+    display: inline-block;
+    text-align: left;
+    margin: 5px 2px;
+    white-space: nowrap;
+
+}
+
+.icon-block{
+    width: 20px;
+    vertical-align: top;
+}
+
+.icon-block i{
+    font-size: 18px;
+    margin-top:-5px;
+}
+
+.contactus #info-block{
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+.contactus .info-btn{
+    border-radius: 0 !important;
+    background-color: transparent;
+    color: white;
+    padding: 2px 5px;
+    font-size: 11px;
+    border:1px solid white;
+    margin:0 auto;
+    z-index: 1000;
+    /*margin: 10px 2px;*/
+}
+
+.contactus .quick-enquiry-btn{
+    font-size: 15px;
+    padding: 5px 10px;
+    background-color: #cfb154;
+    color: white;
+    border: none;
+}
+
+.one-line p{
+    margin-top: 5px;
+}
+

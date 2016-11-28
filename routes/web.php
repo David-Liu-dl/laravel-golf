@@ -13,24 +13,25 @@
 use Jenssegers\Agent\Agent;
 
 Route::get('/mobile', function () {
-//    $agent = new Agent();
-//    if ($agent->isMobile()){
-        return View::make('mobileViews.test_mobile');
-//    }else{
-//        return View::make('home');
-//    }
+    $agent = new Agent();
+
+    if ($agent->isMobile()){
+        return "";
+    }else{
+        return View::make('home');
+    }
 });
 
 
-//
-
 Route::get('/test', function () {
-    if (Auth::check()){
-        Auth::logout();
-        return View::make('home');
-    }else{
-        return View::make('auth.login');
-    }
+//    if (Auth::check()){
+//        Auth::logout();
+//        return View::make('home');
+//    }else{
+//        return View::make('auth.login');
+//    }
+    return View::make('mobileViews.test');
+
 });
 
 Route::get('/', function () {
@@ -42,7 +43,13 @@ Route::get('/home', function () {
 });
 
 Route::get('/tournament', function () {
-    return View::make('tournament');
+    $agent = new Agent();
+
+    if ($agent->isMobile()){
+        return View::make('mobileViews.tournament');
+    }else{
+        return View::make('tournament');
+    }
 });
 
 Route::get('/casual', function () {
@@ -54,11 +61,25 @@ Route::get('/contactus', function () {
 });
 
 Route::get('/cocktail', function () {
-    return View::make('golf_and_cocktail_bar');
+    $agent = new Agent();
+
+    if ($agent->isMobile()){
+        return View::make('mobileViews.golf_and_cocktail_bar');
+    }else{
+        return View::make('golf_and_cocktail_bar');
+
+    }
 });
 
 Route::get('/price', function () {
-    return View::make('price_detail');
+    $agent = new Agent();
+
+    if ($agent->isMobile()){
+        return View::make('mobileViews.price_detail');
+    }else{
+        return View::make('price_detail');
+
+    }
 });
 
 Route::get('/coming_events', "EventController@getAll");
