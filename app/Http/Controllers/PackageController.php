@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Package;
+use Jenssegers\Agent\Agent as Agent;
 
 class PackageController extends Controller {
-
+    
     public function index($id) {
         $package = Package::find($id);
         if(empty($package)){
@@ -28,8 +29,13 @@ class PackageController extends Controller {
                 $package['features'] = explode(";", $package['features']);
             }
         }
-
-        return view('packages')->with("packages", $packages);
+        $Agent = new Agent();
+        if ($Agent->isMobile()) {
+            return view('mobileViews/packages')->with("packages", $packages);
+        }else{
+            return view('packages')->with("packages", $packages);
+        }
+        
     }
     
     private function first(){
