@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="static/css/mobile_frame.css">
     <link rel="stylesheet" href="static/css/mobile_contactus.css">
-
+    @yield('extracss')
     <style>
         body {
             overflow-x:hidden;
@@ -101,34 +101,25 @@
 
 <body>
 <!--------nav start-------->
-<div class="black-container container-fluid" id="header">
-    <div class="container">
-        <div class="row">
-            <div id="header-logo2" class="col-md-5 col-sm-5 col-xs-5">
-                <div class="row">
-                    <div class="col-md-6">
-                        <a href="home"><img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre" /></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-7 col-sm-7 col-xs-7 hidden-nav-xs" style="text-align: right">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown main-menu">
-                        <button type="button" class="dropdown-toggle btn" data-toggle="dropdown" id="dropdown-show">
-                            <span class="fa fa-bars" aria-hidden="true"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdown-show">
-                            <li><a href="tournament">TOURNAMENT</a></li>
-                            <li><a href="academy">ACADEMY</a></li>
-                            <li><a href="coming_events">ACTIVITY</a></li>
-                            <li><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
-                            <li><a href="price">PRICING</a></li>
-                            <li><a href="#" onclick="showBookWindow()">BOOKING</a></li>
-                            <li><a href="contactus">CONTACT US</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+<div class="black-container" id="header">
+    <div class="container-fluid">
+        <div class="logo">
+            <a href="home"><img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre" /></a>
+        </div>
+        <div class="dropdown">
+            <button id="dLabel" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="fa fa-bars" aria-hidden="true"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                <li><a href="tournament">TOURNAMENT</a></li>
+                <li><a href="academy">ACADEMY</a></li>
+                <li><a href="coming_events">EVENT</a></li>
+                <li><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
+                <li><a href="price">PRICING</a></li>
+                <li><a href="#" onclick="showBookWindow()">BOOKING</a></li>
+                <li><a href="contactus">ENQUIRY</a></li>
+                <li><a href="contactus">CONTACT US</a></li>
+            </ul>
         </div>
     </div>
 </div>
@@ -301,14 +292,10 @@
     @yield('content')
 </div>
 
-<div id="footer2" class="black-container container-fluid">
-    <div class="container">
-        <ul class="nav navbar-nav navbar-right">
-            <li class="pointer" onClick="window.open('contactus')"><i class="fa fa-phone"></i>&nbsp;03 9600
-                0988
-            </li>
-            <li class="pointer"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</li>
-        </ul>
+<div id="footer2" class="black-container">
+    <div class="container-fluid">
+        <div style="margin-right: 5%;display: inline-block"><i class="fa fa-map-marker"></i>&nbsp;03 9600 0988</div>
+        <div style="display: inline-block"><i class="fa fa-phone"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</div>
     </div>
 </div>
 <!--------nav end-------->

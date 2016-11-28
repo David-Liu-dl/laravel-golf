@@ -16,11 +16,19 @@
         #footer2 {
             border-top: 1px solid #cfb154;
         }
+
+        .contactus .title-block{
+            border-bottom: 1px solid #cfb154;
+            color: #cfb154;
+            font-size: 10px;
+            padding-bottom: 10px;
+        }
     </style>
 
     <div class="container-fluid contactus">
         <div id="contact-info-container">
-            <div>
+            <div class="title-block">CONTACT US</div>
+            <div style="margin-top: 10px;">
                 <img id="map-img" src="static/images/map.jpg"/>
             </div>
             <div id="info-block" style="width:300px;margin: 8% auto;">

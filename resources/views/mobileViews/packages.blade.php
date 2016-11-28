@@ -1,4 +1,4 @@
-@extends('layouts.mobile_new')
+@extends('layouts.mobile')
 @section('extracss')
 <style>
     .package-content{
@@ -46,7 +46,8 @@
     }
 
     .package-content .desc{
-        color: white;
+        /*color: white;*/
+        color: gray;
         line-height: 20px;
         margin-bottom: 20px;
     }

@@ -29,9 +29,12 @@ class PackageController extends Controller {
                 $package['features'] = explode(";", $package['features']);
             }
         }
+
+
         $Agent = new Agent();
+
         if ($Agent->isMobile()) {
-            return view('mobileViews/packages')->with("packages", $packages);
+            return view('mobileViews.packages')->with("packages", $packages);
         }else{
             return view('packages')->with("packages", $packages);
         }

@@ -12,6 +12,7 @@
             top: 0;
             /*background-size: cover;*/
             position: fixed;
+            z-index: -1;
         }
 
         #fixed-frame {
