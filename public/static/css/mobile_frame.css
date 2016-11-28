@@ -1,3 +1,8 @@
+
+#header{
+    padding-bottom: 10px;
+}
+
 #header .dropdown-menu{
     border:1px solid #cfb154;
     background:black;
@@ -300,7 +305,8 @@ input.error {
 #book_window{
     position: fixed; /* or absolute */
     width: 100%;
-    height: 80%;
+    /*padding:5% 10%;*/
+    height: 100%;
     z-index: 999;
     display:none;
 }

@@ -22,13 +22,10 @@
         }
 
         #enquiry_window{
-            /*-moz-border-radius: 6px;*/
-            /*border-radius: 6px;*/
             background: white;
             width: 100%;
             height: 100%;
             padding:10px 20px;
-
             position: fixed; /* or absolute */
             z-index: 999;
             display: none;
@@ -99,31 +96,6 @@
 </head>
 
 <body>
-<!--------nav start-------->
-<div class="black-container" id="header">
-    <div class="container-fluid">
-        <div class="logo">
-            <a href="home"><img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre" /></a>
-        </div>
-        <div class="dropdown">
-            <button id="dLabel" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="fa fa-bars" aria-hidden="true"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dLabel">
-                <li><a href="tournament">TOURNAMENT</a></li>
-                <li><a href="academy">ACADEMY</a></li>
-                <li><a href="coming_events">EVENT</a></li>
-                <li><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
-                <li><a href="price">PRICING</a></li>
-                <li><a href="#" onclick="showBookWindow()">BOOKING</a></li>
-                <li><a href="contactus">ENQUIRY</a></li>
-                <li><a href="contactus">CONTACT US</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!--------nav end-------->
-
 <!--------float window start-------->
 
 <div id="enquiry_window">
@@ -286,6 +258,31 @@
 
 </div>
 <!--------float window end-------->
+
+<!--------nav start-------->
+<div class="black-container" id="header">
+    <div class="container-fluid">
+        <div class="logo">
+            <a href="home"><img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre" /></a>
+        </div>
+        <div class="dropdown">
+            <button id="dLabel" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="fa fa-bars" aria-hidden="true"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                <li><a href="tournament">TOURNAMENT</a></li>
+                <li><a href="academy">ACADEMY</a></li>
+                <li><a href="coming_events">EVENT</a></li>
+                <li><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
+                <li><a href="price">PRICING</a></li>
+                <li><a href="#" onclick="showBookWindow()">BOOKING</a></li>
+                <li><a href="contactus">ENQUIRY</a></li>
+                <li><a href="contactus">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--------nav end-------->
 
 <div id="main">
     @yield('content')
