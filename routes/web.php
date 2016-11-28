@@ -24,12 +24,14 @@ Route::get('/mobile', function () {
 
 
 Route::get('/test', function () {
-    if (Auth::check()){
-        Auth::logout();
-        return View::make('home');
-    }else{
-        return View::make('auth.login');
-    }
+//    if (Auth::check()){
+//        Auth::logout();
+//        return View::make('home');
+//    }else{
+//        return View::make('auth.login');
+//    }
+    return View::make('mobileViews.test');
+
 });
 
 Route::get('/', function () {

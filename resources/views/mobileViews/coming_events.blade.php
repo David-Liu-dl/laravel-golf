@@ -30,8 +30,7 @@
             width: 90%;
             overFlow-x:hidden;
             overFlow-y:scroll;
-            position: fixed;
-
+            /*position: fixed;*/
         }
 
         #fixed-frame p {

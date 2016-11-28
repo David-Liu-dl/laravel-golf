@@ -12,7 +12,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="static/css/animation.css">
-    <link rel="stylesheet" href="static/css/reset.css">
+    {{--<link rel="stylesheet" href="static/css/reset.css">--}}
 
     <link rel="stylesheet" href="static/css/mobile_frame.css">
     <link rel="stylesheet" href="static/css/mobile_contactus.css">
@@ -326,6 +326,14 @@
 <script src="static/js/contactus.js"></script>
 <script>
     $(document).ready(function () {
+
+        $('#main').css("min-height", function(){
+            var screenH = $(window).height();
+            var headerH = $('#header').height();
+            var footerH = $('#footer2').height();
+            return screenH - (headerH + footerH);
+        });
+
         getOrder();
 
         $('#info-container').scroll(function(e) {
