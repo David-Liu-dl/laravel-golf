@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="static/css/animation.css">
     <link rel="stylesheet" href="static/css/reset.css">
+
     <link rel="stylesheet" href="static/css/frame.css">
+
     <link href="static/css/contactus.css" rel="stylesheet">
     <style>
         body {

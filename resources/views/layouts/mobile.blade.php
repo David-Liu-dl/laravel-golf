@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Golf</title>
     <link rel="stylesheet" href="static/css/bootstrap.css">
-    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/mobile_main.css">
     <link rel="stylesheet" href="static/css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="static/css/jquery-ui.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="static/css/animation.css">
     <link rel="stylesheet" href="static/css/reset.css">
-    {{--<link rel="stylesheet" href="static/css/frame.css">--}}
-    <link rel="stylesheet" href="static/css/frame_mobile.css">
-    {{--<link rel="stylesheet" href="static/css/contactus.css">--}}
+
+    <link rel="stylesheet" href="static/css/mobile_frame.css">
+    <link rel="stylesheet" href="static/css/mobile_contactus.css">
 
     <style>
         body {
@@ -32,7 +32,7 @@
 
             position: fixed; /* or absolute */
             z-index: 999;
-            /*display: none;*/
+            display: none;
         }
 
         #enquiry_window .input-group-addon,#enquiry_window input.transparent-input{
@@ -100,6 +100,40 @@
 </head>
 <body>
 <!--------nav start-------->
+<div class="black-container container-fluid" id="header">
+    <div class="container">
+        <div class="row">
+            <div id="header-logo2" class="col-md-5 col-sm-5 col-xs-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="home"><img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 col-sm-7 col-xs-7 hidden-nav-xs" style="text-align: right">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown main-menu">
+                        <button type="button" class="dropdown-toggle btn" data-toggle="dropdown" id="dropdown-show">
+                            <span class="fa fa-bars" aria-hidden="true"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown-show">
+                            <li><a href="tournament">TOURNAMENT</a></li>
+                            <li><a href="academy">ACADEMY</a></li>
+                            <li><a href="coming_events">ACTIVITY</a></li>
+                            <li><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
+                            <li><a href="price">PRICING</a></li>
+                            <li><a href="#" onclick="showBookWindow()">BOOKING</a></li>
+                            <li><a href="contactus">CONTACT US</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------nav end-------->
+
+<!--------float window start-------->
 
 <div id="enquiry_window">
     <form id="enquiry_form" action="enquiry-form" class="form-horizontal" role="form" method="POST">
@@ -260,7 +294,22 @@
     </div>
 
 </div>
+<!--------float window end-------->
 
+<div id="main">
+    @yield('content')
+</div>
+
+<div id="footer2" class="black-container container-fluid">
+    <div class="container">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="pointer" onClick="window.open('contactus')"><i class="fa fa-phone"></i>&nbsp;03 9600
+                0988
+            </li>
+            <li class="pointer"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</li>
+        </ul>
+    </div>
+</div>
 <!--------nav end-------->
 
 <!--------footer end-------->
