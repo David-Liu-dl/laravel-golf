@@ -35,11 +35,22 @@ Route::get('/test', function () {
 });
 
 Route::get('/', function () {
-    return View::make('home');
+    $agent = new Agent();
+    if ($agent->isMobile()){
+        return View::make('mobileViews.home');
+    }else{
+        return View::make('home');
+    }
+    
 });
 
 Route::get('/home', function () {
-    return View::make('home');
+    $agent = new Agent();
+    if ($agent->isMobile()){
+        return View::make('mobileViews.home');
+    }else{
+        return View::make('home');
+    }
 });
 
 Route::get('/tournament', function () {
