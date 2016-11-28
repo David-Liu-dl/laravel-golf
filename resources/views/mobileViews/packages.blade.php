@@ -55,6 +55,7 @@
     .package-content .desc p{
         margin-top: 10px;
         margin-bottom: 10px;
+        text-align: justify;
     }
 
     .package-content .intro{

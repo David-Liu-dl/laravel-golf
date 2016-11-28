@@ -66,6 +66,17 @@
         <script src="/static/js/moment.min.js"></script>
         <script src="static/js/book.js"></script>
         <script src="static/js/contactus.js"></script>
-        
+        <script>
+            $(document).ready(function () {
+                function getMinHeight(){
+                    var screenH = $(window).height();
+                    var headerH = $('#header').height();
+                    var footerH = $('#footer2').height();
+                    return screenH - (headerH + footerH);
+                }
+                $('#main').css("min-height", getMinHeight());
+                $('#control-icon').css("min-height", getMinHeight());
+            });
+        </script>
     </body>
 </html>

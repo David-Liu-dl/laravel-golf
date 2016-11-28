@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="static/css/animation.css">
     {{--<link rel="stylesheet" href="static/css/reset.css">--}}
-
     <link rel="stylesheet" href="static/css/mobile_frame.css">
     <link rel="stylesheet" href="static/css/mobile_contactus.css">
     @yield('extracss')

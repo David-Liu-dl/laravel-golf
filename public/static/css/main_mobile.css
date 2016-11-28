@@ -218,11 +218,12 @@ body {
     overflow: hidden;
     outline: none;
     z-index: 5;
-    padding: 8px 8px !important;
+    padding: 6px 9px !important;
 }
 
 .dropdown-toggle span {
     color: #cfb154;
+    font-size: 16px;
 }
 
 .dropdown .dropdown-menu {
@@ -630,8 +631,16 @@ body {
     visibility: hidden;
 }
 
+.slide-item{
+    height: 100%;
+    position: absolute;
+}
+
 .text-part{
-    margin-top: 8%;
+    position: relative;
+    top: auto;
+    bottom: 0px;
+    margin-bottom: 50px;
     text-align: right;
     right: 8%!important;
     opacity: 1;
@@ -741,12 +750,9 @@ body {
     }
 }
 
-#control-icon{
-    /*height: 100%;*/
-    /*width: 100%;*/
-}
 
 #control-icon span{
+    position: absolute;
     display: block;
     top: 49%;
     font-size: 30px;
