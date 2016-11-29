@@ -304,10 +304,10 @@
 <div id="footer2" class="black-container container-fluid">
     <div class="container">
         <ul class="nav navbar-nav navbar-right">
-            <li class="pointer" onClick="window.open('contactus')"><i class="fa fa-map-marker"></i>&nbsp;03 9600
+            <li class="pointer" onClick="window.open('contactus')"><i class="fa fa-phone"></i>&nbsp;03 9600
                 0988
             </li>
-            <li class="pointer"><i class="fa fa-phone"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</li>
+            <li class="pointer"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</li>
             <li class="pointer icon hidden-xs hidden-sm">
                 <i class="fa fa-facebook-square"></i>
             </li>

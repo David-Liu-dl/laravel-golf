@@ -297,8 +297,8 @@
 
 <div id="footer2" class="black-container">
     <div class="container-fluid">
-        <div style="margin-right: 5%;display: inline-block"><i class="fa fa-map-marker"></i>&nbsp;03 9600 0988</div>
-        <div style="display: inline-block"><i class="fa fa-phone"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</div>
+        <div style="margin-right: 5%;display: inline-block"><i class="fa fa-phone"></i>&nbsp;03 9600 0988</div>
+        <div style="display: inline-block"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</div>
     </div>
 </div>
 <!--------nav end-------->
