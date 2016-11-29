@@ -5,7 +5,8 @@
 
     <style>
         body {
-            background-image: url("../static/images/map-bg.jpg");
+            /*background-image: url("../static/images/map-bg.jpg");*/
+            background-color: black;
 
         }
 

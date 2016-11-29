@@ -4,6 +4,18 @@
     <style>
         body{
             /*overflow-y: hidden;*/
+            background-image: url("../images/background.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: #464646;
+            min-height: 100%;
+            height: auto;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
         }
 
         #main {
