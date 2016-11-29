@@ -72,7 +72,7 @@
                                 <div>
                                     <button type="button" class="btnCustom info-btn" style="font-size: 8px;padding: 2px 2px;">Stop4</button>
                                     <span style="margin-left: 5px;">Lonsdale Street</span>
-                                    <span style="margin-left: 5px;">Trams:12/30/35/109</span>
+                                    <span style="margin-left: 5px;">Trams:55</span>
                                 </div>
                             </div>
                         </div>
@@ -84,8 +84,8 @@
                         <div>
                             <div class="one-line icon-block"><i class="fa fa-product-hunt" aria-hidden="true"></i></div>
                             <div class="one-line">
-                                <div style="margin-top: 3px">Secure Parking</div>
-                                <div style="margin-top: 3px">558 Little Bouke Street, Melbourne, VIC 3000</div>
+                                <div style="margin-top: 3px">Flagstaff Parking</div>
+                                <div style="margin-top: 3px">6 Healeys Ln, Melbourne, VIC 3000</div>
                             </div>
                         </div>
                     </div>

@@ -56,7 +56,7 @@
         }
 
         .gold-btn{
-            padding: 5px 15px;
+            padding: 5px 10px;
             font-size: 10px;
             background: #cfb154;
             color: black;
@@ -71,7 +71,7 @@
 
     <div id="fixed-frame" class="container">
         <div class="img-block">
-            <a href="#" rel="external"><img class="golf-img" src="static/images/cocktail_bar.png" style="width:100%; height:auto"></a>
+            <a href="#" rel="external"><img class="golf-img" src="static/images/cocktail_bar_mobile.png" style="width:100%; height:auto"></a>
             <a href="static/images/price_drink.jpg" rel="external"><img class="golf-img" src="static/images/price_drink.jpg" width="100%"></a>
             <a href="static/images/price_food.jpg" rel="external"><img class="golf-img" src="static/images/price_food.jpg" width="100%"></a>
         </div>
@@ -79,7 +79,7 @@
         <div style="margin:10px 0px 0px 0px;text-align: center">
             <a><button id="bookBtn" type="button" class="btnCustom gold-btn" onclick="showBookWindow()">BOOKING</button></a>
 
-            <button id="bookBtn" type="button" class="btnCustom gold-btn" onclick="showEnquiryWindow()">ENQUIRY</button>
+            <a><button id="bookBtn" type="button" class="btnCustom gold-btn" onclick="showEnquiryWindow()">ENQUIRY</button></a>
 
             <a href="coming_events" rel="external"><button id="bookBtn" type="button" class="btn btnCustom gold-btn">ACTIVITIES</button></a>
         </div>
