@@ -13,6 +13,10 @@
     src: url('../Work_Sans/WorkSans-Regular.ttf');
 }
 
+*:focus {
+    outline: none;
+}
+
 .btnCustom {
     font-family: 'work-sans-light';
     display: inline-block;
