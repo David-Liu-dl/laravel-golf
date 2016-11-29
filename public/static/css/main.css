@@ -160,7 +160,7 @@ body {
     min-height: 100%;
     height: auto;
     position: relative;
-    background-size: cover;
+    border:none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
