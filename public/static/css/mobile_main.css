@@ -349,12 +349,14 @@ body {
     background-image: url(../images/mobile_main_bg.png);
     /*background-size: auto 100%;*/
     background-repeat: no-repeat;
+    background-position:left top;
 }
 
 .cb-slideshow li:nth-child(2) span {
     background-image: url(../images/slider3_mobile.png);
     /*background-size: auto 100%;*/
     background-repeat: no-repeat;
+    background-position:left top;
 
 }
 
@@ -362,12 +364,14 @@ body {
     background-image: url(../images/slider2_mobile.png);
     /*background-size: auto 100%;*/
     background-repeat: no-repeat;
+    background-position:left top;
 }
 
 .cb-slideshow li:nth-child(4) span {
     background-image: url(../images/slider1_mobile.png);
     /*background-size: auto 100%;*/
     background-repeat: no-repeat;
+    background-position:left top;
 }
 
 @-webkit-keyframes imageAnimationIn {
