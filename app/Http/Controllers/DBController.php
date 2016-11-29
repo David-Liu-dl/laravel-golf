@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DayOpenHour;
 use App\Http\Requests;
 use App\Order;
 use App\Event;
@@ -21,7 +22,12 @@ class DBController extends Controller
             array_push($ordersDate, \Carbon\Carbon::parse($order->book_block));
         }
 
-        return response()->json($ordersDate);
+        $daysSchedule = DayOpenHour::all();
+        $info = array();
+        $info['booked_date'] = $ordersDate;
+        $info['schedule'] = $daysSchedule;
+
+        return response()->json($info);
     }
 
     public function getAllAvailableEvents(){

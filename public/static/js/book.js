@@ -35,7 +35,7 @@ function getOrder() {
     });
 }
 
-function render(ordersDate) {
+function render(info) {
     $("#datepicker").datepicker(
         {
             minDate: 0,
@@ -46,7 +46,7 @@ function render(ordersDate) {
             onSelect: function () {
                 var selected = $(this).val();
                 $('#selected-date').val(selected);
-                var selectDayData = getSelectedDayData(selected, ordersDate);
+                var selectDayData = getSelectedDayData(selected, info);
                 insertSlots(selectDayData);
                 var selectedDates = [];
                 $(".block.selected").each(function () {
@@ -197,19 +197,43 @@ function insertSlots(slots) {
     });
 }
 
-function getSelectedDayData(selected, ordersDate) {
+function getSelectedDayData(selected, info) {
+    var schedule = info['schedule'];
+    var ordersDate = info['booked_date'];
     var slot_availability = [];
+    var startDate = new Date(selected);
+    var dayOfWeek = startDate.getDay();
     var slots = createDaysTimeSlots(selected);
+
+    var isOpen = schedule[dayOfWeek]['availability'];
+    var isOpenBL = isOpen == 1;
+    var openAt = schedule[dayOfWeek]['open_at'].split(':')[0];
+    var closeAt = schedule[dayOfWeek]['close_at'].split(':')[0];
+    closeAt = closeAt == 0 ? 24 : closeAt;
 
     $.each(slots, function (index, value) {
         var booked = false;
-        if (value.getTime() < (new Date()).getTime()) {
+
+        if (isOpenBL) {
+            var time = value.getTime();
+            var hour = value.getHours();
+
+            if (time < (new Date()).getTime()) {
+                booked = true;
+            } else {
+                var isInOpen = hour >= openAt && hour < closeAt;
+
+                if (!isInOpen) {
+                    booked = true;
+                } else {
+                    var count = ordersDate.reduce(function (n, innerValue) {
+                        return n + ((new Date(innerValue['date'])).getTime() == time);
+                    }, 0);
+                    booked = count >= 4;
+                }
+            }
+        }else{
             booked = true;
-        } else {
-            var count = ordersDate.reduce(function(n, innerValue) {
-                return n + ((new Date(innerValue['date'])).getTime() == value.getTime());
-            }, 0);
-            booked = count >= 4;
         }
 
         slot_availability.push({'slot': value, 'availability': (!booked)});
@@ -222,10 +246,10 @@ function getSelectedDayData(selected, ordersDate) {
 function createDaysTimeSlots(selected) {
     var slots = [];
     var startDate = new Date(selected);
-    startDate.setHours(8);
+    startDate.setHours(12);
     startDate.setMinutes(0);
 
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < 12; i++) {
         var newSlot = new Date(startDate);
         newSlot.setHours(startDate.getHours() + i);
         slots.push(newSlot);

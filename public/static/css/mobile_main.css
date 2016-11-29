@@ -172,6 +172,7 @@ fieldset[disabled] .btnCustom-default.active {
 
 body {
     font-family: work-sans-regular;
+    border:none;
     background-color: black;
 }
 

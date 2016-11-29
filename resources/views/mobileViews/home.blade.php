@@ -4,7 +4,7 @@
     <style>
         body{
             /*overflow-y: hidden;*/
-            background-image: url("../images/background.jpg");
+            background-image: url(../static/images/background.jpg);
             background-position: center center;
             background-repeat: no-repeat;
             background-attachment: fixed;

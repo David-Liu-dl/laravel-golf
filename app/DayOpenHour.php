@@ -14,5 +14,5 @@ class DayOpenHour extends Model
 {
     public $timestamps = false;
 
-    protected $fillable = ['day_of_Week','open','close','availability'];
+    protected $fillable = ['day_of_Week','title','open','close','availability'];
 }

@@ -77,6 +77,7 @@ class DayOpenHourController extends Controller
             });
 
             $grid->day_of_week();
+            $grid->title();
             $grid->open_at();
             $grid->close_at();
             $grid->availability()->value(function ($availability) {
@@ -95,8 +96,8 @@ class DayOpenHourController extends Controller
     protected function form()
     {
         return Admin::form(DayOpenHour::class, function (Form $form) {
-            $form->time('open_at','Open at');
-            $form->time('close_at','Close at');
+            $form->time('open_at','Open at')->format('HH:00:00');
+            $form->time('close_at','Close at')->format('HH:00:00');
             $form->radio('availability','isOpen')->values(['0'=>'No', '1'=>'Yes'])->default('1');
         });
     }
