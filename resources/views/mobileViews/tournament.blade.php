@@ -2,19 +2,6 @@
 
 @section('content')
     <style>
-        .casual_container {
-            background: url("static/images/slider1.png") 0 0 no-repeat;
-            filter: Alpha(opacity=20);
-            opacity: 0.3;
-            height: 100%;
-            width: 100%;
-            right: 0;
-            top: 0;
-            /*background-size: cover;*/
-            position: fixed;
-            z-index: -1;
-        }
-
         #fixed-frame {
             overFlow-x:hidden;
             overFlow-y:scroll;
@@ -110,9 +97,6 @@
             overflow: hidden;
         }
     </style>
-
-    <div class="casual_container container-fluid">
-    </div>
 
     <div id="fixed-frame" class="container">
         <p class="title">TOURNAMENT</p>

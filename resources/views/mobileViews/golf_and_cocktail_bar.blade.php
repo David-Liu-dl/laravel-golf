@@ -2,30 +2,8 @@
 
 @section('content')
     <style>
-        .casual_container {
-            background: url("static/images/slider3.png") 0 0 no-repeat;
-            filter: Alpha(opacity=20);
-            opacity: 0.2;
-            height: 100%;
-            width: 100%;
-            right: 0;
-            top: 0;
-            background-size: cover;
-            z-index: -1;
-            position: fixed;
-        }
-
         #fixed-frame {
-            /*height: 80%;*/
-            /*max-height: 80%;*/
-            /*bottom: 40px;*/
-            /*top: 10%;*/
-            /*right: 5%;*/
-            /*left: 5%;*/
-            /*width: 90%;*/
-            /*overFlow-x:hidden;*/
             overFlow-y:scroll;
-
         }
 
         #fixed-frame a {
@@ -57,17 +35,13 @@
 
         .gold-btn{
             padding: 5px 10px;
-            font-size: 10px;
+            font-size: 13px;
             background: #cfb154;
             color: black;
             font-weight: normal;
-            margin:10px;
+            margin:5px;
         }
     </style>
-
-
-    <div class="casual_container container-fluid">
-    </div>
 
     <div id="fixed-frame" class="container">
         <div class="img-block">
