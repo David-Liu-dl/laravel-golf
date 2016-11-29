@@ -71,17 +71,17 @@
 
     <div id="fixed-frame" class="container">
         <div class="img-block">
-            <a href="#"><img class="golf-img" src="static/images/cocktail_bar.png" style="width:100%; height:auto"></a>
-            <a href="static/images/price_drink.jpg"><img class="golf-img" src="static/images/price_drink.jpg" width="100%"></a>
-            <a href="static/images/price_food.jpg"><img class="golf-img" src="static/images/price_food.jpg" width="100%"></a>
+            <a href="#" rel="external"><img class="golf-img" src="static/images/cocktail_bar.png" style="width:100%; height:auto"></a>
+            <a href="static/images/price_drink.jpg" rel="external"><img class="golf-img" src="static/images/price_drink.jpg" width="100%"></a>
+            <a href="static/images/price_food.jpg" rel="external"><img class="golf-img" src="static/images/price_food.jpg" width="100%"></a>
         </div>
 
         <div style="margin:10px 0px 0px 0px;text-align: center">
             <a><button id="bookBtn" type="button" class="btnCustom gold-btn" onclick="showBookWindow()">BOOKING</button></a>
 
-            <a><button id="bookBtn" type="button" class="btnCustom gold-btn" onclick="showEnquiryWindow()">ENQUIRY</button></a>
+            <button id="bookBtn" type="button" class="btnCustom gold-btn" onclick="showEnquiryWindow()">ENQUIRY</button>
 
-            <a href="coming_events"><button id="bookBtn" type="button" class="btn btnCustom gold-btn"href="coming_events">ACTIVITIES</button></a>
+            <a href="coming_events" rel="external"><button id="bookBtn" type="button" class="btn btnCustom gold-btn">ACTIVITIES</button></a>
         </div>
     </div>
 

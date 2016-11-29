@@ -2,6 +2,19 @@
  * Created by yuhaoliu on 8/10/2016.
  */
 $(function () {
+    var screenH = $(window).outerHeight();
+    var headerH = $('#header').outerHeight();
+    var footerH = $('#footer2').outerHeight();
+
+    function getMinHeight(){
+        return screenH - (headerH + footerH);
+    }
+
+    $('#main').css("min-height", getMinHeight());
+    $('.cb-slideshow').css({"max-height":(screenH-headerH),overflow:"hidden"});
+    $('.cb-slideshow .bg').css({"width":"100%"});
+    $('.slide-item .text-part').css({"bottom":$('#footer2').outerHeight() + 10});
+
     var items = $('.slide-item').toArray();
     var timer;
     var clickTimer;
@@ -16,34 +29,19 @@ $(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
     });
 
-    $('#btn-left').unbind("click").click(function () {
-        moveToPrevious();
-    });
-    $('#btn-right').unbind("click").click(function () {
+    //for mobile swipe
+    $(document).on("swiperight",function(){
         moveToNext();
     });
+    $(document).on("swipeleft",function(){
+        moveToPrevious();
+    });
 
-    // check if video is loaded
-    function checkVideoLoaded(){
-        setTimeout(function () {
-            if ( $('#bgvid').get(0).readyState === 4 ) {
-                //start sliding
-                recurse(0);
-
-                $("body").mousemove(function(event){
-                    hide_show()
-                });
-            }else {
-                checkVideoLoaded();
-            }
-        }, 200)
-    }
-
-    checkVideoLoaded();
+    recurse(0);
 
     function recurse(counter) {
         // get the colour
-        var duration = 10000;
+        var duration = 1000000;
         var item = items[counter];
         nowIndex = counter;
         // animate it

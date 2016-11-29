@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'work-sans-bold';
     src: url('../Work_Sans/WorkSans-Bold.ttf');
@@ -115,60 +114,60 @@ fieldset[disabled] .btnCustom-default.active {
 }
 
 @media only screen and (max-width: 300px) {
-  html {
-    font-size: 8.33333px
-  }
+    html {
+        font-size: 8.33333px
+    }
 
-  .viewport {
-    max-width: 300px
-  }
+    .viewport {
+        max-width: 300px
+    }
 }
 
 @media only screen and (max-width: 310px) and (min-width: 300px) {
-  html {
-    font-size: 8.33333px
-  }
+    html {
+        font-size: 8.33333px
+    }
 
-  .viewport {
-    max-width: 310px
-  }
+    .viewport {
+        max-width: 310px
+    }
 }
 @media only screen and (max-width: 320px) and (min-width: 310px) {
-  html {
-    font-size: 8.61111px
-  }
+    html {
+        font-size: 8.61111px
+    }
 
-  .viewport {
-    max-width: 320px
-  }
+    .viewport {
+        max-width: 320px
+    }
 }
 @media only screen and (max-width: 350px) and (min-width: 320px) {
-  html {
-    font-size: 8.88889px
-  }
+    html {
+        font-size: 8.88889px
+    }
 
-  .viewport {
-    max-width: 350px
-  }
+    .viewport {
+        max-width: 350px
+    }
 }
 @media only screen and (max-width: 360px) and (min-width: 350px) {
-  html {
-    font-size: 9.72222px
-  }
-  
-  .viewport {
-    max-width: 360px
-  }
+    html {
+        font-size: 9.72222px
+    }
+
+    .viewport {
+        max-width: 360px
+    }
 }
 
 @media only screen and (min-width: 361px) and (min-width: 350px) {
-  html {
-    font-size: 10px
-  }
-  
-  .viewport {
-    min-width: 361px
-  }
+    html {
+        font-size: 10px
+    }
+
+    .viewport {
+        min-width: 361px
+    }
 }
 
 body {
@@ -355,12 +354,12 @@ body {
     z-index: 0;
 }
 
-.cb-slideshow li div {
+/*.cb-slideshow li div {
     z-index: 1000;
     bottom: 10%;
     left: 0px;
     right:0%;
-}
+}*/
 
 .cb-slideshow li:nth-child(1) span {
     /*background-image: url(../images/polina.jpg);*/
@@ -631,20 +630,19 @@ body {
     visibility: hidden;
 }
 
-.slide-item{
-    height: 100%;
-    position: absolute;
-}
 
 .text-part{
-    position: relative;
-    top: auto;
-    bottom: 0px;
-    margin-bottom: 50px;
+    position: absolute;
+    bottom: 0;
     text-align: right;
-    right: 8%!important;
+    right: 5%!important;
     opacity: 1;
     visibility: hidden;
+    margin-bottom: 50px;
+    width: 100%;
+    margin-right: 2%;
+    left: 0;
+    padding: 5%;
 }
 
 
@@ -672,18 +670,30 @@ body {
 
 
 .btn-block{
-    margin-top:50px;
+    margin-top:10%;
 }
 
 .gold-btn {
-    margin-left: 20px;
     border-radius: 0 !important;
-    background-color: transparent;
-    color: #cfb154;
+    /*    background-color: transparent;
+        color: #cfb154;*/
+    background: rgb(174,144,60);
+    color: black;
     font-weight: bold;
     font-size: 20px;
     border:1px solid #cfb154;
-    z-index: 1000;
+    z-index: 2;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: inline;
+}
+
+.gold-btn.left{
+    float: left;
+}
+
+.gold-btn.right{
+    float: right;
 }
 
 .gold-btn:hover {
@@ -706,6 +716,7 @@ body {
 
 .thumb {
     display: block;
+    height: 0;
 }
 
 .thumb img {
@@ -770,4 +781,9 @@ body {
 
 #control-icon .right{
     right: 0%;
+}
+
+#main {
+    padding: 5% 5%;
+    height:100%;
 }

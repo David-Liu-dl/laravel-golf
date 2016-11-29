@@ -12,10 +12,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="static/css/animation.css">
-    {{--<link rel="stylesheet" href="static/css/reset.css">--}}
+    <link rel="stylesheet" href="static/css/reset.css">
     <link rel="stylesheet" href="static/css/mobile_frame.css">
     <link rel="stylesheet" href="static/css/mobile_contactus.css">
     @yield('extracss')
+
     <style>
         body {
             overflow-x:hidden;
@@ -157,7 +158,7 @@
                     TOURNAMENT BOOKING
                 </div>
                 <div class="col-xs-2" style="padding-top: 10px;text-align: right">
-                    <a href="#" onClick="hideBookWindow();">
+                    <a href="#" rel="external" onClick="hideBookWindow();">
                         <i style="padding:0px;font-size: 20px;font-weight: normal;color:#cfb154" class="fa fa-times" aria-hidden="true"></i>
                     </a>
 
@@ -182,16 +183,24 @@
                     </div>
                     {{--right--}}
                     <div id="user_info_block">
+
+
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-xs-12" style="text-align: center;margin-top: 10px;" >
-                                    <div class="btn-group" data-toggle="buttons">
-                                        <label class="btn active">
-                                            <input type="radio" name="hand" value="lefthand" checked=""><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> LEFT HAND</span>
-                                        </label>
-                                        <label class="btn">
-                                            <input type="radio" name="hand" value="righthand"><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> RIGHT HAND</span>
-                                        </label>
+                                    <div class="" data-toggle="buttons">
+                                        <fieldset data-role="controlgroup">
+                                            <div class="row" style="font-size: 15px;">
+                                                <div class="col-xs-6 ui-radio">
+                                                    <input type="radio" name="hand" value="lefthand" id="left-hand" checked="">
+                                                    <label style="vertical-align: middle" class="btn active" for="left-hand">LEFT HAND</label>
+                                                </div>
+                                                <div class="col-xs-6 ui-radio">
+                                                    <input type="radio" name="hand" id="right-hand" value="righthand">
+                                                    <label style="vertical-align: middle" class="btn" for="right-hand">RIGHT HAND</label>
+                                                </div>
+                                            </div>
+                                        </fieldset>
                                     </div>
                                 </div>
                             </div>
@@ -220,7 +229,6 @@
                             <label class="col-xs-2 col-form-label">Email:</label>
                             <div class="col-xs-10">
                                 <input name="email" type="email" class="form-control transparent-input" aria-describedby="emailHelp">
-
                             </div>
                         </div>
 
@@ -242,7 +250,7 @@
             <label>TOURNAMENT BOOKING</label>
         </div>
         <div class="col-xs-2" style="text-align: right;padding: 0px;margin-top: 0px;">
-            <a href="#" onClick="hideFdWindowAndRefresh()">
+            <a href="#" rel="external" onClick="hideFdWindowAndRefresh()">
                 <i style="font-size: 20px;font-weight: normal;color:#cfb154" class="fa fa-times" aria-hidden="true"></i>
             </a>
         </div>
@@ -253,7 +261,7 @@
         <p>THE COMFIRMATION WILL SENT TO YOUR EMAIL ADDRESS</p><br/>
         <p>FOR MORE DETAILS. PLEASE CONTACT US ON</p><br/>
         <p style="border-bottom: 1px solid #cfb154">03 9600 0988</p><br/>
-        <p><a type="button" class="btnCustom gold-btn" onclick="hideFdWindowAndRefresh()">CLOSE</a></p>
+        <div style="margin-top: 30px;"><a type="button" rel="external" class="btnCustom gold-btn" onclick="hideFdWindowAndRefresh()">CLOSE</a></div>
     </div>
 
 </div>
@@ -263,27 +271,26 @@
 <div class="black-container" id="header">
     <div class="container-fluid">
         <div class="logo">
-            <a href="home"><img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre" /></a>
+            <a href="home" rel="external"><img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre" /></a>
         </div>
         <div class="dropdown">
             <button id="dLabel" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="fa fa-bars" aria-hidden="true"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dLabel">
-                <li><a href="tournament">TOURNAMENT</a></li>
-                <li><a href="academy">ACADEMY</a></li>
-                <li><a href="coming_events">EVENT</a></li>
-                <li><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
-                <li><a href="price">PRICING</a></li>
-                <li><a href="#" onclick="showBookWindow()">BOOKING</a></li>
-                <li><a href="contactus">ENQUIRY</a></li>
-                <li><a href="contactus">CONTACT US</a></li>
+                <li><a href="tournament" rel="external">TOURNAMENT</a></li>
+                <li><a href="academy" rel="external">ACADEMY</a></li>
+                <li><a href="coming_events" rel="external">EVENT</a></li>
+                <li><a href="cocktail" rel="external">GOLF&COCKTAIL BAR</a></li>
+                <li><a href="price" rel="external">PRICING</a></li>
+                <li><a href="#" rel="external" onclick="showBookWindow()">BOOKING</a></li>
+                <li><a href="contactus" rel="external">ENQUIRY</a></li>
+                <li><a href="contactus" rel="external">CONTACT US</a></li>
             </ul>
         </div>
     </div>
 </div>
 <!--------nav end-------->
-
 <div id="main">
     @yield('content')
 </div>
@@ -298,6 +305,8 @@
 
 <!--------footer end-------->
 <script src="static/js/jquery-1.11.3.js"></script>
+<script src="static/js/jquery_mobile-1.4.5.min.js"></script>
+
 <!-- Optional theme -->
 <!-- Latest compiled and minified JavaScript -->
 <script src="static/js/bootstrap.min.js"></script>
@@ -310,13 +319,17 @@
 <script src="static/js/contactus.js"></script>
 <script>
     $(document).ready(function () {
+        $.mobile.loading().hide();
 
-        $('#main').css("min-height", function(){
-            var screenH = $(window).height();
-            var headerH = $('#header').height();
-            var footerH = $('#footer2').height();
+        var screenH = $(window).outerHeight();
+        var headerH = $('#header').outerHeight();
+        var footerH = $('#footer2').outerHeight();
+
+        function getMinHeight(){
             return screenH - (headerH + footerH);
-        });
+        }
+
+        $('#main').css("min-height", getMinHeight());
 
         getOrder();
 

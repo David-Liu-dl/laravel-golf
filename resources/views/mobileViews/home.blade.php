@@ -1,22 +1,36 @@
-@extends('layouts.mobile_new')
+@extends('layouts.mobile')
 
 @section('content')
     <style>
-        .event-cover{
-            max-width: 200px;
-            max-height: 200px;
+        body{
+            /*overflow-y: hidden;*/
         }
+
+        #main {
+            padding: 0px;
+            height:100%;
+        }
+
+        .gold-btn{
+            padding: 5px 15px;
+            font-size: 16px;
+        }
+
+        .slide-item{
+
+        }
+
     </style>
 
     <section class="cd-hero">
         <ul class="cb-slideshow">
 
-            <li class="slide-item" ><span></span>
-                <div id="div-video" class="bg">
-                    <video autoplay loop width="100%" height="auto" poster="static/images/polina.jpg" id="bgvid">
-                        <source src="static/images/polina.mp4" type="video/mp4">
-                    </video>
-                </div>
+            <li class="slide-item" ><span class="bg"></span>
+                {{--<div id="div-video" class="bg">--}}
+                    {{--<video autoplay loop width="100%" height="auto" poster="static/images/polina.jpg" id="bgvid">--}}
+                        {{--<source src="static/images/polina.mp4" type="video/mp4">--}}
+                    {{--</video>--}}
+                {{--</div>--}}
             </li>
 
             <li class="slide-item"><span class="bg"></span>
@@ -33,12 +47,8 @@
                     </div>
 
                     <div class="btn-block">
-                        <a type="button" class="btnCustom gold-btn" href="cocktail">DETAILS</a>
-                        <a type="button" class="btnCustom gold-btn" onClick="showBookWindow()">BOOKING</a>
-                    </div>
-
-                    <div class="thumb event-block">
-                        <a href="#"><img src="" class="img-responsive event-cover" item=""  /></a>
+                        <a type="button" class="btnCustom gold-btn left" href="cocktail" rel="external">DETAILS</a >
+                        <a type="button" class="btnCustom gold-btn right" onClick="showBookWindow()" rel="external">BOOKING</a >
                     </div>
                 </div>
             </li>
@@ -57,11 +67,7 @@
                     </div>
 
                     <div class="btn-block">
-                        <a type="button" class="btnCustom gold-btn" href="academy">MORE INFORMATION</a>
-                    </div>
-
-                    <div class="thumb event-block">
-                        <a href="#"><img src="" class="img-responsive event-cover" item="" /></a>
+                        <a type="button" class="btnCustom gold-btn right" href="academy" rel="external">MORE INFORMATION</a >
                     </div>
                 </div>
             </li>
@@ -80,26 +86,18 @@
                     </div>
 
                     <div class="btn-block">
-                        <a type="button" class="btnCustom gold-btn" href="tournament">DETAILS</a>
-                        <a type="button" class="btnCustom gold-btn" href="coming_events">OTHER ACTIVITY</a>
+                        <a type="button" class="btnCustom gold-btn right" href="tournament" rel="external">DETAILS</a >
+                        <a type="button" class="btnCustom gold-btn left" href="coming_events" rel="external">OTHER ACTIVITY</a >
                     </div>
 
-                    <div class="thumb event-block">
-                        <a href="#"><img src="" class="img-responsive event-cover" item=""  /></a>
-                    </div>
                 </div>
             </li>
         </ul>
 
     </section>
 
-    <div id="control-icon">
-        <span class="left" id="btn-left" style="visibility: hidden;"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
-        <span class="right" id="btn-right" style="visibility: hidden;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-    </div>
-
     <script type="text/javascript" src="{!! asset('static/js/jquery-1.11.3.js') !!}"></script>
-    <script type="text/javascript" src="{!! asset('static/js/home.js') !!}"></script>
+    <script type="text/javascript" src="{!! asset('static/js/mobile_home.js') !!}"></script>
     <script type="text/javascript" src="{!! asset('static/js/vidbg.js') !!}"></script>
     <script type="text/javascript" src="{!! asset('static/js/slider.js') !!}"></script>
 @stop

@@ -23,6 +23,7 @@
             font-size: 10px;
             padding-bottom: 10px;
         }
+
     </style>
 
     <div class="container-fluid contactus">
