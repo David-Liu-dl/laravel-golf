@@ -56,7 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => 'lyhmelbourne@gmail',
+//        'address' => 'lyhmelbourne@gmail.com',
+        'address' => 'euniceyangjing@gmail.com',
         'name' => 'Golf Club',
     ],
 
@@ -111,5 +112,7 @@ return [
     */
 
     'sendmail' => '/usr/sbin/sendmail -bs',
+    
+    'pretend' => false,
 
 ];

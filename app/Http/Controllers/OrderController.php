@@ -62,7 +62,7 @@ class OrderController extends Controller
     private function sendEmailWithOrder(Request $request){
         $name = $request -> input('name');
         Mail::send('emailViews.order',['request'=>$request->all()],function($message) use($name){
-            $to = '375099857@qq.com';
+            $to = 'euniceyangjing@gmail.com';
             $message ->to($to)->subject('New Booking: ' . $name);
         });
     }

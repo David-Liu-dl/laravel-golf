@@ -178,6 +178,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Encore\Admin\Providers\AdminServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
 
@@ -229,6 +230,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Agent' => 'Jenssegers\Agent\Facades\Agent',
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
 
