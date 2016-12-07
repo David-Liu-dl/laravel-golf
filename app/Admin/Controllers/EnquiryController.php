@@ -68,6 +68,7 @@ class EnquiryController extends Controller
         return Admin::grid(Enquiry::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
+            $grid->entry_from();
             $grid->name();
             $grid->email();
             $grid->phone();

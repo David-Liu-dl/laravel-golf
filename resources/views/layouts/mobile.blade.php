@@ -93,6 +93,10 @@
         .filter-option{
             text-transform: uppercase;
         }
+
+        #enquiry_form .selectpicker, #enquiry_form .ui-li-count{
+            display: none;
+        }
     </style>
 </head>
 
@@ -111,14 +115,18 @@
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
             </div>
 
+            <div>
+                <input style="color: black" id="entry_from" type="hidden" name="entry_from" value="">
+            </div>
+
             <div class="input_container input-group">
                 <span class="input-group-addon">NAME </span>
-                <input type="text" name="name" class="form-control transparent-input">
+                <input style="color: black" type="text" name="name" class="form-control transparent-input">
             </div>
 
             <div class="input_container input-group">
                 <span class="input-group-addon">EMAIL </span>
-                <input type="text" name="email" class="form-control transparent-input">
+                <input style="color: black" type="text" name="email" class="form-control transparent-input">
             </div>
 
             <div class="input_container input-group">
@@ -233,7 +241,7 @@
                         </div>
 
                         <div>
-                            <button style="margin-top:20px;float:right;font-size:15px;padding:10px 10px;" id="submit" type="submit" class="btnCustom gold-btn">REQUEST BOOKING</button>
+                            <button style="margin-top:20px;float:right;font-size:15px;padding:10px 10px;" id="submit" type="submit" class="btnCustom gold-btn">BOOKING</button>
                         </div>
                     </div>
                     <div style="clear: both"></div>
@@ -257,10 +265,9 @@
     </div>
     <div id="info-block" style="text-align: center;padding:8% 0px 12%;">
         <p style="padding: 10px 0px;font-weight: bold">THANK YOU!</p><br/>
-        <p>YOUR BOOKING INFORMATION IS CONFIRMED</p><br/>
-        <p>THE COMFIRMATION WILL SENT TO YOUR EMAIL ADDRESS</p><br/>
-        <p>FOR MORE DETAILS. PLEASE CONTACT US ON</p><br/>
-        <p style="border-bottom: 1px solid #cfb154">03 9600 0988</p><br/>
+        <p>Dear, Customer</p><br/>
+        <p>We have received your booking. You will receive a confirmation email shortly.</p><br/>
+        <p>Thank you. Have a nice day.</p><br/>
         <div style="margin-top: 30px;"><a type="button" rel="external" class="btnCustom gold-btn" onclick="hideFdWindowAndRefresh()">CLOSE</a></div>
     </div>
 
@@ -284,7 +291,7 @@
                 <li><a href="cocktail" rel="external">GOLF&COCKTAIL BAR</a></li>
                 <li><a href="price" rel="external">PRICING</a></li>
                 <li><a href="#" rel="external" onclick="showBookWindow()">BOOKING</a></li>
-                <li><a href="contactus" rel="external">ENQUIRY</a></li>
+                <li><a href="#" rel="external" onclick="showEnquiryWindow()">ENQUIRY</a></li>
                 <li><a href="contactus" rel="external">CONTACT US</a></li>
             </ul>
         </div>
@@ -297,7 +304,7 @@
 
 <div id="footer2" class="black-container">
     <div class="container-fluid">
-        <div style="margin-right: 5%;display: inline-block"><i class="fa fa-phone"></i>&nbsp;03 9600 0988</div>
+        <div style="margin-right: 5%;display: inline-block"><i class="fa fa-phone"></i>&nbsp;13000GPLUS</div>
         <div style="display: inline-block"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</div>
     </div>
 </div>

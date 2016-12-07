@@ -7,7 +7,7 @@ use Jenssegers\Agent\Agent;
 class EventController extends Controller
 {
     public function getAll() {
-        $events = Event::where("availability",1) -> get();
+        $events = Event::where("availability",1) ->orderBy('priority', 'desc')-> get();
         $this->addResourcePrefix($events);
 
         $agent = new Agent();

@@ -24,7 +24,7 @@ class PackageController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('Courses');
+            $content->header('Lessons');
             $content->body($this->grid());
         });
     }
@@ -39,7 +39,7 @@ class PackageController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('Course - '.$id);
+            $content->header('Lesson - '.$id);
             $content->body($this->form()->edit($id));
         });
     }
@@ -53,7 +53,7 @@ class PackageController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('Courses');
+            $content->header('Lessons');
             $content->body($this->form());
         });
     }
@@ -69,6 +69,7 @@ class PackageController extends Controller
 
             $grid->id('ID')->sortable();
             $grid->column('title');
+            $grid->priority();
             $grid->description();
             $grid->column('features');
             $grid->video_url()->value(function ($video_url){
@@ -95,11 +96,12 @@ class PackageController extends Controller
     {
         return Admin::form(Package::class, function (Form $form) {
             $form->text('title', 'Title');
+            $form->number('priority', 'Priority');
             $form->textarea('description', 'Description');
             $form->textarea('features', 'Features');
             $form->url('video_url', 'Video URL(embed)');
             $form->image('pic_url', 'Picture');
-            $form->decimal('price', 'Price');
+            $form->number('price', 'Price');
         });
     }
 }

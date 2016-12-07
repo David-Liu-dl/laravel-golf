@@ -91,7 +91,7 @@
                     </div>
 
                     <div id="right-btn-block"  class="one-line" style="position:absolute;right:0px; top:0px;">
-                        <button type="button" class="quick-enquiry-btn btnCustom info-btn">QUICK ENQUIRY</button>
+                        <button type="button" class="quick-enquiry-btn btnCustom info-btn" value="contact_us">QUICK ENQUIRY</button>
                     </div>
                 </div>
 

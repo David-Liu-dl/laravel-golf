@@ -31,7 +31,7 @@ class DBController extends Controller
     }
 
     public function getAllAvailableEvents(){
-        $events = Event::where("availability",1) -> get();
+        $events = Event::where("availability",1) -> orderBy('priority', 'desc') -> get();
         $this->addResourcePrefix($events);
         return response()->json($events);
     }

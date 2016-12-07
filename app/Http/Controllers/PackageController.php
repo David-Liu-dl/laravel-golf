@@ -18,7 +18,7 @@ class PackageController extends Controller {
     }
 
     public function getAll() {
-        $packages = Package::all();
+        $packages = Package::orderBy('priority', 'desc') -> get();
 
         foreach ($packages as $package){
 

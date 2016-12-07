@@ -18,6 +18,7 @@ class CreateEnquirysTable extends Migration
 
         Schema::create('enquirys', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('entry_from');
             $table->string('name');
             $table->string('phone')->nullable();
             $table->string('email')->nullable();

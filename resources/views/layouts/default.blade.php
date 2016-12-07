@@ -96,6 +96,10 @@
         input.error {
             color: red;
         }
+
+        /*.navbar-nav > li > a{*/
+            /*padding:0px;*/
+        /*}*/
     </style>
 </head>
 <body>
@@ -215,7 +219,7 @@
                     </div>
 
                     <div>
-                        <button style="margin-top:20px;float:right;font-size:15px;padding:10px 10px;" id="submit" type="submit" class="btnCustom gold-btn">REQUEST BOOKING</button>
+                        <button style="margin-top:20px;float:right;font-size:15px;padding:10px 10px;" id="submit" type="submit" class="btnCustom gold-btn">BOOKING</button>
                     </div>
                 </div>
                 <div style="clear: both"></div>
@@ -237,6 +241,10 @@
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
             </div>
 
+            <div>
+                <input id="entry_from" type="hidden" name="entry_from" value="">
+            </div>
+
             <div class="input_container input-group">
                 <span class="input-group-addon">NAME </span>
                 <input type="text" name="name" class="form-control transparent-input">
@@ -253,6 +261,8 @@
             </div>
 
             <div class="">
+                <input id="selected_blocks" name="selected_types" type="hidden" class="form-control">
+
                 <select class="selectpicker text-uppercase" name="types[]" title="WHICH PART WOULD YOU LIKE TO ENQUIRE" multiple>
                     <option value="tournament">tournament</option>
                     <option value="event">event</option>
@@ -286,10 +296,9 @@
     </div>
     <div id="info-block" style="text-align: center;padding:8% 0px 12%;">
         <p style="padding: 10px 0px;font-weight: bold">THANK YOU!</p><br/>
-        <p>YOUR BOOKING INFORMATION IS CONFIRMED</p><br/>
-        <p>THE COMFIRMATION WILL SENT TO YOUR EMAIL ADDRESS</p><br/>
-        <p>FOR MORE DETAILS. PLEASE CONTACT US ON</p><br/>
-        <p style="border-bottom: 1px solid #cfb154">03 9600 0988</p><br/>
+        <p>Dear, Customer</p><br/>
+        <p>We have received your booking. You will receive a confirmation email shortly.</p><br/>
+        <p>Thank you. Have a nice day.</p><br/>
         <p><a type="button" class="btnCustom gold-btn" onclick="hideFdWindowAndRefresh()">CLOSE</a></p>
     </div>
 
@@ -304,19 +313,13 @@
 <div id="footer2" class="black-container container-fluid">
     <div class="container">
         <ul class="nav navbar-nav navbar-right">
-            <li class="pointer" onClick="window.open('contactus')"><i class="fa fa-phone"></i>&nbsp;03 9600
-                0988
-            </li>
+            <li class="pointer" onClick="window.open('contactus')"><i class="fa fa-phone"></i>&nbsp;13000GPLUS</li>
             <li class="pointer"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</li>
             <li class="pointer icon hidden-xs hidden-sm">
-                <i class="fa fa-facebook-square"></i>
+                <a style="padding:10px;text-decoration: none;" href="https://www.facebook.com/golfplusbar/"><i class="fa fa-facebook-square"></i></a>
             </li>
-            <li class="pointer icon hidden-xs hidden-sm">
-                <i class="fa fa-tumblr-square"></i>
-            </li>
-            <li class="pointer icon hidden-lg hidden-md">
-                <i class="fa fa-facebook-square"></i>&nbsp;&nbsp;
-                <i class="fa fa-tumblr-square"></i>
+            <li class="pointer icon hidden-xs hidden-sm" style="margin-right:20px;">
+                <a style="padding:10px;text-decoration: none;" href="https://twitter.com/GolfplusBar"><i class="fa fa-tumblr-square" href="https://twitter.com/GolfplusBar"></i></a>
             </li>
         </ul>
     </div>

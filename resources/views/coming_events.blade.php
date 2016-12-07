@@ -149,7 +149,7 @@
     <div id="fixed-frame" class="container">
         <div style="margin-right: 5%;">
             <div id="events_block_title">
-                <span>GPLUS ACTIVITIES</span>
+                <span style="text-transform: uppercase;font-family: work-sans-regular">membership & activities</span>
             </div>
 
             <div id="event_block">
@@ -164,10 +164,10 @@
                                 <div class="event_description">{{$event['introduction']}}</div>
                                 <div class="event_date"><label>DATE:&nbsp;</label><span >{{$event['date']}}</span></div>
                                 <div class="event_location"><label>PLACE:&nbsp;</label><span >{{$event['address']}}</span></div>
-                                <div class="event_price"><label>ENTRY FEE:&nbsp;</label><span class="event_location">{{$event['price'] . "AUD"}} </span></div>
+                                <div class="event_price"><label>ENTRY FEE:&nbsp;</label><span class="event_location">{{$event['price'] . " AUD"}} </span></div>
                             </div>
 
-                            <div><button class="btnCustom info-btn entry_btn quick-enquiry-btn">ENTRY NOW</button></div>
+                            <div><button class="btnCustom info-btn entry_btn quick-enquiry-btn" value={{"Event:" . $event['title']}}>ENTRY NOW</button></div>
                         </div>
                     </div>
                 @endforeach

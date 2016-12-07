@@ -63,21 +63,21 @@
             <div class="golf-info row" style="">
                 <div class="col-xs-5 .col-sm-5 .col-lg-4" style="padding:0px;text-align:left;font-size: 0.6em;">
                     <p class="pointer icon">
-                        <i class="fa fa-facebook-square"></i>
-                        <span>golfplus.city</span>
+                        <a style="color:#cfb154;text-decoration: none;" href="https://www.facebook.com/golfplusbar/"><i class="fa fa-facebook-square"></i>
+                            <span>@golfplusbar</span></a>
                     </p>
                     <p class="pointer icon">
-                        <i class="fa fa-tumblr-square"></i>
-                        <span>@golfplus280</span>
+                        <a style="color:#cfb154;text-decoration: none;" href="https://twitter.com/GolfplusBar"><i class="fa fa-tumblr-square"></i>
+                            <span>@GolfplusBar</span></a>
                     </p>
                     <p class="pointer icon">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                        <span>golfplus280</span>
+                        <a style="color:#cfb154;text-decoration: none;" href="https://www.instagram.com/golfplusbar/"><i class="fa fa-instagram" aria-hidden="true"></i>
+                            <span>golfplusbar</span></a>
                     </p>
                 </div>
                 <div class="col-xs-7 .col-sm-7 .col-lg-8" style="padding:0px;text-align: right;font-size: 0.6em;">
                     <p class="text-uppercase">more information contact to:</p>
-                    <p>03 9600 0988</p>
+                    <p>13000GPLUS</p>
                     <p>www.golfplus.net.au</p>
                     <p>info@golfplus.net.au</p>
                 </div>

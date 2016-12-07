@@ -24,7 +24,7 @@ class OrderController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('Orders');
+            $content->header('Booking');
             $content->body($this->grid());
         });
     }
@@ -39,7 +39,7 @@ class OrderController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('Order - '.$id);
+            $content->header('Booking - '.$id);
             $content->body($this->form()->edit($id));
         });
     }
@@ -53,7 +53,7 @@ class OrderController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('Order');
+            $content->header('Booking');
             $content->body($this->form());
         });
     }

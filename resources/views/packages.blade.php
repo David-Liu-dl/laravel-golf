@@ -155,7 +155,7 @@
                                 <p> {{ $feature }}</p>
                             @endforeach
                             <p>${{ $package['price'] }}</p>
-                            <button class="quick-enquiry-btn enquiry">ENQUIRY</button>
+                            <button class="quick-enquiry-btn enquiry" value={{"Lesson:" . $package['title']}}>ENQUIRY</button>
                         </div>
                     </div>
                 </div>

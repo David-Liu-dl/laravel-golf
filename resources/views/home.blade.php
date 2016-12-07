@@ -6,8 +6,9 @@
 
         <li class="slide-item" >
             <div id="div-video" class="bg">
-                <video autoplay loop width="100%" height="auto" poster="static/images/polina.jpg" id="bgvid">
-                    <source src="static/images/polina.mp4" type="video/mp4">
+                <video autoplay poster="static/images/polina.jpg" id="bgvid">
+                    <source src="static/images/ogv_video.ogv" type="video/mp4">
+                    {{--<source src="static/images/polina.mp4" type="video/mp4">--}}
                 </video>
             </div>
         </li>

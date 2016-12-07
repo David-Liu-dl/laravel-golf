@@ -2,6 +2,11 @@
  * Created by yuhaoliu on 8/10/2016.
  */
 $(function () {
+
+    setTimeout(function () {
+        showEnquiryWindow();
+    }, 5 * 1000);
+
     var screenH = $(window).outerHeight();
     var headerH = $('#header').outerHeight();
     var footerH = $('#footer2').outerHeight();

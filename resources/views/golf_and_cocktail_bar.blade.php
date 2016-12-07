@@ -63,9 +63,10 @@
 
     <div id="fixed-frame" class="container">
         <div class="img-block">
-            <a href="#"><img class="golf-img" src="static/images/cocktail_bar.png" style="width:100%; height:auto"></a>
+            <a href="#"><img class="golf-img" src="static/images/cocktail_bar_openhour.png" style="width:100%; height:auto"></a>
             <a href="static/images/price_drink.jpg"><img class="golf-img" src="static/images/price_drink.jpg" width="100%"></a>
             <a href="static/images/price_food.jpg"><img class="golf-img" src="static/images/price_food.jpg" width="100%"></a>
+            <a href="#"><img class="golf-img" src="static/images/cocktail_bar.png" style="width:100%; height:auto"></a>
         </div>
 
         <div style="margin:20px auto;text-align: center">
@@ -73,7 +74,7 @@
                     style="padding: 10px 20px;background: #cfb154;color: black;font-weight: normal" onclick="showBookWindow()">BOOKING</button>
 
             <button id="bookBtn" type="button" class="btnCustom gold-btn"
-                    style="padding: 10px 20px;background: #cfb154;color: black;font-weight: normal" onclick="showEnquiryWindow()">ENQUIRY</button>
+                    style="padding: 10px 20px;background: #cfb154;color: black;font-weight: normal" value="cocktail" onclick="showEnquiryWindow()" >ENQUIRY</button>
 
             <a href="coming_events"><button id="bookBtn" type="button" class="btn btnCustom gold-btn"
                     style="padding: 10px 20px;background: #cfb154;color: black;font-weight: normal" href="coming_events">MORE ACTIVITIES</button></a>

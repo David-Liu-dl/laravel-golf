@@ -174,9 +174,13 @@ fieldset[disabled] .btnCustom-default.active {
     }
 }
 
+* {
+    font-family: work-sans-light;
+}
+
 body {
-    font-family: work-sans-regular;
-    border:none;
+
+    /*border:none;*/
     background-color: black;
 }
 
@@ -201,6 +205,10 @@ body {
 .dropdown{
     float: right;
     margin-top:10px;
+}
+
+.dropdown-menu {
+    font-family: work-sans-light;
 }
 
 .dropdown-toggle {
@@ -343,7 +351,7 @@ body {
     background-image: url(../images/mobile_main_bg.png);
     /*background-size: auto 100%;*/
     background-repeat: no-repeat;
-    background-position:left top;
+    background-position:center;
 }
 
 .cb-slideshow li:nth-child(2) span {

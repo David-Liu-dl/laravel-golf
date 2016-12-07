@@ -70,6 +70,8 @@ class EventController extends Controller
 
             $grid->id('ID')->sortable();
             $grid->title();
+            $grid->priority();
+
             $grid->price();
             $grid->address();
             $grid->introduction();
@@ -97,6 +99,8 @@ class EventController extends Controller
         return Admin::form(Event::class, function (Form $form) {
 
             $form->text('title', 'Title');
+            $form->number('priority', 'Priority');
+            $form->number('price', 'Price');
             $form->text('address', 'Address');
             $form->textarea('introduction', 'Introduction');
             $form->radio('availability', 'Availability')->values(['0'=>'No', '1'=>'Yes'])->default('0');

@@ -146,7 +146,7 @@
         <p>PACKAGE INCLUDES: {{ implode(', ', $package['features']) }} </p>
         <p>PRICE: ${{ $package['price'] }}</p>
     </div>
-    <p><button class="quick-enquiry-btn enquiry">ENQUIRY</button></p>
+    <p><button class="quick-enquiry-btn enquiry" value={{"Lesson:" . $package['title']}}>ENQUIRY</button></p>
     <div class="video">
         <div class="embed-responsive embed-responsive-4by3">
             <iframe class="embed-responsive-item" src="{{ $package['video_url'] }}"></iframe>
