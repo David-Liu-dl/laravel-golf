@@ -2,6 +2,7 @@
 
 @section('content')
     <style>
+
         #fixed-frame {
             overFlow-y:scroll;
         }

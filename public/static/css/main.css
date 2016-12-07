@@ -185,7 +185,7 @@ body {
 }
 
 #header-logo2 img {
-    height: 50px;
+    max-height: 100%;
 
 }
 

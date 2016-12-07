@@ -2,6 +2,12 @@
 
 @section('content')
     <style>
+
+        body{
+            background-color: black;
+            background-image: none;
+        }
+
         .casual_container {
             background: url("static/images/slider3.png") 0 0 no-repeat;
             filter: Alpha(opacity=20);

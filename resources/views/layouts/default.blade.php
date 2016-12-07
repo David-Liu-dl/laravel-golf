@@ -107,10 +107,10 @@
 <div class="black-container container-fluid" id="header">
     <div class="container">
         <div class="row">
-            <div id="header-logo2" class="col-md-5 col-sm-5 col-xs-5">
-                <div class="row">
-                    <div class="col-md-6">
-                        <a href="home"><img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre" /></a>
+            <div id="header-logo2" style="height: 50px;padding: 5px 0px;" class="col-md-5 col-sm-5 col-xs-5">
+                <div class="row" style="height: 100%">
+                    <div class="col-md-6" style="height: 100%">
+                        <a href="home"><img src="static/images/logo.png" class="" alt="Cinque Terre" /></a>
                     </div>
                 </div>
             </div>
@@ -264,6 +264,7 @@
                 <input id="selected_blocks" name="selected_types" type="hidden" class="form-control">
 
                 <select class="selectpicker text-uppercase" name="types[]" title="WHICH PART WOULD YOU LIKE TO ENQUIRE" multiple>
+                    <option value="membership">membership</option>
                     <option value="tournament">tournament</option>
                     <option value="event">event</option>
                     <option value="academy">academy</option>

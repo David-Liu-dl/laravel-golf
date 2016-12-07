@@ -136,6 +136,7 @@
 
             <div class="">
                 <select class="selectpicker text-uppercase" name="types[]" title="WHICH PART WOULD YOU LIKE TO ENQUIRE" multiple>
+                    <option value="membership">membership</option>
                     <option value="tournament">tournament</option>
                     <option value="event">event</option>
                     <option value="academy">academy</option>
