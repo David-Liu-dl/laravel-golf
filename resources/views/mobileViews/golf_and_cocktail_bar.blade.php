@@ -58,7 +58,8 @@
             <span style="text-transform: uppercase;font-family: work-sans-regular">golf&cocktail bar</span>
         </div>
         <div class="img-block">
-            <a href="#"><img class="golf-img" src="static/images/cocktail_bar.png" style="width:100%; height:auto"></a>
+            <a href="#"><img class="golf-img" src="static/images/cocktail_bar-1.png" style="width:100%; height:auto"></a>
+            <a href="#"><img class="golf-img" src="static/images/cocktail_bar-2.png" style="width:100%; height:auto"></a>
             <a href="static/images/price_drink.jpg" rel="external"><img class="golf-img" src="static/images/price_drink.jpg" width="100%"></a>
             <a href="static/images/price_food.jpg" rel="external"><img class="golf-img" src="static/images/price_food.jpg" width="100%"></a>
 

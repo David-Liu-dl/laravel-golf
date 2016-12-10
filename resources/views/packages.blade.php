@@ -98,8 +98,14 @@
                 <span style="text-transform: uppercase;font-family: work-sans-regular">Introduction</span>
             </div>
             <div>
-                <p style="text-align: center"><img src="static/images/academy.png" style="max-width:100%; height:auto"></p>
+                <p style="text-align: center"><img src="static/images/academy-1.png" style="max-width:100%; height:auto"></p>
             </div>
+            <div style="border-bottom: 2px dotted #cfb154"></div>
+            <div>
+                <p style="text-align: center"><img src="static/images/academy-2.png" style="max-width:100%; height:auto"></p>
+            </div>
+            <div style="border-bottom: 2px dotted #cfb154"></div>
+
             @foreach( $packages as $package)
                 <div class="package-item-container">
                     <div>

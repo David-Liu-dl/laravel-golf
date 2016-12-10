@@ -17,7 +17,7 @@ body{
     margin-top: 10px;
 }
 #package-fixed .package-item-container:not(:last-child){
-    border-bottom: 1px dotted #cfb154;
+    border-bottom: 2px dotted #cfb154;
 }
 
 #package-fixed {

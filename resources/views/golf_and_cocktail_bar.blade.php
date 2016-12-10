@@ -57,7 +57,7 @@
         .img-block a:not(:last-child) img{
             padding-bottom: 20px;
             margin-bottom: 20px;
-            border-bottom: 1px dashed #cfb154;
+            border-bottom: 2px dotted #cfb154;
         }
 
         #events_block_title{
@@ -81,7 +81,8 @@
         </div>
 
         <div class="img-block">
-            <a href="#"><img class="golf-img" src="static/images/cocktail_bar.png" style="width:100%; height:auto"></a>
+            <a href="#"><img class="golf-img" src="static/images/cocktail_bar-1.png" style="width:100%; height:auto"></a>
+            <a href="#"><img class="golf-img" src="static/images/cocktail_bar-2.png" style="width:100%; height:auto"></a>
             <a href="static/images/price_drink.jpg"><img class="golf-img" src="static/images/price_drink.jpg" width="100%"></a>
             <a href="static/images/price_food.jpg"><img class="golf-img" src="static/images/price_food.jpg" width="100%"></a>
         </div>

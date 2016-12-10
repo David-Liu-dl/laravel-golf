@@ -79,7 +79,13 @@
         </div>
 
         <div style="display:table;margin:0 auto;">
-            <img src="static/images/pricing.png" style="max-width:100%; height:auto">
+            <img src="static/images/pricing-1.png" style="max-width:100%; height:auto">
+            <div style="border-bottom: 2px dotted #cfb154"></div>
+            <div id="events_block_title" style="margin-top: 50px;">
+                <span style="text-transform: uppercase;font-family: work-sans-regular">FUNCTIONS AND PARTIES</span>
+            </div>
+            <img src="static/images/pricing-2.png" style="max-width:100%; height:auto">
+            <div style="border-bottom: 2px dotted #cfb154"></div>
             <div class="golf-info row" style="margin-left:30%;width: 70%;">
                 <div class="col-xs-4 .col-sm-4 .col-lg-4" style="text-align: left">
                     <p class="pointer icon hidden-xs hidden-sm">
