@@ -169,6 +169,7 @@
     border-bottom: 1px solid #cfb154;
     color: #cfb154;
     font-size: 18px;
+    font-family: 'work-sans-regular';
 }
 
 .full-height{
@@ -309,6 +310,7 @@ input.error {
     height: 100%;
     z-index: 999;
     display:none;
+    font-family: 'work-sans-light';
 }
 
 #info-container{

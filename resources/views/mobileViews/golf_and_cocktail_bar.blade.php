@@ -42,14 +42,25 @@
             font-weight: normal;
             margin:5px;
         }
+
+        #events_block_title{
+            padding:15px 0px;
+            text-align: center;
+            color:#cfb154;
+            font-size: 13px;
+            font-weight: normal;
+            border-bottom: 1px solid #cfb154;
+        }
     </style>
 
     <div id="fixed-frame" class="container">
+        <div id="events_block_title">
+            <span style="text-transform: uppercase;font-family: work-sans-regular">golf&cocktail bar</span>
+        </div>
         <div class="img-block">
-            <a href="#" rel="external"><img class="golf-img" src="static/images/cocktail_bar_openhour.png" style="width:100%; height:auto"></a>
+            <a href="#"><img class="golf-img" src="static/images/cocktail_bar.png" style="width:100%; height:auto"></a>
             <a href="static/images/price_drink.jpg" rel="external"><img class="golf-img" src="static/images/price_drink.jpg" width="100%"></a>
             <a href="static/images/price_food.jpg" rel="external"><img class="golf-img" src="static/images/price_food.jpg" width="100%"></a>
-            <a href="#" rel="external"><img class="golf-img" src="static/images/cocktail_bar_mobile.png" style="width:100%; height:auto"></a>
 
         </div>
 

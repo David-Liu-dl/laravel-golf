@@ -37,6 +37,7 @@
             transform: translate(-50%, -50%);
             z-index: 999;
             display: none;
+            font-family: 'work-sans-light';
         }
 
         #enquiry_window .input-group-addon,#enquiry_window input.transparent-input{
@@ -57,6 +58,7 @@
             text-align: center;
             font-size: 20px;
             color:#b5a37e;
+            font-family: 'work-sans-regular';
         }
 
         .input_container{
@@ -314,7 +316,7 @@
 <div id="footer2" class="black-container container-fluid">
     <div class="container">
         <ul class="nav navbar-nav navbar-right">
-            <li class="pointer" onClick="window.open('contactus')"><i class="fa fa-phone"></i>&nbsp;13000GPLUS</li>
+            <li class="pointer" onClick="window.open('contactus')"><i class="fa fa-phone"></i>&nbsp;1300047587</li>
             <li class="pointer"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</li>
             <li class="pointer icon hidden-xs hidden-sm">
                 <a style="padding:10px;text-decoration: none;" href="https://www.facebook.com/golfplusbar/"><i class="fa fa-facebook-square"></i></a>

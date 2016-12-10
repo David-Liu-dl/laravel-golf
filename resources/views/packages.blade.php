@@ -81,59 +81,22 @@
         input.error {
             color: red;
         }
+
+        #events_block_title{
+            padding:15px 0px;
+            text-align: center;
+            color:#cfb154;
+            font-size: 17px;
+            font-weight: normal;
+            border-bottom: 1px solid #cfb154;
+        }
     </style>
 
-    <div id="enquiry_window">
-        <form id="enquiry_form" target="_self" class="form-horizontal" role="form" method="POST">
-            <div id="form_container" >
-                <div class="col-xs-" id="enquiry_form_title">
-                    ENQUIRY
-                    <i class="fa fa-times pointer" aria-hidden="true" style="position: absolute;right: 5%;" onclick="hideEnquiryWindow()"></i>
-                </div>
-
-                <div>
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                </div>
-
-                <div class="input_container input-group">
-                    <span class="input-group-addon">NAME </span>
-                    <input type="text" name="name" class="form-control transparent-input">
-                </div>
-
-                <div class="input_container input-group">
-                    <span class="input-group-addon">EMAIL </span>
-                    <input type="text" name="email" class="form-control transparent-input">
-                </div>
-
-                <div class="input_container input-group">
-                    <span class="input-group-addon">PHONE </span>
-                    <input type="text" name="phone" class="form-control transparent-input">
-                </div>
-
-                <div class="">
-                    <select class="selectpicker text-uppercase" name="types[]" title="WHICH PART WOULD YOU LIKE TO ENQUIRE" multiple>
-                        <option value="tournament">tournament</option>
-                        <option value="event">event</option>
-                        <option value="academy">academy</option>
-                        <option value="golf & cocktail bar">golf & cocktail bar</option>
-                    </select>
-                </div>
-
-                <div class="input_container">
-                    <textarea type="text" name="comment" placeholder="COMMENT / REQUEST" class="form-control transparent-input" style="border:none;height: 100px;resize: none;"></textarea>
-                </div>
-
-                <div>
-                    <button type="submit" class="btn btn-default btn-full">Submit</button>
-                </div>
-
-            </div>
-        </form>
-    </div>
     <div class="container" id="package-container"></div>
-
-
         <div class="container" id="package-fixed">
+            <div id="events_block_title">
+                <span style="text-transform: uppercase;font-family: work-sans-regular">Introduction</span>
+            </div>
             <div>
                 <p style="text-align: center"><img src="static/images/academy.png" style="max-width:100%; height:auto"></p>
             </div>

@@ -3,12 +3,13 @@
 <style>
     .package-content{
         color: #cfb154;
-        margin-top: 20px;
+        font-family: work-sans-light;
     }
     .package-content .title{
-        font-size: 10px;
+        font-size: 12px;
         text-transform:uppercase;
         text-align: center;
+        padding-top: 10px;
         padding-bottom: 10px;
         border-bottom: 1px solid #cfb154;
     }
@@ -17,7 +18,7 @@
         color: rgb(191, 155, 58);
         text-transform:uppercase;
         font-weight: bold;
-        font-size: 12px;
+        font-size: 13px;
         line-height: 30px;
         margin-top: 20px;
     }
@@ -93,6 +94,7 @@
 
     .package-item-container .content{
         margin-top: 20px;
+        font-size: 13px;
         color: #fff;
     }
 

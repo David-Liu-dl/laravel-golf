@@ -13,12 +13,10 @@
             height: 80%;
             max-height: 80%;
             bottom: 40px;
-            top: 10%;
-            right: 5%;
-            left: 5%;
-            width: 90%;
+            width: 100%;
             overFlow-x:hidden;
             overFlow-y:scroll;
+            padding: 0px;
             /*position: fixed;*/
         }
 
@@ -66,10 +64,10 @@
         /* end */
 
         #events_block_title{
-            padding:15px 0px;
+            padding:10px 0px;
             text-align: center;
             color:#cfb154;
-            font-size: 17px;
+            font-size: 12px;
             font-weight: normal;
             border-bottom: 1px solid #cfb154;
         }
@@ -105,18 +103,25 @@
             color: #cfb154;
         }
         .event_description{
+            font-family: 'work-sans-regular';
             margin:20px 0px;
             line-height:25px;
             word-wrap: break-word;
         }
         .event_date{
+            font-family: 'work-sans-regular';
+
             margin:15px 0px;
         }
         .event_location{
+            font-family: 'work-sans-regular';
+
             margin:15px 0px;
 
         }
         .event_price{
+            font-family: 'work-sans-regular';
+
             margin:15px 0px;
 
         }

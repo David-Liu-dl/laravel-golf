@@ -18,13 +18,13 @@
             height: 70%;
             max-height: 70%;
             bottom: 40px;
-            top: 16%;
-            right: 15%;
-            left: 15%;
-            width: 70%;
+            top: 15%;
+            left: 12%;
+            width: 80%;
             overFlow-x:hidden;
             overFlow-y:scroll;
             position: fixed;
+            font-family: work-sans-regular
 
         }
 
@@ -140,7 +140,7 @@
     </style>
 
     <div id="fixed-frame" class="container">
-        <div style="margin-right: 5%;">
+        <div style="margin-right: 0%;">
             <div id="events_block_title">
                 <span style="text-transform: uppercase;font-family: work-sans-regular">membership & activities</span>
             </div>

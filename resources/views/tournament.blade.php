@@ -20,28 +20,27 @@
         }
 
         #fixed-frame {
-            padding-right: 5%;
             height: 70%;
             max-height: 70%;
             bottom: 40px;
-            top: 16%;
-            right: 15%;
-            left: 10%;
+            top: 15%;
+            left: 12%;
             width: 80%;
             overFlow-x:hidden;
             overFlow-y:scroll;
             position: fixed;
+            font-family: work-sans-regular
 
         }
 
         #fixed-frame .title {
             width: 100%;
-            padding-bottom: 20px;
+            padding-bottom: 10px;
             text-align: center;
             color: #cfb154;
             font-weight: bold;
             text-transform: uppercase;
-            border-bottom: 2px solid #cfb154;
+            border-bottom: 1px solid #cfb154;
             font-size: 14px;
             margin-bottom: 8px;
             filter: Alpha(opacity=100);
@@ -120,13 +119,25 @@
             -webkit-line-clamp: 6;
             overflow: hidden;
         }
+
+        #events_block_title{
+            padding:15px 0px;
+            text-align: center;
+            color:#cfb154;
+            font-size: 17px;
+            font-weight: normal;
+            border-bottom: 1px solid #cfb154;
+        }
+
     </style>
 
     <div class="casual_container container-fluid">
     </div>
 
     <div id="fixed-frame" class="container">
-        <p class="title">TOURNAMENT</p>
+        <div id="events_block_title">
+            <span style="text-transform: uppercase;font-family: work-sans-regular">TOURNAMENT</span>
+        </div>
         <div style="margin-top: 20px;">
             <div class="row" id="event_block">
             </div>

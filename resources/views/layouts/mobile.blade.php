@@ -30,6 +30,7 @@
             position: fixed; /* or absolute */
             z-index: 999;
             display: none;
+            font-family: 'work-sans-light';
         }
 
         #enquiry_window .input-group-addon,#enquiry_window input.transparent-input{
@@ -50,6 +51,7 @@
             text-align: center;
             font-size: 20px;
             color:#b5a37e;
+            font-family: 'work-sans-regular';
         }
 
         .input_container{
@@ -305,7 +307,7 @@
 
 <div id="footer2" class="black-container">
     <div class="container-fluid">
-        <div style="margin-right: 5%;display: inline-block"><i class="fa fa-phone"></i>&nbsp;13000GPLUS</div>
+        <div style="margin-right: 5%;display: inline-block"><i class="fa fa-phone"></i>&nbsp;1300047587</div>
         <div style="display: inline-block"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</div>
     </div>
 </div>

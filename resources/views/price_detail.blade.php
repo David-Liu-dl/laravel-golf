@@ -19,13 +19,13 @@
             height: 70%;
             max-height: 70%;
             bottom: 40px;
-            top: 16%;
-            right: 15%;
-            left: 10%;
+            top: 15%;
+            left: 12%;
             width: 80%;
             overFlow-x:hidden;
             overFlow-y:auto;
             position: fixed;
+            font-family: work-sans-regular
 
         }
 
@@ -59,12 +59,24 @@
         .golf-info span{
             margin-left: 10px;
         }
+
+        #events_block_title{
+            padding:15px 0px;
+            text-align: center;
+            color:#cfb154;
+            font-size: 17px;
+            font-weight: normal;
+            border-bottom: 1px solid #cfb154;
+        }
     </style>
 
     <div class="casual_container container-fluid">
     </div>
 
     <div id="fixed-frame" class="container" style="text-align: center">
+        <div id="events_block_title">
+            <span style="text-transform: uppercase;font-family: work-sans-regular">GOLFPLUS PRICING</span>
+        </div>
 
         <div style="display:table;margin:0 auto;">
             <img src="static/images/pricing.png" style="max-width:100%; height:auto">
@@ -85,7 +97,7 @@
                 </div>
                 <div class="col-xs-8 .col-sm-8 .col-lg-8" style="text-align: right;font-size: 0.875em;">
                     <p class="text-uppercase">more information contact to:</p>
-                    <p>13000GPLUS</p>
+                    <p>1300047587</p>
                     <p>www.golfplus.net.au</p>
                     <p>info@golfplus.net.au</p>
                 </div>

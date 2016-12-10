@@ -18,7 +18,7 @@
 
         #fixed-frame {
             overFlow-y:auto;
-
+            padding: 0px;
         }
 
         ::-webkit-scrollbar {
@@ -51,14 +51,26 @@
         .golf-info span{
             margin-left: 10px;
         }
+
+
+        #events_block_title{
+            padding:15px 0px;
+            text-align: center;
+            color:#cfb154;
+            font-size: 13px;
+            font-weight: normal;
+            border-bottom: 1px solid #cfb154;
+        }
     </style>
 
     <div class="casual_container container-fluid">
     </div>
 
     <div id="fixed-frame" class="container" style="text-align: center">
-
         <div style="display:table;margin:0 auto;">
+            <div id="events_block_title">
+                <span style="text-transform: uppercase;font-family: work-sans-regular">GOLFPLUS PRICING</span>
+            </div>
             <img src="static/images/mobile_pricing.png" style="max-width:100%; height:auto">
             <div class="golf-info row" style="">
                 <div class="col-xs-5 .col-sm-5 .col-lg-4" style="padding:0px;text-align:left;font-size: 0.6em;">
@@ -77,7 +89,7 @@
                 </div>
                 <div class="col-xs-7 .col-sm-7 .col-lg-8" style="padding:0px;text-align: right;font-size: 0.6em;">
                     <p class="text-uppercase">more information contact to:</p>
-                    <p>13000GPLUS</p>
+                    <p>1300047587</p>
                     <p>www.golfplus.net.au</p>
                     <p>info@golfplus.net.au</p>
                 </div>

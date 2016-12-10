@@ -7,6 +7,7 @@
         body {
             /*background-image: url("../static/images/map-bg.jpg");*/
             background-color: black;
+            font-family: 'work-sans-regular';
 
         }
 
@@ -21,7 +22,7 @@
         .contactus .title-block{
             border-bottom: 1px solid #cfb154;
             color: #cfb154;
-            font-size: 10px;
+            font-size: 12px;
             padding-bottom: 10px;
         }
 

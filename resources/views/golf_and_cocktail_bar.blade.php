@@ -21,13 +21,12 @@
         }
 
         #fixed-frame {
-            height: 80%;
-            max-height: 80%;
+            height: 70%;
+            max-height: 70%;
             bottom: 40px;
-            top: 10%;
-            right: 17%;
-            left: 13%;
-            width: 70%;
+            top: 15%;
+            left: 12%;
+            width: 80%;
             overFlow-x:hidden;
             overFlow-y:scroll;
             position: fixed;
@@ -61,6 +60,15 @@
             border-bottom: 1px dashed #cfb154;
         }
 
+        #events_block_title{
+            padding:15px 0px;
+            text-align: center;
+            color:#cfb154;
+            font-size: 17px;
+            font-weight: normal;
+            border-bottom: 1px solid #cfb154;
+        }
+
     </style>
 
 
@@ -68,11 +76,14 @@
     </div>
 
     <div id="fixed-frame" class="container">
+        <div id="events_block_title">
+            <span style="text-transform: uppercase;font-family: work-sans-regular">golf&cocktail bar</span>
+        </div>
+
         <div class="img-block">
-            <a href="#"><img class="golf-img" src="static/images/cocktail_bar_openhour.png" style="width:100%; height:auto"></a>
+            <a href="#"><img class="golf-img" src="static/images/cocktail_bar.png" style="width:100%; height:auto"></a>
             <a href="static/images/price_drink.jpg"><img class="golf-img" src="static/images/price_drink.jpg" width="100%"></a>
             <a href="static/images/price_food.jpg"><img class="golf-img" src="static/images/price_food.jpg" width="100%"></a>
-            <a href="#"><img class="golf-img" src="static/images/cocktail_bar.png" style="width:100%; height:auto"></a>
         </div>
 
         <div style="margin:20px auto;text-align: center">
