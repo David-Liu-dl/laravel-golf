@@ -8,7 +8,7 @@
         }
 
         .casual_container {
-            background: url("static/images/slider1.png") 0 0 no-repeat;
+            background: url("static/images/tournament_center.png") no-repeat fixed center;
             filter: Alpha(opacity=20);
             opacity: 0.3;
             height: 100%;

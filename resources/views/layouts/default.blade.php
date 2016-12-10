@@ -109,17 +109,17 @@
 <div class="black-container container-fluid" id="header">
     <div class="container">
         <div class="row">
-            <div id="header-logo2" style="height: 50px;padding: 5px 0px;" class="col-md-5 col-sm-5 col-xs-5">
+            <div id="header-logo2" style="height: 50px;padding: 5px 0px;" class="col-md-3 col-sm-3 col-xs-3">
                 <div class="row" style="height: 100%">
                     <div class="col-md-6" style="height: 100%">
                         <a href="home"><img src="static/images/logo.png" class="" alt="Cinque Terre" /></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-7 col-sm-7 col-xs-7 hidden-nav-xs">
+            <div class="col-md-9 col-sm-9 col-xs-9 hidden-nav-xs">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="main-menu"><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
-                    <li class="main-menu"><a href="coming_events">ACTIVITIES</a></li>
+                    <li class="main-menu"><a href="coming_events">MEMBERSHIP&ACTIVITIES</a></li>
                     <li class="main-menu"><a href="academy">ACADEMY</a></li>
                     <li class="main-menu"><a href="tournament">TOURNAMENT</a></li>
                     <li class="main-menu"><a href="price">PRICING</a></li>
@@ -130,7 +130,7 @@
                         <ul class="dropdown-menu" aria-labelledby="dropdown-show">
                             <li><a href="tournament">TOURNAMENT</a></li>
                             <li><a href="academy">ACADEMY</a></li>
-                            <li><a href="coming_events">ACTIVITY</a></li>
+                            <li><a href="coming_events">MEMBERSHIP&ACTIVITIES</a></li>
                             <li><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
                             <li><a href="price">PRICING</a></li>
                             <li><a href="#" onclick="showBookWindow()">BOOKING</a></li>

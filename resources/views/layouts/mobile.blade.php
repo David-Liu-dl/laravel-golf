@@ -140,7 +140,7 @@
                 <select class="selectpicker text-uppercase" name="types[]" title="WHICH PART WOULD YOU LIKE TO ENQUIRE" multiple>
                     <option value="membership">membership</option>
                     <option value="tournament">tournament</option>
-                    <option value="event">event</option>
+                    <option value="membership&activities">MEMBERSHIP&ACTIVITIES</option>
                     <option value="academy">academy</option>
                     <option value="golf & cocktail bar">golf & cocktail bar</option>
                 </select>
@@ -290,7 +290,7 @@
             <ul class="dropdown-menu" aria-labelledby="dLabel">
                 <li><a href="tournament" rel="external">TOURNAMENT</a></li>
                 <li><a href="academy" rel="external">ACADEMY</a></li>
-                <li><a href="coming_events" rel="external">EVENT</a></li>
+                <li><a href="coming_events" rel="external">MEMBERSHIP&ACTIVITIES</a></li>
                 <li><a href="cocktail" rel="external">GOLF&COCKTAIL BAR</a></li>
                 <li><a href="price" rel="external">PRICING</a></li>
                 <li><a href="#" rel="external" onclick="showBookWindow()">BOOKING</a></li>

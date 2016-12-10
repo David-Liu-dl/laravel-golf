@@ -3,7 +3,7 @@ body{
 }
 
 #package-container{
-    background: url('/static/images/slider2.png') no-repeat fixed center;
+    background: url('/static/images/academy_center.png') no-repeat fixed center;
     /*filter: Alpha(opacity=20);*/
     opacity: 0.2;
     height: 100%;

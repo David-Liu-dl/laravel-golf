@@ -9,7 +9,7 @@
         }
 
         .casual_container {
-            background: url("static/images/slider3.png") 0 0 no-repeat;
+            background: url("static/images/cocktail_bar_center.png") 0 0 no-repeat;
             filter: Alpha(opacity=20);
             opacity: 0.2;
             height: 100%;
