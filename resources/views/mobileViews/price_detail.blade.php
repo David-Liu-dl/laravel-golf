@@ -2,18 +2,18 @@
 
 @section('content')
     <style>
-        .casual_container {
-            background: url("static/images/pricing_bg.jpg") no-repeat center;
-            filter: Alpha(opacity=20);
-            opacity: 1;
-            height: 100%;
-            width: 100%;
-            right: 0;
-            top: 0;
-            background-size: cover;
-            position: fixed;
-            z-index: -1;
-        }
+        /*.casual_container {*/
+            /*background: url("static/images/pricing_bg.jpg") no-repeat center;*/
+            /*filter: Alpha(opacity=20);*/
+            /*opacity: 1;*/
+            /*height: 100%;*/
+            /*width: 100%;*/
+            /*right: 0;*/
+            /*top: 0;*/
+            /*background-size: cover;*/
+            /*position: fixed;*/
+            /*z-index: -1;*/
+        /*}*/
 
 
         #fixed-frame {
@@ -65,8 +65,8 @@
         }
     </style>
 
-    <div class="casual_container container-fluid" style="height: 102%;">
-    </div>
+    {{--<div class="casual_container container-fluid" style="height: 102%;">--}}
+    {{--</div>--}}
 
     <div id="fixed-frame" class="container" style="text-align: center">
         <div style="display:table;margin:0 auto;">
