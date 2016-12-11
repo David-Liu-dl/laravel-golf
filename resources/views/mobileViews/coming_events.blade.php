@@ -96,32 +96,33 @@
             text-align: left;
         }
         .event_title{
-            font-family: 'work-sans-bold';
+            font-family: 'work-sans-regular';
             margin: 20px auto;
-            font-size: 20px;
+            font-size: 16px;
             font-weight:bold;
             color: #cfb154;
         }
         .event_description{
             font-family: 'work-sans-regular';
             margin:20px 0px;
+            font-size: 12px;
             line-height:25px;
             word-wrap: break-word;
         }
         .event_date{
-            font-family: 'work-sans-regular';
+            font-family: 'work-sans-light';
+            font-size: 12px;
 
             margin:15px 0px;
         }
         .event_location{
-            font-family: 'work-sans-regular';
-
+            font-family: 'work-sans-light';
             margin:15px 0px;
 
         }
         .event_price{
-            font-family: 'work-sans-regular';
-
+            font-family: 'work-sans-light';
+            font-size: 12px;
             margin:15px 0px;
 
         }
