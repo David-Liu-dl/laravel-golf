@@ -19,6 +19,7 @@
         #fixed-frame {
             overFlow-y:auto;
             padding: 0px;
+            font-family: work-sans-regular
         }
 
         ::-webkit-scrollbar {
@@ -71,19 +72,24 @@
             <div id="events_block_title">
                 <span style="text-transform: uppercase;font-family: work-sans-regular">GOLFPLUS PRICING</span>
             </div>
-            <img src="static/images/mobile_pricing.png" style="max-width:100%; height:auto">
+            <img src="static/images/pricing-1_mobile.png" style="max-width:100%; height:auto">
+            <div style="border-bottom: 2px dotted #cfb154"></div>
+            <div id="events_block_title" style="margin-top: 50px;">
+                <span style="text-transform: uppercase;font-family: work-sans-regular">FUNCTIONS AND PARTIES</span>
+            </div>
+            <img src="static/images/pricing-2_mobile.png" style="max-width:100%; height:auto">
             <div class="golf-info row" style="">
                 <div class="col-xs-5 .col-sm-5 .col-lg-4" style="padding:0px;text-align:left;font-size: 0.6em;">
                     <p class="pointer icon">
-                        <a style="color:#cfb154;text-decoration: none;" href="https://www.facebook.com/golfplusbar/"><i class="fa fa-facebook-square"></i>
+                        <a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://www.facebook.com/golfplusbar/"><i class="fa fa-facebook-square"></i>
                             <span>@golfplusbar</span></a>
                     </p>
                     <p class="pointer icon">
-                        <a style="color:#cfb154;text-decoration: none;" href="https://twitter.com/GolfplusBar"><i class="fa fa-tumblr-square"></i>
+                        <a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://twitter.com/GolfplusBar"><i class="fa fa-tumblr-square"></i>
                             <span>@GolfplusBar</span></a>
                     </p>
                     <p class="pointer icon">
-                        <a style="color:#cfb154;text-decoration: none;" href="https://www.instagram.com/golfplusbar/"><i class="fa fa-instagram" aria-hidden="true"></i>
+                        <a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://www.instagram.com/golfplusbar/"><i class="fa fa-instagram" aria-hidden="true"></i>
                             <span>golfplusbar</span></a>
                     </p>
                 </div>

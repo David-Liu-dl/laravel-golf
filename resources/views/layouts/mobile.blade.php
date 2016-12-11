@@ -307,8 +307,8 @@
 
 <div id="footer2" class="black-container">
     <div class="container-fluid">
-        <div style="margin-right: 5%;display: inline-block"><i class="fa fa-phone"></i>&nbsp;1300047587</div>
-        <div style="display: inline-block"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</div>
+        <a style="text-decoration: none;color:#cfb154" href="contactus" rel="external"><div style="margin-right: 5%;display: inline-block"><i class="fa fa-phone"></i>&nbsp;1300047587</div></a>
+        <a style="text-decoration: none;color:#cfb154" href="contactus" rel="external"><div style="display: inline-block"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</div></a>
     </div>
 </div>
 <!--------nav end-------->

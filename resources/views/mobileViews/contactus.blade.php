@@ -100,6 +100,20 @@
                                 <div style="margin-top: 3px">6 Healeys Ln, Melbourne, VIC 3000</div>
                             </div>
                         </div>
+                        <div style="color: white;font-size: 20px; margin-top: 15px;">
+                            <div class="pointer icon" style="margin-bottom: 10px;">
+                                <a target="_blank" style="color:white;text-decoration: none;" href="https://www.facebook.com/golfplusbar/"><i class="fa fa-facebook-square"></i>
+                                    <span style="font-size: 14px;">@golfplusbar</span></a>
+                            </div>
+                            <div class="pointer icon" style="margin-bottom: 10px;">
+                                <a target="_blank" style="color:white;text-decoration: none;" href="https://twitter.com/GolfplusBar"><i class="fa fa-tumblr-square"></i>
+                                    <span style="font-size: 14px;">@GolfplusBar</span></a>
+                            </div>
+                            <div class="pointer icon" style="margin-bottom: 10px;">
+                                <a target="_blank" style="color:white;text-decoration: none;" href="https://www.instagram.com/golfplusbar/"><i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <span style="font-size: 14px;">golfplusbar</span></a>
+                            </div>
+                        </div>
                     </div>
 
 

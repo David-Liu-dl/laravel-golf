@@ -18,6 +18,11 @@
             -o-background-size: cover;
         }
 
+        #footer2 {
+            position: absolute;
+            z-index: 11;
+        }
+
         #main {
             padding: 0px;
             height:100%;

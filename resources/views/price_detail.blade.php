@@ -89,15 +89,15 @@
             <div class="golf-info row" style="margin-left:30%;width: 70%;">
                 <div class="col-xs-4 .col-sm-4 .col-lg-4" style="text-align: left">
                     <p class="pointer icon hidden-xs hidden-sm">
-                        <a style="color:#cfb154;text-decoration: none;" href="https://www.facebook.com/golfplusbar/"><i class="fa fa-facebook-square"></i>
+                        <a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://www.facebook.com/golfplusbar/"><i class="fa fa-facebook-square"></i>
                         <span>@golfplusbar</span></a>
                     </p>
                     <p class="pointer icon hidden-xs hidden-sm">
-                        <a style="color:#cfb154;text-decoration: none;" href="https://twitter.com/GolfplusBar"><i class="fa fa-tumblr-square"></i>
+                        <a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://twitter.com/GolfplusBar"><i class="fa fa-tumblr-square"></i>
                         <span>@GolfplusBar</span></a>
                     </p>
                     <p class="pointer icon hidden-xs hidden-sm">
-                        <a style="color:#cfb154;text-decoration: none;" href="https://www.instagram.com/golfplusbar/"><i class="fa fa-instagram" aria-hidden="true"></i>
+                        <a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://www.instagram.com/golfplusbar/"><i class="fa fa-instagram" aria-hidden="true"></i>
                         <span>golfplusbar</span></a>
                     </p>
                 </div>

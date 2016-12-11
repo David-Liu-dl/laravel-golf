@@ -47,8 +47,10 @@
     }
 
     .package-content .desc{
-        /*color: white;*/
-        color: gray;
+        color: white;
+        font-size: 13px;
+        font-family: work-sans-light;
+        /*color: gray;*/
         line-height: 20px;
         margin-bottom: 20px;
     }
