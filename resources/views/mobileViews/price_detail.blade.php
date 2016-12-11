@@ -65,7 +65,7 @@
         }
     </style>
 
-    <div class="casual_container container-fluid">
+    <div class="casual_container container-fluid" style="height: 100%;">
     </div>
 
     <div id="fixed-frame" class="container" style="text-align: center">
