@@ -18,6 +18,7 @@
 
         #fixed-frame {
             overFlow-y:auto;
+            overFlow-x:hidden;
             padding: 0px;
             font-family: work-sans-regular
         }

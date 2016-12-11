@@ -49,7 +49,6 @@
     .package-content .desc{
         color: white;
         font-size: 13px;
-        font-family: work-sans-light;
         /*color: gray;*/
         line-height: 20px;
         margin-bottom: 20px;
@@ -59,6 +58,7 @@
         margin-top: 10px;
         margin-bottom: 10px;
         text-align: justify;
+        font-family: work-sans-light;
     }
 
     .package-content .intro{
@@ -74,6 +74,7 @@
         padding-bottom: 20px;
         color: #cfb154;
         border-bottom: 1px dotted #cfb154;
+        font-family: work-sans-light;
     }
 
     .package-item-container:last-of-type{
@@ -88,6 +89,7 @@
         font-weight: bold;
         font-size: 13px;
         text-transform:uppercase;
+        font-family:work-sans-regular;
     }
 
     .package-item-container .desc{

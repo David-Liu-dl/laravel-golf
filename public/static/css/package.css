@@ -15,6 +15,7 @@ body{
 }
 #package-fixed .package-item-container{
     margin-top: 10px;
+    font-family: work-sans-light;
 }
 #package-fixed .package-item-container:not(:last-child){
     border-bottom: 2px dotted #cfb154;

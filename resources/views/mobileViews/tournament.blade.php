@@ -68,7 +68,7 @@
         }
 
         .item-container {
-            padding: 20px 3%;
+            padding: 0px 20px;
 
         }
 
