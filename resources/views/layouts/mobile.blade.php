@@ -280,23 +280,25 @@
 <!--------nav start-------->
 <div class="black-container" id="header">
     <div class="container-fluid">
-        <div class="logo">
-            <a href="home" rel="external"><img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre" /></a>
-        </div>
-        <div class="dropdown">
-            <button id="dLabel" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="fa fa-bars" aria-hidden="true"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dLabel">
-                <li><a href="tournament" rel="external">TOURNAMENT</a></li>
-                <li><a href="academy" rel="external">ACADEMY</a></li>
-                <li><a href="coming_events" rel="external">MEMBERSHIP&ACTIVITIES</a></li>
-                <li><a href="cocktail" rel="external">GOLF&COCKTAIL BAR</a></li>
-                <li><a href="price" rel="external">PRICING</a></li>
-                <li><a href="#" rel="external" onclick="showBookWindow()">BOOKING</a></li>
-                <li><a href="#" rel="external" onclick="showEnquiryWindow()">ENQUIRY</a></li>
-                <li><a href="contactus" rel="external">CONTACT US</a></li>
-            </ul>
+        <div class="row">
+            <div class="col-xs-9 logo">
+                <a href="home" rel="external"><img width="100%" src="static/images/logo.png" class="" alt="Cinque Terre" /></a>
+            </div>
+            <div class="col-xs-3 dropdown">
+                <button id="dLabel" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="fa fa-bars" aria-hidden="true"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li><a href="tournament" rel="external">TOURNAMENT</a></li>
+                    <li><a href="academy" rel="external">ACADEMY</a></li>
+                    <li><a href="coming_events" rel="external">MEMBERSHIP&ACTIVITIES</a></li>
+                    <li><a href="cocktail" rel="external">GOLF&COCKTAIL BAR</a></li>
+                    <li><a href="price" rel="external">PRICING</a></li>
+                    <li><a href="#" rel="external" onclick="showBookWindow()">BOOKING</a></li>
+                    <li><a href="#" rel="external" onclick="showEnquiryWindow()">ENQUIRY</a></li>
+                    <li><a href="contactus" rel="external">CONTACT US</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
@@ -324,7 +326,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
 <script src="static/js/jquery-ui.min.js"></script>
 <script src="static/js/moment.min.js"></script>
-<script src="/static/js/moment.min.js"></script>
 <script src="static/js/book.js"></script>
 <script src="static/js/contactus.js"></script>
 <script>

@@ -15,10 +15,15 @@ $(function () {
         return screenH - (headerH + footerH);
     }
 
-    $('#main').css("min-height", getMinHeight());
-    $('.cb-slideshow').css({"max-height":(screenH-headerH),overflow:"hidden"});
-    $('.cb-slideshow .bg').css({"width":"100%"});
-    $('.slide-item .text-part').css({"bottom":$('#footer2').outerHeight() + 10});
+
+    setTimeout(function() {
+        $('#main').css("min-height", getMinHeight());
+        $('.cb-slideshow').css({"max-height":(screenH-headerH),overflow:"hidden"});
+        $('.cb-slideshow .bg').css({"width":"100%"});
+        $('.slide-item .text-part').css({"bottom":$('#footer2').outerHeight() + 10});
+    }, 300);
+
+
 
     var items = $('.slide-item').toArray();
     var timer;
