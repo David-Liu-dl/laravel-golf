@@ -128,12 +128,13 @@
                             <span class="fa fa-bars" aria-hidden="true"></span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdown-show">
-                            <li><a href="tournament">TOURNAMENT</a></li>
-                            <li><a href="academy">ACADEMY</a></li>
-                            <li><a href="coming_events">MEMBERSHIP&ACTIVITIES</a></li>
                             <li><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
+                            <li><a href="coming_events">MEMBERSHIP&ACTIVITIES</a></li>
+                            <li><a href="academy">ACADEMY</a></li>
+                            <li><a href="tournament">TOURNAMENT</a></li>
                             <li><a href="price">PRICING</a></li>
                             <li><a href="#" onclick="showBookWindow()">BOOKING</a></li>
+                            <li><a href="#" onclick="showEnquiryWindow()">ENQUIRY</a></li>
                             <li><a href="contactus">CONTACT US</a></li>
                         </ul>
                     </li>
@@ -267,9 +268,9 @@
 
                 <select class="selectpicker text-uppercase" name="types[]" title="WHICH PART WOULD YOU LIKE TO ENQUIRE" multiple>
                     <option value="membership">membership</option>
-                    <option value="tournament">tournament</option>
-                    <option value="event">event</option>
                     <option value="academy">academy</option>
+                    <option value="membership&activities">ACTIVITIES</option>
+                    <option value="tournament">tournament</option>
                     <option value="golf & cocktail bar">golf & cocktail bar</option>
                 </select>
             </div>
