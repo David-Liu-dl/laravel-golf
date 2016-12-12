@@ -79,28 +79,28 @@
                 <span style="text-transform: uppercase;font-family: work-sans-regular">FUNCTIONS AND PARTIES</span>
             </div>
             <img src="static/images/pricing-2_mobile.png" style="max-width:100%; height:auto">
-            <div class="golf-info row" style="">
-                <div class="col-xs-5 .col-sm-5 .col-lg-4" style="padding:0px;text-align:left;font-size: 0.6em;">
-                    <p class="pointer icon">
-                        <a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://www.facebook.com/golfplusbar/"><i class="fa fa-facebook-square"></i>
-                            <span>@golfplusbar</span></a>
-                    </p>
-                    <p class="pointer icon">
-                        <a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://twitter.com/GolfplusBar"><i class="fa fa-tumblr-square"></i>
-                            <span>@GolfplusBar</span></a>
-                    </p>
-                    <p class="pointer icon">
-                        <a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://www.instagram.com/golfplusbar/"><i class="fa fa-instagram" aria-hidden="true"></i>
-                            <span>golfplusbar</span></a>
-                    </p>
-                </div>
-                <div class="col-xs-7 .col-sm-7 .col-lg-8" style="padding:0px;text-align: right;font-size: 0.6em;">
-                    <p class="text-uppercase">more information contact to:</p>
-                    <p>1300047587</p>
-                    <p>www.golfplus.net.au</p>
-                    <p>info@golfplus.net.au</p>
-                </div>
-            </div>
+            {{--<div class="golf-info row" style="">--}}
+                {{--<div class="col-xs-5 .col-sm-5 .col-lg-4" style="padding:0px;text-align:left;font-size: 0.6em;">--}}
+                    {{--<p class="pointer icon">--}}
+                        {{--<a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://www.facebook.com/golfplusbar/"><i class="fa fa-facebook-square"></i>--}}
+                            {{--<span>@golfplusbar</span></a>--}}
+                    {{--</p>--}}
+                    {{--<p class="pointer icon">--}}
+                        {{--<a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://twitter.com/GolfplusBar"><i class="fa fa-tumblr-square"></i>--}}
+                            {{--<span>@GolfplusBar</span></a>--}}
+                    {{--</p>--}}
+                    {{--<p class="pointer icon">--}}
+                        {{--<a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://www.instagram.com/golfplusbar/"><i class="fa fa-instagram" aria-hidden="true"></i>--}}
+                            {{--<span>golfplusbar</span></a>--}}
+                    {{--</p>--}}
+                {{--</div>--}}
+                {{--<div class="col-xs-7 .col-sm-7 .col-lg-8" style="padding:0px;text-align: right;font-size: 0.6em;">--}}
+                    {{--<p class="text-uppercase">more information contact to:</p>--}}
+                    {{--<p>1300047587</p>--}}
+                    {{--<p>www.golfplus.net.au</p>--}}
+                    {{--<p>info@golfplus.net.au</p>--}}
+                {{--</div>--}}
+            {{--</div>--}}
         </div>
 
 
