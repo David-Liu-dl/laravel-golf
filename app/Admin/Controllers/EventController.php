@@ -86,6 +86,7 @@ class EventController extends Controller
                 return $pic_url ? "<img style='max-height:150px;max-width:150px' src='/storage/$pic_url'>" : null;
             });
             $grid->created_at();
+            $grid->disablePerPageSelector();
         });
     }
 

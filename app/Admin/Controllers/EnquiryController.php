@@ -75,6 +75,7 @@ class EnquiryController extends Controller
             $grid->types();
             $grid->comment();
             $grid->created_at();
+            $grid->disablePerPageSelector();
         });
     }
 

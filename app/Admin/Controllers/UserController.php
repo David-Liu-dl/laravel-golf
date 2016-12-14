@@ -71,6 +71,7 @@ class UserController extends Controller
             $grid->name();
             $grid->email();
             $grid->created_at();
+            $grid->disablePerPageSelector();
             
         });
     }

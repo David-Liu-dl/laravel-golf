@@ -84,6 +84,7 @@ class PackageController extends Controller
             $grid->created_at()->sortable();
             $grid->paginate(15);
             $grid->disableExport();
+            $grid->disablePerPageSelector();
         });
     }
 

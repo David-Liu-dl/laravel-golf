@@ -43,7 +43,7 @@ class EnquiryController extends Controller
     private function sendEmailWithEnquiry(Request $request){
         $name = $request -> input('name');
         Mail::send('emailViews.enquiry',['request'=>$request->all()],function($message) use($name){
-            $to = '375099857@qq.com';
+            $to = 'info@golfplus.net.au';
             $message ->to($to)->subject('New Enquiry: ' . $name);
         });
     }

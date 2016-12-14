@@ -21,12 +21,15 @@ class DBController extends Controller
         foreach ($orders as $order){
             array_push($ordersDate, \Carbon\Carbon::parse($order->book_block));
         }
-
+        
+        $schedules = array();
         $daysSchedule = DayOpenHour::all();
+        foreach($daysSchedule as $schedule){
+            $schedules[$schedule['day_of_week']] = $schedule;
+        }
         $info = array();
         $info['booked_date'] = $ordersDate;
-        $info['schedule'] = $daysSchedule;
-
+        $info['schedule'] = $schedules;
         return response()->json($info);
     }
 

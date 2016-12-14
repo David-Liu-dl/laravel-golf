@@ -74,6 +74,7 @@ class OrderController extends Controller
             $grid->email();
             $grid->book_block();
             $grid->created_at();
+            $grid->disablePerPageSelector();
         });
     }
 

@@ -65,11 +65,11 @@ $(document).ready(function () {
                     $('#enquiry_window').slideUp(100);
                 },
                 error: function () {
-                    OnError(cartObject.productID)
+//                    OnError(cartObject.productID)
                 },
                 complete: function () {
                     // Handle the complete event
-                    alert("ajax completed " + cartObject.productID);
+//                    alert("ajax completed " + cartObject.productID);
                 }
             });
             return false;

@@ -203,11 +203,17 @@ function getSelectedDayData(selected, info) {
     var startDate = new Date(selected);
     var dayOfWeek = startDate.getDay();
     var slots = createDaysTimeSlots(selected);
-
-    var isOpen = schedule[dayOfWeek]['availability'];
+    var isOpen = 0;
+    var openAt = '00:00:00';
+    var closeAt = '00:00:00';
+    if(schedule[dayOfWeek]){
+        isOpen = schedule[dayOfWeek]['availability'];
+        openAt = schedule[dayOfWeek]['open_at'].split(':')[0];
+        closeAt = schedule[dayOfWeek]['close_at'].split(':')[0];
+    }
+    
     var isOpenBL = isOpen == 1;
-    var openAt = schedule[dayOfWeek]['open_at'].split(':')[0];
-    var closeAt = schedule[dayOfWeek]['close_at'].split(':')[0];
+   
     closeAt = closeAt == 0 ? 24 : closeAt;
 
     $.each(slots, function (index, value) {
