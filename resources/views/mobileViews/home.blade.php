@@ -18,6 +18,11 @@
             -o-background-size: cover;
         }
 
+        #footer2 {
+            position: absolute;
+            z-index: 11;
+        }
+
         #main {
             padding: 0px;
             height:100%;
@@ -110,6 +115,6 @@
 
     <script type="text/javascript" src="{!! asset('static/js/jquery-1.11.3.js') !!}"></script>
     <script type="text/javascript" src="{!! asset('static/js/mobile_home.js') !!}"></script>
-    <script type="text/javascript" src="{!! asset('static/js/vidbg.js') !!}"></script>
-    <script type="text/javascript" src="{!! asset('static/js/slider.js') !!}"></script>
+{{--    <script type="text/javascript" src="{!! asset('static/js/vidbg.js') !!}"></script>--}}
+{{--    <script type="text/javascript" src="{!! asset('static/js/slider.js') !!}"></script>--}}
 @stop

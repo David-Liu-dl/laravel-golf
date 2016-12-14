@@ -30,6 +30,7 @@
             position: fixed; /* or absolute */
             z-index: 999;
             display: none;
+            font-family: 'work-sans-light';
         }
 
         #enquiry_window .input-group-addon,#enquiry_window input.transparent-input{
@@ -50,6 +51,7 @@
             text-align: center;
             font-size: 20px;
             color:#b5a37e;
+            font-family: 'work-sans-regular';
         }
 
         .input_container{
@@ -93,6 +95,10 @@
         .filter-option{
             text-transform: uppercase;
         }
+
+        #enquiry_form .selectpicker, #enquiry_form .ui-li-count{
+            display: none;
+        }
     </style>
 </head>
 
@@ -111,14 +117,18 @@
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
             </div>
 
+            <div>
+                <input style="color: black" id="entry_from" type="hidden" name="entry_from" value="">
+            </div>
+
             <div class="input_container input-group">
                 <span class="input-group-addon">NAME </span>
-                <input type="text" name="name" class="form-control transparent-input">
+                <input style="color: black" type="text" name="name" class="form-control transparent-input">
             </div>
 
             <div class="input_container input-group">
                 <span class="input-group-addon">EMAIL </span>
-                <input type="text" name="email" class="form-control transparent-input">
+                <input style="color: black" type="text" name="email" class="form-control transparent-input">
             </div>
 
             <div class="input_container input-group">
@@ -128,9 +138,10 @@
 
             <div class="">
                 <select class="selectpicker text-uppercase" name="types[]" title="WHICH PART WOULD YOU LIKE TO ENQUIRE" multiple>
-                    <option value="tournament">tournament</option>
-                    <option value="event">event</option>
+                    <option value="membership">membership</option>
                     <option value="academy">academy</option>
+                    <option value="membership&activities">ACTIVITIES</option>
+                    <option value="tournament">tournament</option>
                     <option value="golf & cocktail bar">golf & cocktail bar</option>
                 </select>
             </div>
@@ -233,7 +244,7 @@
                         </div>
 
                         <div>
-                            <button style="margin-top:20px;float:right;font-size:15px;padding:10px 10px;" id="submit" type="submit" class="btnCustom gold-btn">REQUEST BOOKING</button>
+                            <button style="margin-top:20px;float:right;font-size:15px;padding:10px 10px;" id="submit" type="submit" class="btnCustom gold-btn">BOOKING</button>
                         </div>
                     </div>
                     <div style="clear: both"></div>
@@ -257,10 +268,9 @@
     </div>
     <div id="info-block" style="text-align: center;padding:8% 0px 12%;">
         <p style="padding: 10px 0px;font-weight: bold">THANK YOU!</p><br/>
-        <p>YOUR BOOKING INFORMATION IS CONFIRMED</p><br/>
-        <p>THE COMFIRMATION WILL SENT TO YOUR EMAIL ADDRESS</p><br/>
-        <p>FOR MORE DETAILS. PLEASE CONTACT US ON</p><br/>
-        <p style="border-bottom: 1px solid #cfb154">03 9600 0988</p><br/>
+        <p>Dear, Customer</p><br/>
+        <p>We have received your booking. You will receive a confirmation email shortly.</p><br/>
+        <p>Thank you. Have a nice day.</p><br/>
         <div style="margin-top: 30px;"><a type="button" rel="external" class="btnCustom gold-btn" onclick="hideFdWindowAndRefresh()">CLOSE</a></div>
     </div>
 
@@ -270,23 +280,25 @@
 <!--------nav start-------->
 <div class="black-container" id="header">
     <div class="container-fluid">
-        <div class="logo">
-            <a href="home" rel="external"><img src="static/images/logo.png" class="img-responsive" alt="Cinque Terre" /></a>
-        </div>
-        <div class="dropdown">
-            <button id="dLabel" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="fa fa-bars" aria-hidden="true"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dLabel">
-                <li><a href="tournament" rel="external">TOURNAMENT</a></li>
-                <li><a href="academy" rel="external">ACADEMY</a></li>
-                <li><a href="coming_events" rel="external">EVENT</a></li>
-                <li><a href="cocktail" rel="external">GOLF&COCKTAIL BAR</a></li>
-                <li><a href="price" rel="external">PRICING</a></li>
-                <li><a href="#" rel="external" onclick="showBookWindow()">BOOKING</a></li>
-                <li><a href="contactus" rel="external">ENQUIRY</a></li>
-                <li><a href="contactus" rel="external">CONTACT US</a></li>
-            </ul>
+        <div class="row">
+            <div class="col-xs-9 logo">
+                <a href="home" rel="external"><img width="100%" src="static/images/logo.png" class="" alt="Cinque Terre" /></a>
+            </div>
+            <div class="col-xs-3 dropdown">
+                <button id="dLabel" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="fa fa-bars" aria-hidden="true"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li><a href="cocktail" rel="external">GOLF&COCKTAIL BAR</a></li>
+                    <li><a href="coming_events" rel="external">MEMBERSHIP&ACTIVITIES</a></li>
+                    <li><a href="academy" rel="external">ACADEMY</a></li>
+                    <li><a href="tournament" rel="external">TOURNAMENT</a></li>
+                    <li><a href="price" rel="external">PRICING</a></li>
+                    <li><a href="#" rel="external" onclick="showBookWindow()">BOOKING</a></li>
+                    <li><a href="#" rel="external" onclick="showEnquiryWindow()">ENQUIRY</a></li>
+                    <li><a href="contactus" rel="external">CONTACT US</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
@@ -297,8 +309,8 @@
 
 <div id="footer2" class="black-container">
     <div class="container-fluid">
-        <div style="margin-right: 5%;display: inline-block"><i class="fa fa-phone"></i>&nbsp;03 9600 0988</div>
-        <div style="display: inline-block"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</div>
+        <a href="tel:1300047587"><div style="margin-right: 5%;display: inline-block"><i class="fa fa-phone"></i>&nbsp;1300047587</div></a>
+        <a style="text-decoration: none;color:#cfb154" href="contactus" rel="external"><div style="display: inline-block"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</div></a>
     </div>
 </div>
 <!--------nav end-------->
@@ -314,7 +326,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
 <script src="static/js/jquery-ui.min.js"></script>
 <script src="static/js/moment.min.js"></script>
-<script src="/static/js/moment.min.js"></script>
 <script src="static/js/book.js"></script>
 <script src="static/js/contactus.js"></script>
 <script>

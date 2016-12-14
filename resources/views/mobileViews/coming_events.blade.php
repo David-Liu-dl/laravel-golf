@@ -13,12 +13,10 @@
             height: 80%;
             max-height: 80%;
             bottom: 40px;
-            top: 10%;
-            right: 5%;
-            left: 5%;
-            width: 90%;
+            width: 100%;
             overFlow-x:hidden;
             overFlow-y:scroll;
+            padding: 0px;
             /*position: fixed;*/
         }
 
@@ -66,10 +64,10 @@
         /* end */
 
         #events_block_title{
-            padding:15px 0px;
+            padding:10px 0px;
             text-align: center;
             color:#cfb154;
-            font-size: 17px;
+            font-size: 12px;
             font-weight: normal;
             border-bottom: 1px solid #cfb154;
         }
@@ -98,25 +96,33 @@
             text-align: left;
         }
         .event_title{
-            font-family: 'work-sans-bold';
+            font-family: 'work-sans-regular';
             margin: 20px auto;
-            font-size: 20px;
+            font-size: 16px;
             font-weight:bold;
             color: #cfb154;
         }
         .event_description{
+            font-family: 'work-sans-regular';
             margin:20px 0px;
+            font-size: 12px;
             line-height:25px;
             word-wrap: break-word;
         }
         .event_date{
+            font-family: 'work-sans-light';
+            font-size: 12px;
+
             margin:15px 0px;
         }
         .event_location{
+            font-family: 'work-sans-light';
             margin:15px 0px;
 
         }
         .event_price{
+            font-family: 'work-sans-light';
+            font-size: 12px;
             margin:15px 0px;
 
         }
@@ -134,7 +140,7 @@
     <div id="fixed-frame" class="container">
         <div>
             <div id="events_block_title">
-                <span>GPLUS ACTIVITIES</span>
+                <span style="text-transform: uppercase;font-family: work-sans-regular">membership & activities</span>
             </div>
 
             <div id="event_block" >
@@ -149,10 +155,10 @@
                                 <div class="event_description">{{$event['introduction']}}</div>
                                 <div class="event_date"><label>DATE:&nbsp;</label><span >{{$event['date']}}</span></div>
                                 <div class="event_location"><label>PLACE:&nbsp;</label><span >{{$event['address']}}</span></div>
-                                <div class="event_price"><label>ENTRY FEE:&nbsp;</label><span class="event_location">{{$event['price'] . "AUD"}} </span></div>
+                                <div class="event_price"><label>ENTRY FEE:&nbsp;</label><span class="event_location">{{$event['price'] . " AUD"}} </span></div>
                             </div>
 
-                            <div><button class="btnCustom info-btn entry_btn quick-enquiry-btn">ENTRY NOW</button></div>
+                            <div><button class="btnCustom info-btn entry_btn quick-enquiry-btn" value="{{"Event:" . $event['title']}}">ENTRY NOW</button></div>
                         </div>
                     </div>
                 @endforeach

@@ -116,7 +116,6 @@ function render(info) {
                     showFdWindow();
                 },
                 error: function(data,status,error){
-                    alert(data.statusText);
                     hideFdWindowAndRefresh();
                 }
             });

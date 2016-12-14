@@ -3,12 +3,13 @@
 <style>
     .package-content{
         color: #cfb154;
-        margin-top: 20px;
+        font-family: work-sans-light;
     }
     .package-content .title{
-        font-size: 10px;
+        font-size: 12px;
         text-transform:uppercase;
         text-align: center;
+        padding-top: 10px;
         padding-bottom: 10px;
         border-bottom: 1px solid #cfb154;
     }
@@ -17,7 +18,7 @@
         color: rgb(191, 155, 58);
         text-transform:uppercase;
         font-weight: bold;
-        font-size: 12px;
+        font-size: 13px;
         line-height: 30px;
         margin-top: 20px;
     }
@@ -46,8 +47,9 @@
     }
 
     .package-content .desc{
-        /*color: white;*/
-        color: gray;
+        color: white;
+        font-size: 13px;
+        /*color: gray;*/
         line-height: 20px;
         margin-bottom: 20px;
     }
@@ -56,6 +58,7 @@
         margin-top: 10px;
         margin-bottom: 10px;
         text-align: justify;
+        font-family: work-sans-light;
     }
 
     .package-content .intro{
@@ -71,6 +74,7 @@
         padding-bottom: 20px;
         color: #cfb154;
         border-bottom: 1px dotted #cfb154;
+        font-family: work-sans-light;
     }
 
     .package-item-container:last-of-type{
@@ -85,6 +89,7 @@
         font-weight: bold;
         font-size: 13px;
         text-transform:uppercase;
+        font-family:work-sans-regular;
     }
 
     .package-item-container .desc{
@@ -93,6 +98,7 @@
 
     .package-item-container .content{
         margin-top: 20px;
+        font-size: 13px;
         color: #fff;
     }
 
@@ -146,7 +152,7 @@
         <p>PACKAGE INCLUDES: {{ implode(', ', $package['features']) }} </p>
         <p>PRICE: ${{ $package['price'] }}</p>
     </div>
-    <p><button class="quick-enquiry-btn enquiry">ENQUIRY</button></p>
+    <p><button class="quick-enquiry-btn enquiry" value="{{"Lesson:" . $package['title']}}">ENQUIRY</button></p>
     <div class="video">
         <div class="embed-responsive embed-responsive-4by3">
             <iframe class="embed-responsive-item" src="{{ $package['video_url'] }}"></iframe>

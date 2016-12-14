@@ -33,6 +33,11 @@ $(function () {
                 $("body").mousemove(function(event){
                     hide_show()
                 });
+
+                //show enquiry window for once
+                setTimeout(function () {
+                    showEnquiryWindow();
+                }, 5 * 1000);
             }else {
                 checkVideoLoaded();
             }
@@ -50,8 +55,10 @@ $(function () {
         $(item).addClass('active');
 
         if($(item).find('#bgvid').length){
-            duration = $(item).find('#bgvid').get(0).duration;
-            duration = duration * 1000;
+            var video = $(item).find('#bgvid').get(0);
+            duration = video.duration;
+            duration = (duration + 1) * 1000;
+            video.play();
         }
         // run it again for the next number
         timer = setTimeout(function() {

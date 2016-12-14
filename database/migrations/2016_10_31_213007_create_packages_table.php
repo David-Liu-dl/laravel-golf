@@ -16,6 +16,7 @@ class CreatePackagesTable extends Migration
         Schema::create('packages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->integer('priority');
             $table->string('description');
             $table->text('features');
             $table->string('video_url')->nullable();

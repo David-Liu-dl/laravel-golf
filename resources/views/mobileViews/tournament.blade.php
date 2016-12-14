@@ -5,25 +5,24 @@
         #fixed-frame {
             overFlow-x:hidden;
             overFlow-y:scroll;
+            font-family: 'work-sans-light';
             /*position: fixed;*/
+            padding: 0px;
         }
 
         #fixed-frame .title {
 
             width: 100%;
-            padding-bottom: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             text-align: center;
             color: #cfb154;
-            font-weight: bold;
             text-transform: uppercase;
-            border-bottom: 2px solid #cfb154;
-            font-size: 14px;
-            /*margin-top: 5%;*/
-            margin-bottom: 8px;
+            border-bottom: 1px solid #cfb154;
             filter: Alpha(opacity=100);
             opacity: 1;
             font-weight: normal;
-            font-size: 18px;
+            font-size: 13px;
         }
 
         ::-webkit-scrollbar {
@@ -69,7 +68,7 @@
         }
 
         .item-container {
-            padding: 20px 3%;
+            padding: 0px 20px;
 
         }
 

@@ -3,7 +3,7 @@ body{
 }
 
 #package-container{
-    background: url('/static/images/slider2.png') no-repeat fixed center;
+    background: url('/static/images/academy_center.png') no-repeat fixed center;
     /*filter: Alpha(opacity=20);*/
     opacity: 0.2;
     height: 100%;
@@ -15,19 +15,19 @@ body{
 }
 #package-fixed .package-item-container{
     margin-top: 10px;
+    font-family: work-sans-light;
 }
 #package-fixed .package-item-container:not(:last-child){
-    border-bottom: 1px dotted #cfb154;
+    border-bottom: 2px dotted #cfb154;
 }
 
 #package-fixed {
-    height: 80%;
+    height: 70%;
     max-height: 80%;
     bottom: 40px;
-    top: 12%;
-    right: 15%;
-    left: 15%;
-    width: 70%;
+    top: 15%;
+    left: 12%;
+    width: 80%;
     overFlow-x:hidden;
     overFlow-y:auto;
     position: fixed;

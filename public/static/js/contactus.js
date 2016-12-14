@@ -6,12 +6,11 @@ $(document).ready(function () {
     $('.quick-enquiry-btn').click(function () {
         if ($('#enquiry_window').is(":visible")){
         }else{
-            showEnquiryWindow();
+            showEnquiryWindow($(this).val());
         }
     });
 
     $("#enquiry_form .selectpicker").change(function () {
-        console.log($(this).val());
         $("#enquiry_form").valid();
     });
 
@@ -28,8 +27,9 @@ $(document).ready(function () {
                 required: true,
                 email:true
             },
-            types:{
+            "types[]":{
                 required: true,
+                needsSelection:true,
             },
             comment:{
                 required:true,
@@ -47,7 +47,7 @@ $(document).ready(function () {
                 required: "Please enter email",
                 email:"Your email address must be in the format of name@domain.com"
             },
-            types:{
+            "types[]":{
                 required: "Please at least select one type",
             },
             comment:{
@@ -75,9 +75,16 @@ $(document).ready(function () {
             return false;
         }
     });
+
+    $.validator.addMethod("needsSelection", function (value, element) {
+        var count = $(element).find('option:selected').length;
+        return count > 0;
+    })
 });
 
-function showEnquiryWindow() {
+function showEnquiryWindow(entry) {
+    $('#enquiry_window').find("#entry_from").val(entry==null?"common":entry);
+
     if (!$('#enquiry_window').is(":visible")){
         $('#enquiry_window').fadeIn();
     }

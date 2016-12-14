@@ -10,6 +10,7 @@ class EnquiryController extends Controller
 {
     public function storeEnquiry(Request $request){
 
+        $enquiry_from = $request->input('entry_from');
         $name = $request->input('name');
         $phone = $request->input('phone');
         $email = $request->input('email');
@@ -18,6 +19,7 @@ class EnquiryController extends Controller
         $comment = $request->input('comment');
 
         $enquiry = new Enquiry();
+        $enquiry->entry_from = $enquiry_from;
         $enquiry->name = $name;
         $enquiry->phone = $phone;
         $enquiry->email = $email;
