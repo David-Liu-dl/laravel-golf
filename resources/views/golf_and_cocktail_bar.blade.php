@@ -58,7 +58,7 @@
         padding: 40px 10px 40px 10px;
         border-bottom: 2px dotted #cfb154;
         font-family: "work-sans-light";
-        font-size:14px;
+        font-size:15px;
         color: rgba(255,255,255, 0.7);
         line-height: 1.7em;
     }
