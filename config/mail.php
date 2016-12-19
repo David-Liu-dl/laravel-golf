@@ -57,7 +57,7 @@ return [
 
     'from' => [
 //        'address' => 'lyhmelbourne@gmail.com',
-        'address' => 'euniceyangjing@gmail.com',
+        'address' => 'info@golfplus.net.au',
         'name' => 'Golf Club',
     ],
 

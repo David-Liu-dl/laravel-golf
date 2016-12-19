@@ -109,7 +109,7 @@
     <script id="item" type="text/template">
         <div class="col-md-6 col-xs-6 item-container">
             <div class="item">
-                <div class="mythumbnail"><img class="portrait" src={originalImg}></div>
+                <div class="mythumbnail"><img class="portrait" src="{originalImg}"></div>
                 <div class="event_title">{title}</div>
                 <div class="figcaption introduction">{introduction}</div>
             </div>

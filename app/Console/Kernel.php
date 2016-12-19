@@ -58,7 +58,7 @@ class Kernel extends ConsoleKernel {
             })->store('xls', storage_path('excel/exports'));
 
             Mail::send('orders', ['orders' => $orders, 'former_order' => $former_order, 'today' => Carbon::yesterday()->toDateString()], function($message) {
-                $to = 'euniceyangjing@gmail.com';
+                $to = 'info@golfplus.net.au';
                 $message->to($to)->subject("Orders List for " . Carbon::yesterday()->toDateString());
                 $message->attach(storage_path('excel/exports/') . 'Order_List_' . Carbon::yesterday()->toDateString() . '.xls');
             });
