@@ -1,4 +1,5 @@
 @extends('layouts.default')
+@section('title', 'ACADEMY')
 @section('content')
     <link href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/static/css/package.css') }}" rel="stylesheet">

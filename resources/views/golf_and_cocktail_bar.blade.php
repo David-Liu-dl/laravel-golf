@@ -1,5 +1,5 @@
 @extends('layouts.default')
-
+@section('title', 'GOLF & COCKTAIL BAR')
 @section('content')
     <style>
 
@@ -77,7 +77,7 @@
 
     <div id="fixed-frame" class="container">
         <div id="events_block_title">
-            <span style="text-transform: uppercase;font-family: work-sans-regular">golf&cocktail bar</span>
+            <span style="text-transform: uppercase;font-family: work-sans-regular">golf & cocktail bar</span>
         </div>
 
         <div class="img-block">

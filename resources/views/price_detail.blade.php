@@ -1,5 +1,5 @@
 @extends('layouts.default')
-
+@section('title', 'GOLFPLUS PRICIN')
 @section('content')
     <style>
         .casual_container {

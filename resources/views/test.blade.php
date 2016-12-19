@@ -1,6 +1,5 @@
-
 @extends('layouts.default')
-
+@section('title', 'TOURNAMENT BOOKING')
 @section('content')
     <style>
         #info-block p {

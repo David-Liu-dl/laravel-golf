@@ -1,13 +1,11 @@
 @extends('layouts.default')
-
+@section('title', 'Contact Us')
 @section('content')
 
     <style>
         body {
             background-image: url("../static/images/map-bg.jpg");
-
         }
-
         #header {
             border-bottom: 1px solid #cfb154;
         }
@@ -25,7 +23,7 @@
             <div id="info-block" style="width:100%;text-align: left;position: relative;">
                 <div id="text-info-block" style="color: white;">
                     <!--left -->
-                    <div class="one-line" style="font-weight: bold;font-size: 10px;">
+                    <div class="one-line" style="font-weight: bold;font-size: 11px;">
                         <div>
                             <div class="one-line icon-block"><i class="fa fa-map-marker"></i></div>
                             <div class="one-line">280 KING STREET, MELBOURNE, VIC 3000</div>
@@ -33,20 +31,20 @@
                         <div>
                             <div class="one-line icon-block"></div>
                             <div class="one-line">
-                                <button type="button" class="btnCustom info-btn">OPEN HOUR</button>
+                                <button type="button" style="cursor:" class="btnCustom info-btn">OPEN HOUR</button>
                             </div>
                         </div>
                         <div>
                             <div class="one-line icon-block"></div>
-                            <div class="one-line">11:00 AM - 11:00 PM MON.TO THUR.</div>
+                            <div class="one-line">11:00AM - 11:00PM MON.TO THUR.</div>
                         </div>
                         <div>
                             <div class="one-line icon-block"></div>
-                            <div class="one-line">11:00 AM - 11:00 PM MON.TO THUR.</div>
+                            <div class="one-line">11:00AM - LATE FRI.TO SAT.</div>
                         </div>
                         <div>
                             <div class="one-line icon-block"></div>
-                            <div class="one-line">11:00 AM - 11:00 PM MON.TO THUR.</div>
+                            <div class="one-line">11:00AM - 5:00PM SUN.</div>
                         </div>
 
                     </div>
@@ -58,34 +56,34 @@
                                 <i class="fa fa-bus" aria-hidden="true"></i>
                             </div>
                             <div class="one-line">
-                                <div style="margin-top: 0px;">
+                                <div style="margin-top:-2px;">
                                     <button type="button" class="btnCustom info-btn" style="font-size: 8px;padding: 2px 2px;">Stop2</button>
                                     <span style="margin-left: 5px;">King Street</span>
-                                    <span style="margin-left: 5px;">Trams:12/30/35/109</span>
+                                    <span style="margin-left: 5px;">Trams: 12/30/35/109</span>
                                 </div>
-                                <div>
+                                <div style="margin-top:5px;">
                                     <button type="button" class="btnCustom info-btn" style="font-size: 8px;padding: 2px 2px;">Stop3</button>
                                     <span style="margin-left: 5px;">William Street</span>
-                                    <span style="margin-left: 5px;">Trams:12/30/35/109</span>
+                                    <span style="margin-left: 5px;">Trams: 12/30/35/109</span>
                                 </div>
 
-                                <div>
+                                <div style="margin-top:5px;">
                                     <button type="button" class="btnCustom info-btn" style="font-size: 8px;padding: 2px 2px;">Stop4</button>
                                     <span style="margin-left: 5px;">Lonsdale Street</span>
-                                    <span style="margin-left: 5px;">Trams:55</span>
+                                    <span style="margin-left: 5px;">Trams: 55</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div>
+                        <div style="margin-top:5px;">
                             <div class="one-line icon-block"><i class="fa fa-subway" aria-hidden="true"></i></div>
                             <div class="one-line">Flagstaff Station</div>
                         </div>
-                        <div>
+                        <div style="margin-top:5px;">
                             <div class="one-line icon-block"><i class="fa fa-product-hunt" aria-hidden="true"></i></div>
-                            <div class="one-line">
+                            <div class="one-line" style="margin-top:-1px;">
                                 <div style="margin-top: 3px">Flagstaff Parking</div>
-                                <div style="margin-top: 3px">6 Healeys Ln, Melbourne, VIC 3000</div>
+                                <div style="margin-top: 3px">56 Healeys Ln, Melbourne, VIC 3000</div>
                             </div>
                         </div>
                     </div>

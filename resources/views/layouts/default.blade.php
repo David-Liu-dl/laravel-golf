@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GOLF PLUS</title>
+    <title>GOLFPLUS - @yield('title')</title>
     <link rel="stylesheet" href="static/css/bootstrap.css">
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="static/css/font-awesome/css/font-awesome.min.css">
@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="static/css/reset.css">
 
     <link rel="stylesheet" href="static/css/frame.css">
-
     <link href="static/css/contactus.css" rel="stylesheet">
     <style>
         body {

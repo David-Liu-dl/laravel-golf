@@ -17,6 +17,11 @@
     max-width: 100%;
 }
 
+#info-block{
+    font-family: work-sans-light;
+    line-height: 15px;
+}
+
 .one-line {
     display: inline-block;
     /*border: 1px solid white;*/
@@ -38,7 +43,7 @@
 .contactus #info-block{
     float: left;
     margin-top: 20px;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .contactus .info-btn{

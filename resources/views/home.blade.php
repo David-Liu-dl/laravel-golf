@@ -1,5 +1,5 @@
 @extends('layouts.default')
-
+@section('title', 'Home')
 @section('content')
 <section class="cd-hero">
     <ul class="cb-slideshow">

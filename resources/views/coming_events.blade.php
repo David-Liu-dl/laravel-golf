@@ -1,6 +1,6 @@
 
 @extends('layouts.default')
-
+@section('title', 'MEMBERSHIP & ACTIVITIES')
 @section('content')
     <?php
         if (!empty($_GET)) {

@@ -50,15 +50,15 @@
                         </div>
                         <div>
                             <div class="one-line icon-block"></div>
-                            <div class="one-line">11:00 AM - 11:00 PM MON.TO THUR.</div>
+                            <div class="one-line">11:00AM - 11:00PM MON.TO THUR.</div>
                         </div>
                         <div>
                             <div class="one-line icon-block"></div>
-                            <div class="one-line">11:00 AM - 11:00 PM MON.TO THUR.</div>
+                            <div class="one-line">11:00AM - LATE FRI.TO SAT.</div>
                         </div>
                         <div>
                             <div class="one-line icon-block"></div>
-                            <div class="one-line">11:00 AM - 11:00 PM MON.TO THUR.</div>
+                            <div class="one-line">11:00AM - 5:00PM SUN.</div>
                         </div>
 
                     </div>
@@ -73,18 +73,18 @@
                                 <div style="margin-top: 0px;">
                                     <button type="button" class="btnCustom info-btn" style="font-size: 8px;padding: 2px 2px;">Stop2</button>
                                     <span style="margin-left: 5px;">King Street</span>
-                                    <span style="margin-left: 5px;">Trams:12/30/35/109</span>
+                                    <span style="margin-left: 5px;">Trams: 12/30/35/109</span>
                                 </div>
                                 <div>
                                     <button type="button" class="btnCustom info-btn" style="font-size: 8px;padding: 2px 2px;">Stop3</button>
                                     <span style="margin-left: 5px;">William Street</span>
-                                    <span style="margin-left: 5px;">Trams:12/30/35/109</span>
+                                    <span style="margin-left: 5px;">Trams: 12/30/35/109</span>
                                 </div>
 
                                 <div>
                                     <button type="button" class="btnCustom info-btn" style="font-size: 8px;padding: 2px 2px;">Stop4</button>
                                     <span style="margin-left: 5px;">Lonsdale Street</span>
-                                    <span style="margin-left: 5px;">Trams:55</span>
+                                    <span style="margin-left: 5px;">Trams: 55</span>
                                 </div>
                             </div>
                         </div>
