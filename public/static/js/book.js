@@ -39,7 +39,7 @@ function render(info) {
     $("#datepicker").datepicker(
         {
             minDate: 0,
-            maxDate: "+2M",
+            maxDate: "+6M",
             dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
             dayNamesMin: ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"],
             dateFormat: 'yy-mm-dd',
