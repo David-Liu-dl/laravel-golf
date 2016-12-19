@@ -54,6 +54,19 @@
             background: #cfb154;
         }
 
+        #events_introduction {
+            padding: 40px 10px 40px 10px;
+            border-bottom: 2px dotted #cfb154;
+            font-family: 'work-sans-light';
+            font-size:100%;
+            color: rgba(255,255,255, 0.7);
+            line-height: 1.7em;
+        }
+
+        #events_introduction p{
+            margin-bottom: 1em;
+        }
+
         .img-block a:not(:last-child) img{
             padding-bottom: 20px;
             margin-bottom: 20px;
@@ -77,11 +90,19 @@
 
     <div id="fixed-frame" class="container">
         <div id="events_block_title">
-            <span style="text-transform: uppercase;font-family: work-sans-regular">golf&cocktail bar</span>
+            <span style="text-transform: uppercase;font-family: work-sans-regular">golf & cocktail bar</span>
+        </div>
+
+        <div id="events_introduction">
+            <p>
+            GPlus's breathtaking array of premium cocktails and spirits is derived from the best menus in the world with a slight twist. Each item on our menu is infused with golf terminology to get you and your colleagues into the swing of things. Furthermore, there is a drink on the menu to suit every individual much like the game of golf requires all types to enjoy our historic game.
+            </p>
+            <p>
+            The game of golf is to be enjoyed with friends over the finest quality beverages as per the games humble beginnings all those years ago. Staff form GPlus pride themselves on attention to detail in their mixology and have vast knowledge in the game of golf to ensure you and your colleagues have a night to remember.
+            </p>
         </div>
 
         <div class="img-block">
-            <a href="#"><img class="golf-img" src="static/images/cocktail_bar-1.png" style="width:100%; height:auto"></a>
             <a href="#"><img class="golf-img" src="static/images/cocktail_bar-2.png" style="width:100%; height:auto"></a>
             <a href="static/images/price_drink.jpg"><img class="golf-img" src="static/images/price_drink.jpg" width="100%"></a>
             <a href="static/images/price_food.jpg"><img class="golf-img" src="static/images/price_food.jpg" width="100%"></a>
