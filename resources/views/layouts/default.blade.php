@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Golf</title>
+    <title>GOLF PLUS</title>
     <link rel="stylesheet" href="static/css/bootstrap.css">
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="stylesheet" href="static/css/font-awesome/css/font-awesome.min.css">
@@ -118,8 +118,8 @@
             </div>
             <div class="col-md-9 col-sm-9 col-xs-9 hidden-nav-xs">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="main-menu"><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
-                    <li class="main-menu"><a href="coming_events">MEMBERSHIP&ACTIVITIES</a></li>
+                    <li class="main-menu"><a href="cocktail">GOLF & COCKTAIL BAR</a></li>
+                    <li class="main-menu"><a href="coming_events">MEMBERSHIP & ACTIVITIES</a></li>
                     <li class="main-menu"><a href="academy">ACADEMY</a></li>
                     <li class="main-menu"><a href="tournament">TOURNAMENT</a></li>
                     <li class="main-menu"><a href="price">PRICING</a></li>
@@ -128,8 +128,8 @@
                             <span class="fa fa-bars" aria-hidden="true"></span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdown-show">
-                            <li><a href="cocktail">GOLF&COCKTAIL BAR</a></li>
-                            <li><a href="coming_events">MEMBERSHIP&ACTIVITIES</a></li>
+                            <li><a href="cocktail">GOLF & COCKTAIL BAR</a></li>
+                            <li><a href="coming_events">MEMBERSHIP & ACTIVITIES</a></li>
                             <li><a href="academy">ACADEMY</a></li>
                             <li><a href="tournament">TOURNAMENT</a></li>
                             <li><a href="price">PRICING</a></li>
@@ -320,10 +320,8 @@
             <li class="pointer" onClick="window.open('contactus')"><i class="fa fa-phone"></i>&nbsp;1300047587</li>
             <li class="pointer"><i class="fa fa-map-marker"></i>&nbsp;280 KING STREET MELBOURNE, VIC 3000</li>
             <li class="pointer icon hidden-xs hidden-sm">
-                <a style="padding:10px;text-decoration: none;" href="https://www.facebook.com/golfplusbar/"><i class="fa fa-facebook-square"></i></a>
-            </li>
-            <li class="pointer icon hidden-xs hidden-sm" style="margin-right:20px;">
-                <a style="padding:10px;text-decoration: none;" href="https://twitter.com/GolfplusBar"><i class="fa fa-tumblr-square" href="https://twitter.com/GolfplusBar"></i></a>
+                <a style="padding:10px;text-decoration: none;display:initial" href="https://www.facebook.com/golfplusbar/"><i class="fa fa-facebook-square"></i></a>
+                <a style="padding:10px;text-decoration: none;display:initial" href="https://twitter.com/GolfplusBar"><i class="fa fa-tumblr-square" href="https://twitter.com/GolfplusBar"></i></a>
             </li>
         </ul>
     </div>
