@@ -134,7 +134,7 @@
             GPlus's breathtaking array of premium cocktails and spirits is derived from the best menus in the world with a slight twist. Each item on our menu is infused with golf terminology to get you and your colleagues into the swing of things. Furthermore, there is a drink on the menu to suit every individual much like the game of golf requires all types to enjoy our historic game.
         </p>
         <p>
-            The game of golf is to be enjoyed with friends over the finest quality beverages as per the games humble beginnings all those years ago. Staff form GPlus pride themselves on attention to detail in their mixology and have vast knowledge in the game of golf to ensure you and your colleagues have a night to remember.
+            The game of golf is to be enjoyed with friends over the finest quality beverages as per the games humble beginnings all those years ago. Staff from GPlus pride themselves on attention to detail in their mixology and have vast knowledge in the game of golf to ensure you and your colleagues have a night to remember.
         </p>
     </div>
 
