@@ -58,7 +58,7 @@
         padding: 40px 10px 40px 10px;
         border-bottom: 2px dotted #cfb154;
         font-family: "work-sans-light";
-        font-size:100%;
+        font-size:14px;
         color: rgba(255,255,255, 0.7);
         line-height: 1.7em;
     }
@@ -112,6 +112,10 @@
     
     .img-block a:hover img{
         width: 100%;
+    }
+    
+    #events_introduction{
+        line-height: 32px;
     }
 
 </style>
