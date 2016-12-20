@@ -179,7 +179,7 @@
         <p>“We are truly blessed as coaches to have GPlus Academy at our disposal as it is simply the best technology and regimented training tool in the world”.</p>
     </div>
 
-    <p class="mini-title"><span>MATT JAGER</span></p>
+    <p class="mini-title" style="margin-top:30px;"><span>MATT JAGER</span></p>
     <div class='intro-section' style="padding-top: 10px; border-bottom: 2px dotted #cfb154;margin-bottom:40px ">
         <p><img style="float:right;margin:5px;width:200px;" src='static/images/coach_1.jpg' class="img-responsive">Matt turned professional in 2010 as one of the most exciting talents in the country. Born in Perth, Western Australia, Matt was an Australian Amateur and Dual New Zealand Amateur Champion and represented Australia in the World Amateur Team Championship. As a student of the game, Matt has since moved to Melbourne to further his golfing career.</p>
         <p>From the word championship....As an elite professional, Matt has learned from the best players and coaches in the golf industry. His experience as a tour player and knowledge of the modern swing make him a  great asset to our team at GPlus.</p>
