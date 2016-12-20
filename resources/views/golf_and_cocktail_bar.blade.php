@@ -55,7 +55,7 @@
     }
 
     .events-section {
-        padding: 40px 10px 40px 10px;
+        padding: 30px 10px 30px 10px;
         border-bottom: 2px dotted #cfb154;
         font-family: "work-sans-light";
         font-size:15px;
@@ -78,24 +78,23 @@
         text-align: center;
         color:#cfb154;
         font-size: 17px;
-        font-weight: normal;
         border-bottom: 1px solid #cfb154;
     }
 
     #business-hours .label {
         display: block;
-        margin-left: 80px;
-        width: 200px;
-        height: 50px;
-        line-height: 50px; 
+        margin-left: 10%;
+        height: 40px;
+        line-height: 40px;
+        width: 220px;
         background-color: #cfb154;
         color: black;
-        font-family: "work-sans-bold";
-        font-size: 1em;
         text-transform: uppercase;
         border-radius: 0;
         padding-top: 0px;
         padding-bottom: 0px;
+        font-size: 16px;
+        font-family: work-sans-bold;
     }
 
     #business-hours p {
@@ -116,6 +115,13 @@
     
     #events_introduction{
         line-height: 32px;
+    }
+    
+    #fixed-frame p{
+        color: white;
+        font-family: work-sans-regular;
+        font-size: 14px;
+        font-weight: normal;
     }
 
 </style>
