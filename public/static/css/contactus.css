@@ -59,10 +59,10 @@
 
 .contactus .quick-enquiry-btn{
     font-size: 15px;
-    padding: 5px 10px;
-    background-color: #cfb154;
-    color: white;
-    border: none;
+    padding: 10px 10px;
+    background-color: transparent;
+    color: #cfb154;
+    border: 1px solid #cfb154;
 }
 
 .one-line p{
