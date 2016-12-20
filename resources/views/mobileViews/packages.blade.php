@@ -57,7 +57,6 @@
     .package-content .desc p{
         margin-top: 10px;
         margin-bottom: 10px;
-        text-align: justify;
         font-family: work-sans-light;
     }
 

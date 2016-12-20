@@ -25,6 +25,13 @@
             font-size: 12px;
             padding-bottom: 10px;
         }
+        .contactus .quick-enquiry-button{
+            font-size: 15px;
+            padding: 10px 15px;
+            background-color: transparent;
+            color: #cfb154;
+            border: 1px solid #cfb154;
+        }
 
     </style>
 
@@ -121,7 +128,7 @@
 
             </div>
             <div id="right-btn-block">
-                <button type="button"class="quick-enquiry-btn btnCustom info-btn" value="contact_us">QUICK ENQUIRY</button>
+                <button type="button"class="quick-enquiry-button info-btn" value="contact_us">QUICK ENQUIRY</button>
             </div>
         </div>
 

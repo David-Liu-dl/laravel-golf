@@ -128,11 +128,16 @@
         }
 
         .entry_btn{
-            background: #cfb154;
+/*            background: #cfb154;
             font-family: 'work-sans-regular';
             color: black;
             font-size: 1.0em;
-            font-weight: 500;
+            font-weight: 500;*/
+            font-size: 15px;
+            padding: 10px 15px;
+            background-color: transparent;
+            color: #cfb154;
+            border: 1px solid #cfb154;
         }
 
     </style>
@@ -158,7 +163,7 @@
                                 <div class="event_price"><label>ENTRY FEE:&nbsp;</label><span class="event_location">{{$event['price'] . " AUD"}} </span></div>
                             </div>
 
-                            <div><button class="btnCustom info-btn entry_btn quick-enquiry-btn" value="{{"Event:" . $event['title']}}">ENTRY NOW</button></div>
+                            <div><button class="info-btn entry_btn" value="{{"Event:" . $event['title']}}">ENTRY NOW</button></div>
                         </div>
                     </div>
                 @endforeach

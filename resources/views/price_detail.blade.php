@@ -78,8 +78,9 @@
         }
         
         #fixed-frame .row{
-            margin-top: 40px;
-            padding:0px 15px;
+            margin:40px 0px 15px 0px;
+            padding-left: 0px;
+            padding-right: 0px;
         }
         
         #fixed-frame .section-header{
@@ -105,6 +106,11 @@
         #fixed-frame .cost{
             font-size: 18px;
             font-weight: bold;
+        }
+        
+        #fixed-frame .dotted{
+            padding-bottom: 20px; 
+            border-bottom: 2px dotted #cfb154;
         }
     </style>
 
@@ -137,7 +143,7 @@
             </div>
         </div>
         
-        <div class="row">
+        <div class="row dotted">
             <div class="col-md-4">
                 <span class="section-header">PRACTICE HOURS</span>
             </div>
@@ -225,7 +231,7 @@
             </div>
         </div>
         
-        <div class="row">
+        <div class="row dotted">
             <div class="col-md-4">
                 <span class="section-header">PAR PACKAGE</span>
             </div>

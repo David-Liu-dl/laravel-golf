@@ -4,7 +4,9 @@
     <style>
 
         #fixed-frame {
-            overFlow-y:scroll;
+            padding: 5% 5%;
+            height: 100%;
+            margin: 0px;
         }
 
         #fixed-frame a {
@@ -57,7 +59,7 @@
         }
 
         .events-section {
-            padding: 40px 10px 40px 10px;
+            padding: 25px 0px 25px 0px;
             border-bottom: 2px dotted #cfb154;
             font-family: "work-sans-light";
             font-size: 13px;
@@ -66,7 +68,7 @@
         }
 
         .hours-section .hours {
-            padding: 20px 5px 40px 5px;
+            padding: 20px 0px 40px 0px;
         }
 
         .hours-section .day-of-week{
@@ -81,11 +83,11 @@
 
         #business-hours .label {
             display: block;
-            width: 200px;
-            height: 50px;
+            width: 60%;
+            height: 40px;
             margin: 0 auto;
             margin-bottom: 10px;
-            line-height: 50px; 
+            line-height: 40px; 
             background-color: #cfb154;
             color: black;
             font-family: "work-sans-bold";
@@ -95,11 +97,28 @@
             padding-top: 0px;
             padding-bottom: 0px;
         }
+        
+        #business-hours{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        
+        .gold-button{
+            font-size: 15px;
+            width:60%;
+            height: 40px;
+            line-height: 40px;
+            background-color: transparent;
+            color: #cfb154;
+            border: 1px solid #cfb154;
+            margin-bottom: 10px;
+            padding: 0px;
+        }
 
 
     </style>
 
-    <div id="fixed-frame" class="container">
+
         <div id="events_block_title">
             <span style="text-transform: uppercase;font-family: work-sans-regular">golf&cocktail bar</span>
         </div>
@@ -174,13 +193,13 @@
         </div>
 
         <div style="margin:10px 0px 0px 0px;text-align: center">
-            <a><button id="bookBtn" type="button" class="btnCustom gold-btn" onclick="showBookWindow()">BOOKING</button></a>
+            <p><a><button id="bookBtn" type="button" class=" gold-button" onclick="showBookWindow()">BOOKING</button></a></p>
 
-            <a><button id="bookBtn" type="button" class="btnCustom gold-btn" value="cocktail" onclick="showEnquiryWindow()">ENQUIRY</button></a>
+            <p><a><button id="bookBtn" type="button" class=" gold-button" value="cocktail" onclick="showEnquiryWindow()">ENQUIRY</button></a></p>
 
-            <a href="coming_events" rel="external"><button id="bookBtn" type="button" class="btn btnCustom gold-btn">ACTIVITIES</button></a>
+            <p><a href="coming_events" rel="external"><button id="bookBtn" type="button" class="btn gold-button">ACTIVITIES</button></a></p>
         </div>
-    </div>
+
 
     <script type="text/javascript" src="{!! asset('static/js/jquery-1.11.3.js') !!}"></script>
     <script type="text/javascript" src="{!! asset('static/js/jquery.jqzoom.js') !!}"></script>
