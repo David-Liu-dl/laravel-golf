@@ -17,10 +17,11 @@
 
 
         #fixed-frame {
-            overFlow-y:auto;
-            overFlow-x:hidden;
-            padding: 0px;
-            font-family: work-sans-regular
+            color: white;
+            font-family: work-sans-regular;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 35px;
         }
 
         ::-webkit-scrollbar {
@@ -36,6 +37,42 @@
         }
         ::-webkit-scrollbar-thumb:window-inactive {
             background: #cfb154;
+        }
+
+        #fixed-frame .row{
+            margin-top: 40px;
+            padding:0px 40px;
+            border-bottom: 1px dashed #cfb154;
+        }
+        
+        #fixed-frame .section-header{
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            width: 220px;
+            font-size: 16px;
+            background-color: #cfb154;
+            color: black;
+            text-align: center;
+            font-family: work-sans-bold;
+            margin-bottom: 30px;
+        }
+        #fixed-frame .section-title{
+            font-size: 18px;
+            color: #cfb154;
+            margin-left: -15px;
+        }
+        #fixed-frame .detail {
+            padding-left: 30px;
+            padding-bottom: 30px;
+        }
+        #fixed-frame ul li{
+            list-style-type: disc;
+            list-style-position: inherit;
+        }
+        #fixed-frame .cost{
+            font-size: 18px;
+            font-weight: bold;
         }
 
     </style>
@@ -55,7 +92,7 @@
         }
 
 
-        #events_block_title{
+        .events_block_title{
             padding:15px 0px;
             text-align: center;
             color:#cfb154;
@@ -65,45 +102,141 @@
         }
     </style>
 
-    {{--<div class="casual_container container-fluid" style="height: 102%;">--}}
-    {{--</div>--}}
-
-    <div id="fixed-frame" class="container" style="text-align: center">
-        <div style="display:table;margin:0 auto;">
-            <div id="events_block_title">
-                <span style="text-transform: uppercase;font-family: work-sans-regular">GOLFPLUS PRICING</span>
+    <div id="fixed-frame" class="container">
+        <div class="events_block_title">
+            <span style="text-transform: uppercase;font-family: work-sans-regular">GOLFPLUS PRICING</span>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <span class="section-header">HALF AN HOURLY RATE</span>
             </div>
-            <img src="static/images/pricing-1_mobile.png" style="max-width:100%; height:auto">
-            <div style="border-bottom: 2px dotted #cfb154"></div>
-            <div id="events_block_title" style="margin-top: 50px;">
-                <span style="text-transform: uppercase;font-family: work-sans-regular">FUNCTIONS AND PARTIES</span>
+            <div class="col-md-4 detail">
+                <span class="section-title">3 PEOPLE OR LESS</span>
+                <ul>
+                    <li>$<span class="cost">15</span> per person</li>
+                    <li>one complimentary drink </li>
+                    <li>per person when arrival</li>
+                </ul>
             </div>
-            <img src="static/images/pricing-2_mobile.png" style="max-width:100%; height:auto">
-            {{--<div class="golf-info row" style="">--}}
-                {{--<div class="col-xs-5 .col-sm-5 .col-lg-4" style="padding:0px;text-align:left;font-size: 0.6em;">--}}
-                    {{--<p class="pointer icon">--}}
-                        {{--<a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://www.facebook.com/golfplusbar/"><i class="fa fa-facebook-square"></i>--}}
-                            {{--<span>@golfplusbar</span></a>--}}
-                    {{--</p>--}}
-                    {{--<p class="pointer icon">--}}
-                        {{--<a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://twitter.com/GolfplusBar"><i class="fa fa-tumblr-square"></i>--}}
-                            {{--<span>@GolfplusBar</span></a>--}}
-                    {{--</p>--}}
-                    {{--<p class="pointer icon">--}}
-                        {{--<a target="_blank" style="color:#cfb154;text-decoration: none;" href="https://www.instagram.com/golfplusbar/"><i class="fa fa-instagram" aria-hidden="true"></i>--}}
-                            {{--<span>golfplusbar</span></a>--}}
-                    {{--</p>--}}
-                {{--</div>--}}
-                {{--<div class="col-xs-7 .col-sm-7 .col-lg-8" style="padding:0px;text-align: right;font-size: 0.6em;">--}}
-                    {{--<p class="text-uppercase">more information contact to:</p>--}}
-                    {{--<p>1300047587</p>--}}
-                    {{--<p>www.golfplus.net.au</p>--}}
-                    {{--<p>info@golfplus.net.au</p>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+            <div class="col-md-4 detail">
+                <span class="section-title">MORE THAN 3 PEOPLE</span>
+                <ul>
+                    <li>$<span class="cost">10</span> per person</li>
+                    <li>one complimentary drink</li>
+                    <li>per person when arrival</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <span class="section-header">PRACTICE HOURS</span>
+            </div>
+            <div class="col-md-4 detail">
+                <span class="section-title">6 HOLES</span>
+                <ul>
+                    <li>$<span class="cost">19</span> per person</li>
+                    <li>Maximum 1 hour</li>
+                </ul>
+            </div>
+            <div class="col-md-4 detail">
+                <span class="section-title">9 HOLES</span>
+                <ul>
+                    <li>$<span class="cost">25</span> per person</li>
+                    <li>Maximum 1.5 hour</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="events_block_title" style="margin-top: 50px;">
+            <span style="text-transform: uppercase;font-family: work-sans-regular">FUNCTIONS AND PARTIES</span>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <span class="section-header">PAR PACKAGE</span>
+            </div>
+            <div class="col-md-4 detail">
+                <span class="section-title">$30 PER PERSON</span>
+                <ul>
+                    <li>4-10 people</li>
+                    <li>2 hours of using one golf simulator bay</li>
+                    <li>one complimentary drink per person</li>
+                    <li>one serve of party pies, nuggets & chips</li>
+                </ul>
+            </div>
+            <div class="col-md-4 detail">
+                <span class="section-title">$30 PER PERSON</span>
+                <ul>
+                    <li>11-20 people</li>
+                    <li>2 hours of using one golf simulator bay</li>
+                    <li>one complimentary drink per person</li>
+                    <li>one serve of party pies, nuggets & chips</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <span class="section-header">BIRDIE PACKAGE</span>
+            </div>
+            <div class="col-md-4 detail">
+                <span class="section-title">$60 PER PERSON</span>
+                <ul>
+                    <li>2 hours of using the venue privately</li>
+                    <li>one house drink per person</li>
+                </ul>
+            </div>
+            <div class="col-md-4 detail">
+                <span class="section-title">$70 PER PERSON</span>
+                <ul>
+                    <li>3 hours of using the venue privately</li>
+                    <li>one house drink per person</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4">
+                &nbsp;
+            </div>
+            <div class="col-md-4 detail">
+                <span class="section-title">$100 PER PERSON</span>
+                <ul>
+                    <li>2 hours of using the venue privately</li>
+                    <li>unlimited house drink*</li>
+                </ul>
+            </div>
+            <div class="col-md-4 detail">
+                <span class="section-title">$120 PER PERSON</span>
+                <ul>
+                    <li>3 hours of using the venue privately</li>
+                    <li>unlimited house drink*</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <span class="section-header">PAR PACKAGE</span>
+            </div>
+            <div class="col-md-8" style="margin-left:-15px;">
+                <p>we can tailor your function according to your specific requirements, please contact us on 13000GPLUS for more information</p>
+                <p>* house drink includes:</p>
+                <p>house tap beer, house spirits, stubbies, ciders, house white, house red, house sparkling.</p>
+            </div>
         </div>
 
-
+        <div style="display:table;margin:0 auto;">
+            <!--<div id="events_block_title">
+                <span style="text-transform: uppercase;font-family: work-sans-regular">GOLFPLUS PRICING</span>
+            </div>-->
+            <img src="static/images/pricing-1_mobile.png" style="max-width:100%; height:auto">
+            <div style="border-bottom: 2px dotted #cfb154"></div>
+            <!--<div id="events_block_title" style="margin-top: 50px;">
+                <span style="text-transform: uppercase;font-family: work-sans-regular">FUNCTIONS AND PARTIES</span>
+            </div>-->
+            <img src="static/images/pricing-2_mobile.png" style="max-width:100%; height:auto">
+        </div>
 
     </div>
 @stop
