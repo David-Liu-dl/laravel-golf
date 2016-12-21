@@ -61,7 +61,7 @@
         .events-section {
             padding: 25px 0px 25px 0px;
             border-bottom: 2px dotted #cfb154;
-            font-family: "work-sans-regular";
+            font-family: work-sans-regular;
             font-size: 13px;
             color: rgba(255,255,255, 0.7);
             line-height: 1.7em;
@@ -120,7 +120,7 @@
 
 
         <div id="events_block_title">
-            <span style="text-transform: uppercase;font-family: work-sans-regular">golf&cocktail bar</span>
+            <span style="text-transform: uppercase;font-family: work-sans-regular">golf & cocktail bar</span>
         </div>
 
         <div id="events_introduction" class="events-section">
