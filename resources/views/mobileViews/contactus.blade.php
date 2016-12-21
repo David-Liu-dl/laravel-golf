@@ -35,7 +35,7 @@
 
     </style>
 
-    <div class="container-fluid contactus">
+    <div class="container-fluid contactus" style="padding-left: 0px;padding-right: 0px">
         <div id="contact-info-container">
             <div class="title-block">CONTACT US</div>
             <div style="margin-top: 10px;">
