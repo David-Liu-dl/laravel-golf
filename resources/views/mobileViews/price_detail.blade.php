@@ -49,7 +49,7 @@
         margin-left: -15px;
     }
 
-    ul li{
+    .price-row ul li{
         list-style-type: disc;
         list-style-position: inherit;
     }
@@ -94,7 +94,7 @@
 <div class="events_block_title">
     <span style="text-transform: uppercase;font-family: work-sans-regular">GOLFPLUS PRICING</span>
 </div>
-<div class="row">
+<div class="row price-row">
     <div class="col-md-4">
         <span class="section-header">HALF AN HOURLY RATE</span>
     </div>
