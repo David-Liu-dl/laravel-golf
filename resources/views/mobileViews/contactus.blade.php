@@ -128,7 +128,7 @@
 
             </div>
             <div id="right-btn-block">
-                <button type="button"class="quick-enquiry-button info-btn" value="contact_us">QUICK ENQUIRY</button>
+                <button type="button"class="quick-enquiry-button info-btn" value="contact_us" onclick="showEnquiryWindow()">QUICK ENQUIRY</button>
             </div>
         </div>
 
