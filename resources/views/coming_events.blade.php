@@ -165,7 +165,7 @@
                                 <div class="event_price"><label>ENTRY FEE:&nbsp;</label><span class="event_location">{{$event['price'] . " AUD"}} </span></div>
                             </div>
 
-                            <div><button class="info-btn entry_btn" value= "{{$event['title']}}">ENTRY NOW</button></div>
+                            <div><button class="info-btn entry_btn" value= "{{$event['title']}}" onclick="showEnquiryWindow()">ENTRY NOW</button></div>
                         </div>
                     </div>
                 @endforeach
