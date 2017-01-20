@@ -77,18 +77,18 @@
                                 <i class="fa fa-bus" aria-hidden="true"></i>
                             </div>
                             <div class="one-line">
-                                <div style="margin-top: 0px;">
+                                <div style="margin-top:-2px;">
                                     <button type="button" class="btnCustom info-btn" style="font-size: 8px;padding: 2px 2px;">Stop2</button>
                                     <span style="margin-left: 5px;">King Street</span>
                                     <span style="margin-left: 5px;">Trams: 12/30/35/109</span>
                                 </div>
-                                <div>
+                                <div style="margin-top:5px;">
                                     <button type="button" class="btnCustom info-btn" style="font-size: 8px;padding: 2px 2px;">Stop3</button>
                                     <span style="margin-left: 5px;">William Street</span>
                                     <span style="margin-left: 5px;">Trams: 12/30/35/109</span>
                                 </div>
 
-                                <div>
+                                <div style="margin-top:5px;">
                                     <button type="button" class="btnCustom info-btn" style="font-size: 8px;padding: 2px 2px;">Stop4</button>
                                     <span style="margin-left: 5px;">Lonsdale Street</span>
                                     <span style="margin-left: 5px;">Trams: 55</span>
