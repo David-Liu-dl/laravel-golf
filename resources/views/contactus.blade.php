@@ -31,20 +31,21 @@
                         <div>
                             <div class="one-line icon-block"></div>
                             <div class="one-line">
-                                <button type="button" style="cursor:" class="btnCustom info-btn">OPEN HOUR</button>
+                                <button type="button" style="cursor:" class="btnCustom info-btn">TRADING HOUR</button>
                             </div>
                         </div>
+
                         <div>
                             <div class="one-line icon-block"></div>
-                            <div class="one-line">11:00AM - 11:00PM MON.TO THUR.</div>
+                            <div class="one-line">12:00PM - 9:00PM&nbsp;&nbsp;MON.TO WED.</div>
                         </div>
                         <div>
                             <div class="one-line icon-block"></div>
-                            <div class="one-line">11:00AM - LATE FRI.TO SAT.</div>
+                            <div class="one-line">12:00PM - LATE&nbsp;&nbsp;THU.TO SAT.</div>
                         </div>
                         <div>
                             <div class="one-line icon-block"></div>
-                            <div class="one-line">11:00AM - 5:00PM SUN.</div>
+                            <div class="one-line">BOOKING ONLY&nbsp;&nbsp;SUN.</div>
                         </div>
 
                     </div>

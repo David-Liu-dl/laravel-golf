@@ -203,7 +203,7 @@
 
     <div class="row">
         <div class="col-md-4">
-            <span class="section-header">PAR PACKAGE</span>
+            <span class="section-header">EAGLE PACKAGE</span>
         </div>
         <div class="col-md-8" style="margin-left:-15px;">
             <p>we can tailor your function according to your specific requirements, please contact us on 13000GPLUS for more information</p>
