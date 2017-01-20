@@ -52,7 +52,7 @@
                         <div>
                             <div class="one-line icon-block"></div>
                             <div class="one-line">
-                                <button type="button" class="btnCustom info-btn">OPEN HOUR</button>
+                                <button type="button" class="btnCustom info-btn">TRADING HOUR</button>
                             </div>
                         </div>
                         <div>
