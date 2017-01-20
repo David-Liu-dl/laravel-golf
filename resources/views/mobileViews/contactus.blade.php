@@ -41,7 +41,7 @@
             <div style="margin-top: 10px;">
                 <img id="map-img" src="static/images/map.jpg"/>
             </div>
-            <div id="info-block" style="width:300px;margin: 8% auto;">
+            <div id="info-block">
                 <div id="text-info-block" class="" style="color: white;text-align:left;">
                     <!--top -->
                     <div class="" style="font-size: 12px;">
