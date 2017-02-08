@@ -117,7 +117,7 @@
     <div class="intro">
         <p class="title">INTRODUCTION</p>
         <div class='desc'>
-            <p>In Golf Plus Academy we believe the game of golf is never just about swing, we are trying help different levels golfers to gain maximal improvement from different aspects, We have a serious emphasis on each student reaching their maximum potential. The GPlus academy in conjunction with Golfzon Simulation is the forefront in modern day golf coaching and training. The combination of specific biomechanical analysis during the driving range mode and the ability to enhance game play on one of the 200 golf courses around the world makes all lessons more efficient and effective.</p>
+            <p>The Golfplus academy in conjunction with Golfzon Simulation is the forefront in modern day golf coaching and training. The combination of specific swing and short-game analysis during the practise mode and the ability to enhance game play on one of the 200 golf courses around the world makes lessons more efficient and effective for golfers of any level.</p>
             <p>If you are seeking to take your game to the next level, we strongly recommend getting involved in our extensive range of specific programs. We have devised a series of formulated packages that are guaranteed to enhance all aspects of your game.</p>
             <p>Click on each link to learn more about the respective package and book in today. The first step to unlocking your true potential is one click away!!!</p>
         </div>
@@ -135,8 +135,7 @@
         <p class="mini-title"><span>MATT JAGER</span></p>
         <div class='people'><img src='static/images/coach.jpg' class="img-responsive"></div>
         <div class='desc'>
-            <p>Matt turned professional in 2010 as one of the most exciting talents in the country. Born in Perth, Western Australia, Matt was an Australian Amateur and Dual New Zealand Amateur Champion and represented Australia in the World Amateur Team Championship. As a student of the game, Matt has since moved to Melbourne to further his golfing career.</p>
-            <p>From the word championship....As an elite professional, Matt has learned from the best players and coaches in the golf industry. His experience as a tour player and knowledge of the modern swing make him a  great asset to our team at GPlus.</p>
+            <p>Matt turned professional in 2010 as one of the most exciting talents in the country. Born in Perth, Western Australia, Matt was an Australian Amateur and Dual New Zealand Amateur Champion and represented Australia in the World Amateur Team Championship. As an elite professional and student of the game, Matt has learned from the best players and coaches in the golf industry. His experience as a tour player and knowledge of the modern swing make him a great asset to our academy.</p>
         </div>
     </div>
 

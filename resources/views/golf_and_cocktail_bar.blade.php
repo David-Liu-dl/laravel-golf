@@ -136,18 +136,14 @@
     </div>
 
     <div id="events_introduction" class="events-section">
-        <p>
-            GPlus's breathtaking array of premium cocktails and spirits is derived from the best menus in the world with a slight twist. Each item on our menu is infused with golf terminology to get you and your colleagues into the swing of things. Furthermore, there is a drink on the menu to suit every individual much like the game of golf requires all types to enjoy our historic game.
-        </p>
-        <p>
-            The game of golf is to be enjoyed with friends over the finest quality beverages as per the games humble beginnings all those years ago. Staff from GPlus pride themselves on attention to detail in their mixology and have vast knowledge in the game of golf to ensure you and your colleagues have a night to remember.
-        </p>
+        <p>Our array of premium cocktails and spirits is derived from the best menus in the world with a slight golf twist. Each item on our menu re named with golf terminology to get you and your colleagues into the swing of things. Just like the historic game we play, our extensive beverage list caters to every individual.     </p>
+        <p>The game of golf is to be enjoyed with friends over the finest quality beverages as per the games humble beginnings all those years ago. Our staff pride themselves on attention to detail in their mixology, furthermore they have great golf knowledge to ensure you and your colleagues have a day or night to remember.     </p>
     </div>
 
     <div id="business-hours" class="events-section">
         <div class="hours-section clearfix">
             <div class="col-md-4">
-                <span class="label">Open Hours</span>
+                <span class="label">Business Hours</span>
             </div>
             <div class="col-md-4">
                 <p>MONDAY-WEDNESDAY</p>
@@ -162,7 +158,7 @@
         </div>
         <div class="hours-section clearfix">
             <div class="col-md-4">
-                <span class="label">Practice Hours</span>
+                <span class="label">Practise Times</span>
             </div>
             <div class="col-md-4">
                 <p>MONDAY-WEDNESDAY</p>
@@ -175,7 +171,7 @@
         </div>
         <div class="hours-section clearfix">
             <div class="col-md-4">
-                <span class="label">Happy Hours</span>
+                <span class="label">Happy Hour</span>
             </div>
             <div class="col-md-4">
                 <p>MONDAY-WEDNESDAY</p>

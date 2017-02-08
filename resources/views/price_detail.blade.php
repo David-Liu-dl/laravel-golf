@@ -123,22 +123,20 @@
         
         <div class="row">
             <div class="col-md-4">
-                <span class="section-header">HALF AN HOURLY RATE</span>
+                <span class="section-header">HALF HOUR RATE</span>
             </div>
             <div class="col-md-4">
                 <span class="section-title">3 PEOPLE OR LESS</span>
                 <ul>
                     <li>$<span class="cost">15</span> per person</li>
-                    <li>one complimentary drink </li>
-                    <li>per person when arrival</li>
+                    <li>one complimentary drink per person when arrival</li>
                 </ul>
             </div>
             <div class="col-md-4">
                 <span class="section-title">MORE THAN 3 PEOPLE</span>
                 <ul>
                     <li>$<span class="cost">10</span> per person</li>
-                    <li>one complimentary drink</li>
-                    <li>per person when arrival</li>
+                    <li>one complimentary drink per person when arrival</li>
                 </ul>
             </div>
         </div>
@@ -158,7 +156,7 @@
                 <span class="section-title">9 HOLES</span>
                 <ul>
                     <li>$<span class="cost">25</span> per person</li>
-                    <li>Maximum 1.5 hour</li>
+                    <li>Maximum 1.5 hours</li>
                 </ul>
             </div>
         </div>
@@ -219,14 +217,14 @@
                 <span class="section-title">$100 PER PERSON</span>
                 <ul>
                     <li>2 hours of using the venue privately</li>
-                    <li>unlimited house drink*</li>
+                    <li>unlimited house drinks*</li>
                 </ul>
             </div>
             <div class="col-md-4">
                 <span class="section-title">$120 PER PERSON</span>
                 <ul>
                     <li>3 hours of using the venue privately</li>
-                    <li>unlimited house drink*</li>
+                    <li>unlimited house drinks*</li>
                 </ul>
             </div>
         </div>
@@ -237,7 +235,7 @@
             </div>
             <div class="col-md-8" style="margin-left:-15px;">
                 <p>we can tailor your function according to your specific requirements, please contact us on 13000GPLUS for more information</p>
-                <p>* house drink includes:</p>
+                <p>* house drinks include:</p>
                 <p>house tap beer, house spirits, stubbies, ciders, house white, house red, house sparkling.</p>
             </div>
         </div>
