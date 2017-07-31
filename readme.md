@@ -1,3 +1,3 @@
 # laravel-golf
 
-![image](https://github.com/DavidFancy/laravel-golf/tree/yuhao/demos/booking.gif)
+![image](https://github.com/DavidFancy/laravel-golf/blob/yuhao/demos/booking.gif)
